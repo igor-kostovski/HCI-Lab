@@ -1,0 +1,20 @@
+HCI-PROJEKT
+============
+ - web preglednik
+ - razlicite velicine uredaja
+ - pretraga/filter: kabine, slike (pretrazuje po dijelu broda: exterior, interior, main deck..), blog postovi(imat razilicte tagove po kojima se moze filtrirat)
+ - login mozemo dodat kao mock up
+ - 5 javnih stranica: Home, About us/Crew, Technical information, Galerija, Blog, Contact us&FAQ
+ - Blog u obliku promoviranja Hrvatske (Full of life, enjoy cro, minimal covid rate..)
+ - docs
+
+Ideje:
+	Ukradi blog dizajn sa https://www.navilux.eu/index.php?r=site%2Fabout, semantika bloga: https://blog.gogoro.com/en/topic/press
+	Crew: navedi u obliku kartica sa fife, slika kratki info, a za detalje, klik i otvori se ispod opis
+	Specifikacije: navest ih ko sta su navedene ode: https://www.gogoro.com/smartscooter/s-performance/s2/, ali ih prikazat sa animacijama i slicicama koje odgovaraju motu stranice
+	Blog&Reviews: objave s oznakon firme (mock facebook i instagram objava)
+	U Contact us ubaci i FAQ: https://support.gogoro.com/en , za mail malo prouci mail providere, gmail api i sl.
+	Pitaj segija sta koriste ode : https://www.dump.hr/about za mail formu
+
+Alati:
+	https://material-ui.com/components/box/

@@ -15,6 +15,9 @@ Ideje:
 	Blog&Reviews: objave s oznakon firme (mock facebook i instagram objava)
 	U Contact us ubaci i FAQ: https://support.gogoro.com/en , za mail malo prouci mail providere, gmail api i sl.
 	Pitaj segija sta koriste ode : https://www.dump.hr/about za mail formu
-
+	Pogledaj Home page na https://www.rimac-automobili.com/ i ukradi dizajn
+	Promini footer da izgleda ko i rimcev i makni footer sa home i dodaj ga na sve ostale
 Alati:
 	https://material-ui.com/components/box/
+
+

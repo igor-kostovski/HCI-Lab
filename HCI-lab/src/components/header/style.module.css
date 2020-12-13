@@ -1,0 +1,41 @@
+.headerContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #add8e6;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.logoContainer {
+    width: 250px;
+}
+
+.menuContainer {
+    display: none;
+}
+
+@media screen and (max-width: 1250.5px) {
+    .logoContainer {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1000.5px) {
+    .logoContainer {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 950.5px) {
+    .menuContainer {
+        display: block;
+        width: 35px;
+        margin-right: 25px;
+        padding: 20px 0;
+    }
+
+    .headerContainer {
+        justify-content: space-between;
+    }
+}

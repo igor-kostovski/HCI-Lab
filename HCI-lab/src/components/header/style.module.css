@@ -9,6 +9,11 @@
 
 .logoContainer {
     width: 200px;
+    transition: transform 0.2s;
+}
+
+.logoContainer:hover {
+    transform: scale(1.2);
 }
 
 .menuContainer {

@@ -6,8 +6,7 @@ import styles from "../global/global.css"
 
 const IndexPage = () => (
   <>
-    <Header>
-    </Header>
+    <Header/>
   </>
 )
 

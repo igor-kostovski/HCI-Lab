@@ -6,17 +6,19 @@ import BurgerMenu from "../burgerMenu"
 
 import Logo from "../images/logo"
 
-import { headerNavigationTabsLeft, headerNavigationTabsRight } from "../../constants"
+import { navigationTabs } from "../../constants"
 
 import styles from "./style.module.css"
 
+const home = navigationTabs.filter(tab => tab.name == 'Home')[0]
+
 const Header = () => (
     <div className={styles.headerContainer}>
-        <Navigation navigationTabs={headerNavigationTabsLeft}/>
-        <Link className={styles.logoContainer} to={headerNavigationTabsLeft[0].linkTo}>
+        <Navigation navigationTabs={navigationTabs.slice(0,3)}/>
+        <Link className={styles.logoContainer} to={home.linkTo}>
             <Logo/>
         </Link>
-        <Navigation navigationTabs={headerNavigationTabsRight}/>
+        <Navigation navigationTabs={navigationTabs.slice(3,6)}/>
         <div className={styles.menuContainer}>
             <BurgerMenu/>
         </div>

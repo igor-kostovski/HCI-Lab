@@ -19,12 +19,18 @@
     font-size: 27px;
     border-bottom: 2px solid transparent;
     margin: auto;
-    transition: transform .2s
 }
 
 .navigationTabContainer :hover {
     border-bottom: 2px solid #ffffff;
     cursor: pointer;
+}
+
+.navigationTabText {
+    transition: transform 0.2s;
+}
+
+.navigationTabText:hover {
     transform: scale(1.15)
 }
 

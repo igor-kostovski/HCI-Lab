@@ -5,9 +5,9 @@ import styles from "./style.module.css"
 
 const Navigation = ({navigationTabs}) => (
     <div className={styles.navigationContainer}>
-        {navigationTabs.map(({navigationTab, linkTo}) => (
-            <Link className={styles.navigationTabContainer} to={linkTo} key={navigationTab}>
-                <div>{navigationTab.toUpperCase()}</div>
+        {navigationTabs.map(({name, linkTo}) => (
+            <Link className={styles.navigationTabContainer} to={linkTo} key={name}>
+                <div className={styles.navigationTabText}>{name.toUpperCase()}</div>
             </Link>
         ))}
     </div>

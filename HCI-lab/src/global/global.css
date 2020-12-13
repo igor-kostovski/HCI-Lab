@@ -1,3 +1,69 @@
 body {
     margin: 0;
 }
+
+.bm-burger-button {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+}
+
+.bm-burger-bars {
+    background-color: #ffffff
+}
+
+.bm-menu {
+    background-color: #add8e6;
+    height:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.bm-cross {
+    background: #ffffff;
+}
+
+.bm-item-list {
+    height: fit-content !important;
+}
+
+.bm-item {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Raleway', 'sans-serif';
+    font-size: 25px;
+    margin-bottom: 20px;
+    transition: transform .2s
+}
+
+#react-burger-cross-btn:focus {
+    outline: 0px solid transparent;
+}
+
+#react-burger-menu-btn:focus {
+    outline: 0px solid transparent;
+}
+
+.bm-item:focus {
+    outline: 0px solid transparent;
+}
+
+.bm-item:hover {
+    transform: scale(1.25);
+}
+
+.bm-menu-wrap {
+    position: fixed;
+    top: 0;
+}
+
+@media screen and (max-width: 500.5px) {
+    .bm-menu-wrap {
+        top: 0;
+        width: 100vw !important
+    }
+}

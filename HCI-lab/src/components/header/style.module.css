@@ -3,12 +3,12 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #add8e6;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
 .logoContainer {
-    width: 250px;
+    width: 200px;
 }
 
 .menuContainer {
@@ -37,5 +37,6 @@
 
     .headerContainer {
         justify-content: space-between;
+        width: 100%;
     }
 }

@@ -19,11 +19,13 @@
     font-size: 27px;
     border-bottom: 2px solid transparent;
     margin: auto;
+    transition: transform .2s
 }
 
 .navigationTabContainer :hover {
     border-bottom: 2px solid #ffffff;
     cursor: pointer;
+    transform: scale(1.15)
 }
 
 @media screen and (max-width: 1500.5px) {

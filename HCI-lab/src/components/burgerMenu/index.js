@@ -11,9 +11,12 @@ const styles = {
         width: '35px',
         height: '35px'
     },
+
     bmBurgerBars: {
         background: '#373a47'
     },
+
+    
 }
 
 const BurgerMenu = () => (

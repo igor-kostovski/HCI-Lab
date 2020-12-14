@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Card = (props) => {
+import styles from "./style.module.css"
 
+const Card = ({ header, text, children: image }) => {
     return (
-        <div>
-            <h1>{props.header}</h1>
-            <p>{props.text}</p>
-            <img alt={props.image} />
+        <div className={styles.card}>
+            <div style={{ width: '200px', transition: 'transform 0.2s' }}>
+                {image}
+            </div>
+            <div className={styles.container}>
+                <h4><b>{header}</b></h4>
+                <p>{text}</p>
+            </div>
         </div>
-    )
+    );
 }
 
 Card.propTypes = {
     header: PropTypes.string,
-    text: PropTypes.string,
-    image: PropTypes.string
+    text: PropTypes.string.isRequired
 }
 
 export default Card;

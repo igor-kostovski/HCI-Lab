@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+.navigationContainer {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 100;
+    justify-content: space-evenly;
+}
+
+.navigationTabContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    border-bottom: 2px solid transparent;
+    margin: auto;
+}
+
+.navigationTabContainer :hover {
+    border-bottom: 2px solid #ffffff;
+    cursor: pointer;
+}
+
+.navigationTabText {
+    transition: transform 0.2s;
+}
+
+.navigationTabText:hover {
+    transform: scale(1.15)
+}
+
+@media screen and (max-width: 1500.5px) {
+    .navigationTabContainer {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1100.5px) {
+    .navigationTabContainer {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 950.5px) {
+    .navigationContainer {
+        display: none;
+    }
+    
+    .navigationTabContainer {
+        display: none;
+    }
+}

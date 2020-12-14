@@ -6,11 +6,18 @@ import styles from "./style.module.css"
 const Card = ({ header, text, children: image }) => {
     return (
         <div className={styles.card}>
-            <div style={{ width: '200px', transition: 'transform 0.2s' }}>
+            <div style={
+                {
+                    width: '100%',
+                    transition: 'transform 0.2s'
+                }
+            }>
                 {image}
             </div>
             <div className={styles.container}>
-                <h4><b>{header}</b></h4>
+                <h2>
+                    <b>{header}</b>
+                </h2>
                 <p>{text}</p>
             </div>
         </div>

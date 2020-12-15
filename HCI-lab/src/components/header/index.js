@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Navigation from "../navigation"
 import BurgerMenu from "../burgerMenu"
 
-import Image from "../images/image"
+import Image from "../image"
 
 import { navigationTabs, images } from "../../constants"
 

@@ -2,18 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import styles from "./style.module.css"
+import Image from '../image';
 
-const Card = ({ header, text, children: image }) => {
+const Card = ({ header, text, image }) => {
     return (
         <div className={styles.card}>
-            <div style={
-                {
-                    width: '100%',
-                    transition: 'transform 0.2s'
-                }
-            }>
-                {image}
-            </div>
+            {image && <Image style={styles.image} name={image} />}
             <div className={styles.container}>
                 <h2>
                     <b>{header}</b>
@@ -26,7 +20,8 @@ const Card = ({ header, text, children: image }) => {
 
 Card.propTypes = {
     header: PropTypes.string,
-    text: PropTypes.string.isRequired
+    text: PropTypes.string.isRequired,
+    image: PropTypes.string
 }
 
 export default Card;

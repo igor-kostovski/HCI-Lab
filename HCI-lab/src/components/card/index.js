@@ -7,12 +7,12 @@ import Image from '../image';
 const Card = ({ header, text, image }) => {
     return (
         <div className={styles.card}>
-            {image && <Image style={styles.image} name={image} />}
+            {image && <Image className={styles.image} name={image} />}
             <div className={styles.container}>
-                <h2>
-                    <b>{header}</b>
-                </h2>
-                <p>{text}</p>
+                <h4 className={styles.header}>
+                    {header}
+                </h4>
+                <p className={styles.text}>{text}</p>
             </div>
         </div>
     );

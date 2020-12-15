@@ -10,3 +10,8 @@ export const navigationTabs = [
 export const images = {
     logo: "logo"
 }
+
+export const cardStyle = {
+    horizontal: "horizontal",
+    vertical: "vertical"
+}

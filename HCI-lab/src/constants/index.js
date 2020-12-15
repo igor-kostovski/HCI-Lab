@@ -11,7 +11,9 @@ export const images = {
     logo: "logo"
 }
 
-export const cardStyle = {
-    horizontal: "horizontal",
-    vertical: "vertical"
+export const cardStyles = {
+    blog: 0,
+    specs: 1,
+    crew: 2,
+    info: 3
 }

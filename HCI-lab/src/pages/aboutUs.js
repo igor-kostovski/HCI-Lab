@@ -1,6 +1,6 @@
 import React from "react"
 import Card from '../components/card'
-import { images, cardStyles } from "../constants";
+import { images, cardType } from "../constants";
 
 const AboutUsPage = () => (
   <div style={{

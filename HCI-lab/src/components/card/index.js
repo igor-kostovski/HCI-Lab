@@ -6,20 +6,20 @@ import crewStyle from "./crew.module.css"
 import infoStyle from "./info.module.css"
 import specsStyle from "./specs.module.css"
 import Image from '../image';
-import { cardStyles } from '../../constants';
+import { cardType } from '../../constants';
 
 const getStylesFor = (card) => {
     switch (card) {
-        case cardStyles.blog:
+        case cardType.blog:
             return blogStyle;
 
-        case cardStyles.crew:
+        case cardType.crew:
             return crewStyle;
 
-        case cardStyles.info:
+        case cardType.info:
             return infoStyle;
 
-        case cardStyles.specs:
+        case cardType.specs:
             return specsStyle;
 
         default:

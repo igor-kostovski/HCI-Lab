@@ -8,16 +8,27 @@ import specsStyle from "./specs.module.css"
 import Image from '../image';
 import { cardStyles } from '../../constants';
 
-const Card = ({ header, text, image, cardStyle }) => {
-    let styles;
+const getStylesFor = (card) => {
+    switch (card) {
+        case cardStyles.blog:
+            return blogStyle;
 
-    switch (cardStyle) {
-        case cardStyles.blog: styles = blogStyle; break;
-        case cardStyles.crew: styles = crewStyle; break;
-        case cardStyles.info: styles = infoStyle; break;
-        case cardStyles.specs: styles = specsStyle; break;
-        default: styles = crewStyle;
+        case cardStyles.crew:
+            return crewStyle;
+
+        case cardStyles.info:
+            return infoStyle;
+
+        case cardStyles.specs:
+            return specsStyle;
+
+        default:
+            return crewStyle;
     }
+}
+
+const Card = ({ header, text, image, cardType }) => {
+    const styles = getStylesFor(cardType);
 
     return (
         <div className={styles.card}>
@@ -35,7 +46,8 @@ const Card = ({ header, text, image, cardStyle }) => {
 Card.propTypes = {
     header: PropTypes.string,
     text: PropTypes.string.isRequired,
-    image: PropTypes.string
+    image: PropTypes.string,
+    cardType: PropTypes.number
 }
 
 export default Card;

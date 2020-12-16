@@ -11,7 +11,7 @@ export const images = {
     logo: "logo"
 }
 
-export const cardStyles = {
+export const cardType = {
     blog: 0,
     specs: 1,
     crew: 2,

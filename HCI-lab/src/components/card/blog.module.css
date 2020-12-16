@@ -29,7 +29,7 @@
   }
 
   .image {
-    margin-top: 15px;
+    margin-top: -50%;
     width: 100%;
     transition: transform 0.2s;
     order: 1;

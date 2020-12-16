@@ -11,7 +11,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(315deg,#D2E7F0 76%,#AEB8BC 100%);
+    background-image: linear-gradient(315deg,#D2E7F0 50%,#AEB8BC 100%);
+
+    /* For testing */
+    margin-left: 10%;
+    margin-top: 10%;
   }
   
   /* On mouse-over, add a deeper shadow */

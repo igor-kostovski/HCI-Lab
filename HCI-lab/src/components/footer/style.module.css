@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 .footerContainer {
     display: flex;
     flex-direction: column;
@@ -6,10 +8,12 @@
     width: 100%;
     margin: 0 auto;
     align-items: center;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
 }
 
 .logoContainer {
-    width: 200px;
+    width: 150px;
     transition: transform 0.2s;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -28,59 +32,74 @@
 }
 
 .footerImagesContainer {
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    justify-content: space-around;
 }
 
 .socialMediaContainer {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+
+.socialMediaImages {
+    width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
 }
 
 .socialMediaIcon {
-    width: 100px;
+    width: 50px;
     transition: transform 0.2s;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin: auto;
+    margin: auto 0;
+}
+
+.contactContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 47%;
+}
+
+.contactText {
+    margin-top: 25px;
+    line-height: 1.5em;
 }
 
 .euContainer {
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
 }
 
-@media screen and (max-width: 1500.5px) {
+@media screen and (max-width: 1400.5px) {
     .socialMediaIcon {
-        width: 90px;
+        width: 40px;
     }
 }
 
 @media screen and (max-width: 1250.5px) {
+    .footerImagesContainer {
+        margin-bottom: 10px;
+    }
+
     .logoContainer {
         width: 150px;
     }
 
-    .socialMediaIcon {
-        width: 80px;
-    }
-}
-
-@media screen and (max-width: 1170.5px) {
-    .socialMediaIcon {
-        width: 75px;
+    .euContainer {
+        justify-content: space-between;
     }
 }
 
 @media screen and (max-width: 1100.5px) {
-    .logoContainer {
-        width: 150px;
-    }
-
     .socialMediaIcon {
-        width: 70px;
+        width: 35px;
     }
 }
 
@@ -90,11 +109,19 @@
     }
 
     .socialMediaIcon {
-        width: 60px;
+        width: 30px;
     }
 }
 
 @media screen and (max-width: 950.5px) {
+    .logoContainer {
+        display: none;
+    }
+
+    .footerImagesContainer {
+        margin-bottom: 0px;
+    }
+
     .navigationWrapper {
         height: 0px;
     }
@@ -106,49 +133,42 @@
     .logoContainer {
         margin-bottom: 0px;
     }
-}
 
-@media screen and (max-width: 850.5px) {
-    .socialMediaIcon {
-        width: 50px;
-    }
-}
-
-@media screen and (max-width: 750.5px) {
-    .socialMediaIcon {
-        width: 45px;
-    }
-}
-
-@media screen and (max-width: 700.5px) {
-    .socialMediaIcon {
-        width: 40px;
-    }
-}
-
-@media screen and (max-width: 600.5px) {
-    .socialMediaIcon {
-        width: 35px;
-    }
-}
-
-@media screen and (max-width: 550.5px) {
-    .socialMediaIcon {
-        width: 30px;
-    }
-}
-
-@media screen and (max-width: 500.5px) {
     .footerImagesContainer {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        margin-top: 20px;
     }
 
     .socialMediaContainer {
-        width: 80%;
+        width: 155px;
+        margin-bottom: 20px;
+    }
+
+    .socialMediaImages {
+        margin-top: 10px;
+    }
+
+    .socialMediaIcon {
+        width: 35px;
+    }
+
+    .contactContainer {
+        margin-bottom: 20px;
+        max-width: 100%;
+    }
+
+    .contactText {
+        margin-top: 10px;
     }
 
     .euContainer {
-        width: 70%;
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 400.5px) {
+    .euContainer {
+        width: 100%;
     }
 }

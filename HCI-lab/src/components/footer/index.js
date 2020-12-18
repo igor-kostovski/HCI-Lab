@@ -2,7 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 
 import Navigation from "../navigation"
-import BurgerMenu from "../burgerMenu"
 
 import Logo from "../images/logo"
 import Facebook from "../images/facebook"
@@ -27,17 +26,35 @@ const Footer = () => {
             </div>
             <div className={styles.footerImagesContainer}>
                 <div className={styles.socialMediaContainer}>
-                    <div className={styles.socialMediaIcon}>
-                        <Facebook />
+                    <div>
+                        <span>FIND US ON:</span>
                     </div>
-                    <div className={styles.socialMediaIcon}>
-                        <Instagram />
+                    <div className={styles.socialMediaImages}>
+                        <div className={styles.socialMediaIcon}>
+                            <Facebook />
+                        </div>
+                        <div className={styles.socialMediaIcon}>
+                            <Youtube />
+                        </div>
+                        <div className={styles.socialMediaIcon}>
+                            <Instagram />
+                        </div>
                     </div>
-                    <div className={styles.socialMediaIcon}>
-                        <Youtube />
+                </div>
+                <div className={styles.contactContainer}>
+                    <div>
+                        <span>CONTACT INFO:</span>
+                    </div>
+                    <div className={styles.contactText}>
+                        <span>MAIL: INFO@DELPHINUS-YACHTS.COM</span><br/>
+                        <span>TELEPHONE: +385 98 448 518</span><br/>
+                        <span>ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA</span>
                     </div>
                 </div>
                 <div className={styles.euContainer}>
+                    <div>
+                        <span>IN COOPERATION WITH:</span>
+                    </div>
                     <Eu />
                 </div>
             </div>

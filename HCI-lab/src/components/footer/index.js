@@ -3,13 +3,9 @@ import { Link } from "gatsby"
 
 import Navigation from "../navigation"
 
-import Logo from "../images/logo"
-import Facebook from "../images/facebook"
-import Instagram from "../images/instagram"
-import Youtube from "../images/youtube"
-import Eu from "../images/eu"
+import Image from "../image"
 
-import { navigationTabs } from "../../constants"
+import { navigationTabs, images, footerTitles, contactInfo } from "../../constants"
 
 import styles from "./style.module.css"
 
@@ -19,7 +15,7 @@ const Footer = () => {
     return (
         <div className={styles.footerContainer}>
             <Link className={styles.logoContainer} to={home.linkTo}>
-                <Logo />
+                <Image name={images.logo} />
             </Link>
             <div className={styles.navigationWrapper}>
                 <Navigation navigationTabs={navigationTabs} />
@@ -27,35 +23,35 @@ const Footer = () => {
             <div className={styles.footerImagesContainer}>
                 <div className={styles.socialMediaContainer}>
                     <div>
-                        <span>FIND US ON:</span>
+                        <span>{footerTitles.socialMedia}</span>
                     </div>
                     <div className={styles.socialMediaImages}>
                         <div className={styles.socialMediaIcon}>
-                            <Facebook />
+                            <Image name={images.facebook} />
                         </div>
                         <div className={styles.socialMediaIcon}>
-                            <Youtube />
+                            <Image name={images.youtube} />
                         </div>
                         <div className={styles.socialMediaIcon}>
-                            <Instagram />
+                            <Image name={images.instagram} />
                         </div>
                     </div>
                 </div>
                 <div className={styles.contactContainer}>
                     <div>
-                        <span>CONTACT INFO:</span>
+                        <span>{footerTitles.contact}</span>
                     </div>
                     <div className={styles.contactText}>
-                        <span>MAIL: INFO@DELPHINUS-YACHTS.COM</span><br/>
-                        <span>TELEPHONE: +385 98 448 518</span><br/>
-                        <span>ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA</span>
+                        <span>{contactInfo.email}</span><br/>
+                        <span>{contactInfo.telephone}</span><br/>
+                        <span>{contactInfo.address}</span>
                     </div>
                 </div>
                 <div className={styles.euContainer}>
                     <div>
-                        <span>IN COOPERATION WITH:</span>
+                        <span>{footerTitles.eu}</span>
                     </div>
-                    <Eu />
+                    <Image name={images.eu} />
                 </div>
             </div>
         </div>

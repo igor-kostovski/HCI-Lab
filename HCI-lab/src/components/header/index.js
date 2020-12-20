@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 import Navigation from "../navigation"
 import BurgerMenu from "../burgerMenu"
 
-import Logo from "../images/logo"
+import Image from "../image"
 
-import { navigationTabs } from "../../constants"
+import { navigationTabs, images } from "../../constants"
 
 import styles from "./style.module.css"
 
@@ -20,7 +20,7 @@ const Header = () => {
         <div className={styles.headerContainer}>
             <Navigation navigationTabs={firstHalf} />
             <Link className={styles.logoContainer} to={home.linkTo}>
-                <Logo />
+                <Image name={images.logo} />
             </Link>
             <Navigation navigationTabs={secondHalf} />
             <div className={styles.menuContainer}>

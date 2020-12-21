@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+
+.pageTitleContainer {
+    height: 77.77px;
+    background-color: #ffffff;
+    color: #bccbd1;
+    font-size: 45px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 1000;
+    display: none;
+}
+
+@media screen and (max-width: 950.5px) {
+    .pageTitleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 350.5px) {
+    .pageTitleContainer {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 230.5px) {
+    .pageTitleContainer {
+        font-size: 25px;
+    }
+}

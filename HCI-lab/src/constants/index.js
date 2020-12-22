@@ -8,7 +8,11 @@ export const navigationTabs = [
 ]
 
 export const images = {
-    logo: "logo"
+    logo: "logo",
+    facebook: "facebook",
+    youtube: "youtube",
+    instagram: "instagram",
+    eu: "eu"
 }
 
 export const cardType = {
@@ -16,4 +20,16 @@ export const cardType = {
     specs: 1,
     crew: 2,
     info: 3
+}
+
+export const footerTitles = {
+    socialMedia: "FIND US ON:",
+    contact: "CONTACT INFO:",
+    eu: "IN COOPERATION WITH:"
+}
+
+export const contactInfo = {
+    email: "MAIL: info@delphinus-yachts.com",
+    telephone: "TELEPHONE: +385 98 448 518",
+    address: "ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA"
 }

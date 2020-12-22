@@ -3,12 +3,12 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: #add8e6;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .logoContainer {
-    width: 200px;
+    width: 150px;
     transition: transform 0.2s;
 }
 
@@ -18,12 +18,6 @@
 
 .menuContainer {
     display: none;
-}
-
-@media screen and (max-width: 1250.5px) {
-    .logoContainer {
-        width: 150px;
-    }
 }
 
 @media screen and (max-width: 1000.5px) {

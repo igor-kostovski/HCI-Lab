@@ -32,6 +32,20 @@ const IndexPage = () => (
           <Image name={images.exterior3} />
         </div>
       </div>
+      <div className={styles.bannerContainer}>
+        <div className={styles.bannerImage1}>
+          <Image name={images.croatia1} />
+        </div>
+        <div className={styles.bannerImage2}>
+          <Image name={images.croatia4} />
+        </div>
+        <div className={styles.bannerImage3}>
+          <Image name={images.croatia3} />
+        </div>
+        <div className={styles.bannerImage4}>
+          <Image name={images.croatia2} />
+        </div>
+      </div>
     </Layout>
   </>
 )

@@ -14,7 +14,11 @@ export const images = {
     instagram: "instagram",
     eu: "eu",
     exterior2: "exterior2",
-    exterior3: "exterior3"
+    exterior3: "exterior3",
+    croatia1: "croatia1",
+    croatia2: "croatia2",
+    croatia3: "croatia3",
+    croatia4: "croatia4"
 }
 
 export const cardType = {

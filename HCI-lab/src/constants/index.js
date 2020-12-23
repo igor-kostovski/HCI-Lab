@@ -33,3 +33,7 @@ export const contactInfo = {
     telephone: "TELEPHONE: +385 98 448 518",
     address: "ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA"
 }
+
+export const homePageTexts = {
+    titleText: "ENJOY ADRIATIC WITH US"
+}

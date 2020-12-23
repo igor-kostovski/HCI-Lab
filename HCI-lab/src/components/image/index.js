@@ -35,7 +35,21 @@ const Image = ({ name, className }) => {
             }
             eu: file(relativePath: {eq: "eu.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            exterior2: file(relativePath: {eq: "exterior2.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            exterior3: file(relativePath: {eq: "exterior3.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
                         ...GatsbyImageSharpFluid
                       }
                 }

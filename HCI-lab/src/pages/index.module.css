@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+body {
+    background-color: #e5e5e5;
+}
 
 .titleContainer {
     height: 65vh;
@@ -12,8 +17,77 @@
 
 .titleText {
     font-family: 'Raleway', sans-serif;
+    font-weight: 700;
     font-size: 70px;
     text-align: center;
     padding-right: 50px;
     padding-left: 50px;
+}
+
+.contentContainer {
+    width: 70%;
+    margin: 50px auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 1fr 1fr 0.5fr 0.5fr;
+    gap: 20px 50px;
+    grid-template-areas:
+      "contentText1 contentText1 . ."
+      "contentText1 contentText1 contentImage1 contentImage1"
+      "contentText2 contentText2 contentImage1 contentImage1"
+      "contentText2 contentText2 contentImage2 contentImage2"
+      "contentText3 contentText3 contentImage2 contentImage2"
+      "contentText3 contentText3 . .";
+}
+  
+.contentText1 { 
+    grid-area: contentText1; 
+    padding-right: 70px;
+    padding-left: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+  
+.contentText2 { 
+    grid-area: contentText2; 
+    padding-right: 70px;
+    padding-left: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+  
+.contentText3 { 
+    grid-area: contentText3; 
+    padding-right: 70px;
+    padding-left: 70px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+}
+  
+.contentImage1 { 
+    grid-area: contentImage1; 
+}
+  
+.contentImage2 { 
+    grid-area: contentImage2; 
+}
+
+@media screen and (max-width: 950.5px) {
+    .contentContainer {
+        width: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px 50px;
+        grid-template-areas:
+          "contentText1"
+          "contentImage1"
+          "contentText2"
+          "contentImage2"
+          "contentText3";
+    }
 }

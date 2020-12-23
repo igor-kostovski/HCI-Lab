@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 
 .titleContainer {
-    height: 75vh;
+    height: 65vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,4 +13,7 @@
 .titleText {
     font-family: 'Raleway', sans-serif;
     font-size: 70px;
+    text-align: center;
+    padding-right: 50px;
+    padding-left: 50px;
 }

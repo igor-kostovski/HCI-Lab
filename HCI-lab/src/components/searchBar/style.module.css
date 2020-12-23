@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900');
 
 body {
-    width: 430px;
     margin: 0 auto;
     font-family: 'Raleway', sans-serif;
 }
 
 .search-container {
     padding-top: 64px;
+    width: 430px;
 }
 
 .search-input {

@@ -13,6 +13,7 @@ export const images = {
     youtube: "youtube",
     instagram: "instagram",
     eu: "eu",
+    exterior1: "exterior1",
     exterior2: "exterior2",
     exterior3: "exterior3",
     croatia1: "croatia1",

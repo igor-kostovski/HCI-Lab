@@ -32,8 +32,7 @@ body {
     font-weight: 700;
     font-size: 70px;
     text-align: center;
-    padding-right: 50px;
-    padding-left: 50px;
+    padding: 0 50px;
 }
 
 .contentContainer {
@@ -137,6 +136,43 @@ body {
 .bannerImage4 { 
     grid-area: bannerImage4; 
     opacity: 0.3;
+}
+
+@media screen and (min-width: 875.5px) and (max-width: 987.5px){
+    .titleText {
+        padding: 0 110px;
+    }
+}
+
+@media screen and (min-width: 638.5px) and (max-width: 672.5px){
+    .titleText {
+        padding: 0 130px;
+    }
+}
+
+@media screen and (max-width: 500.5px){
+    .titleText {
+        font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 435.5px){
+    .titleText {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 370.5px){
+    .titleText {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 300.5px){
+    .titleText {
+        padding: 0 20px;
+        font-size: 35px;
+    }
 }
 
 @media screen and (max-width: 950.5px) {

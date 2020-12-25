@@ -52,7 +52,7 @@ const IndexPage = () => (
           </div>
         </div>
         <div className={styles.bannerText}>
-          Unique experience delivered with passion
+          {homePageTexts.bannerText}
         </div>
       </div>
     </Layout>

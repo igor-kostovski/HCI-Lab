@@ -31,6 +31,7 @@ const Header = () => {
 
     return (
         <div className={styles.headerContainer}>
+            {/* Someone needs to update activeTab value inside this context */}
             <navigationContext.Consumer>
                 {value => <Navigation activeTab={value} navigationTabs={navTabsWithLogo()} />}
             </navigationContext.Consumer>

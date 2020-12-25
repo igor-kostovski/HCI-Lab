@@ -2,7 +2,6 @@ import React from "react"
 
 import Layout from "../layouts"
 import Image from "../components/image"
-import BackgroundImage from "../components/backgroundImage"
 
 import {homePageTexts, images} from "../constants"
 
@@ -13,7 +12,7 @@ const IndexPage = () => (
     <Layout>
       <div className={styles.titleContainer}>
         <div className={styles.titleImage}>
-          <BackgroundImage name={images.exterior1}/>
+          <Image name={images.titleImage} isBackground={true}/>
         </div>
         <div className={styles.titleText}>
           {homePageTexts.titleText}
@@ -21,34 +20,34 @@ const IndexPage = () => (
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.contentText1}>
-          {homePageTexts.contentText1}
+          {homePageTexts.offerText}
         </div>
         <div className={styles.contentText2}>
-          {homePageTexts.contentText2}
+          {homePageTexts.locationText}
         </div>
         <div className={styles.contentText3}>
-          {homePageTexts.contentText3}
+          {homePageTexts.motivationText}
         </div>
         <div className={styles.contentImage1}>
-          <Image name={images.exterior2} />
+          <Image name={images.nightImage} isBackground={false}/>
         </div>
         <div className={styles.contentImage2}>
-          <Image name={images.exterior3} />
+          <Image name={images.groundPlan} isBackground={false}/>
         </div>
       </div>
       <div className={styles.bannerContainer}>
         <div className={styles.bannerBackground}> 
           <div className={styles.bannerImage1}>
-            <BackgroundImage name={images.croatia1} />
+            <Image name={images.krknjasi} isBackground={true}/>
           </div>
           <div className={styles.bannerImage2}>
-            <BackgroundImage name={images.croatia4} />
+            <Image name={images.zlatniRat} isBackground={true}/>
           </div>
           <div className={styles.bannerImage3}>
-            <BackgroundImage name={images.croatia3} />
+            <Image name={images.sakarun} isBackground={true}/>
           </div>
           <div className={styles.bannerImage4}>
-            <BackgroundImage name={images.croatia2} />
+            <Image name={images.palmizana} isBackground={true}/>
           </div>
         </div>
         <div className={styles.bannerText}>

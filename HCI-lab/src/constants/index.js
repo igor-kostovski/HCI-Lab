@@ -13,13 +13,13 @@ export const images = {
     youtube: "youtube",
     instagram: "instagram",
     eu: "eu",
-    exterior1: "exterior1",
-    exterior2: "exterior2",
-    exterior3: "exterior3",
-    croatia1: "croatia1",
-    croatia2: "croatia2",
-    croatia3: "croatia3",
-    croatia4: "croatia4"
+    titleImage: "titleImage",
+    nightImage: "nightImage",
+    groundPlan: "groundPlan",
+    krknjasi: "krknjasi",
+    zlatniRat: "zlatniRat",
+    sakarun: "sakarun",
+    palmizana: "palmizana"
 }
 
 export const cardType = {
@@ -43,8 +43,8 @@ export const contactInfo = {
 
 export const homePageTexts = {
     titleText: "ENJOY ADRIATIC WITH US",
-    contentText1: "WE OFFER OUR GUESTS CRYSTAL BLUE CRUISING AROUND CHARMING ISLANDS IN THE MID ADRIATIC SEA TO ENRICH THEIR VACATION WITH THE MOST PLEASANT MEMORIES.",
-    contentText2: "OUR PORT OF CALL IS SPLIT, HOWEVER THE ROUTE FOR YOUR CRYSTAL BLUE VOYAGE MAY BE SPECIFICALLY TAILORED AS PER YOUR OWN WISH AMONG SECLUDED BAYS AND BEAUTIFUL BEACHES ON THE ISLANDS OF VIS, HVAR, KORČULA, MLJET AND SO ON.",
-    contentText3: "ON OUR LUXURY YACHT ALESSANDRO YOU WILL SHARE AN UNFORGETTABLE HOLIDAY AND WE ARE LOOKING FORWARD TO GET TO KNOW YOU, YOUR FAMILY AND FRIENDS.",
+    offerText: "WE OFFER OUR GUESTS CRYSTAL BLUE CRUISING AROUND CHARMING ISLANDS IN THE MID ADRIATIC SEA TO ENRICH THEIR VACATION WITH THE MOST PLEASANT MEMORIES.",
+    locationText: "OUR PORT OF CALL IS SPLIT, HOWEVER THE ROUTE FOR YOUR CRYSTAL BLUE VOYAGE MAY BE SPECIFICALLY TAILORED AS PER YOUR OWN WISH AMONG SECLUDED BAYS AND BEAUTIFUL BEACHES ON THE ISLANDS OF VIS, HVAR, KORČULA, MLJET AND SO ON.",
+    motivationText: "ON OUR LUXURY YACHT ALESSANDRO YOU WILL SHARE AN UNFORGETTABLE HOLIDAY AND WE ARE LOOKING FORWARD TO GET TO KNOW YOU, YOUR FAMILY AND FRIENDS.",
     bannerText: "Unique experience delivered with passion"
 }

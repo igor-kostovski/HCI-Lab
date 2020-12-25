@@ -1,8 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import BackgroundImage from "gatsby-background-image"
 
-const Image = ({ name, className }) => {
+const Image = ({ name, className, isBackground }) => {
     const data = useStaticQuery(graphql`
         query {
             logo: file(relativePath: {eq: "logo.png"}) {
@@ -40,14 +41,49 @@ const Image = ({ name, className }) => {
                       }
                 }
             }
-            exterior2: file(relativePath: {eq: "exterior2.jpg"}) {
+            titleImage: file(relativePath: {eq: "titleImage.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            nightImage: file(relativePath: {eq: "nightImage.jpg"}) {
                 childImageSharp {
                     fluid(maxWidth: 500) {
                         ...GatsbyImageSharpFluid
                       }
                 }
             }
-            exterior3: file(relativePath: {eq: "exterior3.jpg"}) {
+            groundPlan: file(relativePath: {eq: "groundPlan.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            krknjasi: file(relativePath: {eq: "krknjasi.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            zlatniRat: file(relativePath: {eq: "zlatniRat.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sakarun: file(relativePath: {eq: "sakarun.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            palmizana: file(relativePath: {eq: "palmizana.jpeg"}) {
                 childImageSharp {
                     fluid(maxWidth: 500) {
                         ...GatsbyImageSharpFluid
@@ -56,7 +92,7 @@ const Image = ({ name, className }) => {
             }
         }
     `)
-    return <Img className={className} fluid={data[name].childImageSharp.fluid} />
+    return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{height: `100%`}}/> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)
 }
 
 export default Image

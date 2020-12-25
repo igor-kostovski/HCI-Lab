@@ -38,3 +38,14 @@ export const aboutUsSections = {
     companyInfo: "COMPANY INFO",
     crewMembers: "CREW MEMBERS"
 }
+
+export const contactSections = {
+    faq: "FAQ",
+    findUs: "FIND US",
+    contact: "CONTACT"
+}
+
+export const blogSections = {
+    filterSearch: "FILTER & SEARCH",
+    posts: "POSTS"
+}

@@ -103,6 +103,7 @@ body {
     font-size: 90px;
     z-index: 50;
     text-align: center;
+    padding: 0 50px;
 }
 
 .bannerBackground {
@@ -136,6 +137,37 @@ body {
 .bannerImage4 { 
     grid-area: bannerImage4; 
     opacity: 0.3;
+}
+
+@media screen and (max-width: 950.5px) {
+    .contentContainer {
+        width: 80%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: minmax(min-content, max-content);
+        gap: 50px;
+        grid-template-areas:
+          "contentText1"
+          "contentImage1"
+          "contentText2"
+          "contentImage2"
+          "contentText3";
+    }
+
+    .contentText1 { 
+        padding: 0;
+    }
+
+    .contentText2 { 
+        padding: 0;
+    }
+
+    .contentText3 { 
+        padding: 0;
+    }
 }
 
 @media screen and (min-width: 875.5px) and (max-width: 987.5px){
@@ -175,33 +207,64 @@ body {
     }
 }
 
-@media screen and (max-width: 950.5px) {
-    .contentContainer {
-        width: 80%;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        align-items: center;
+@media screen and (min-width: 1250.5px) and (max-width: 1622.5px) {
+    .bannerText {
+        padding: 0 200px;
+    }
+}
+
+@media screen and (max-width: 1250.5px){
+    .bannerBackground {
+        grid-area: overlap;
+        height: 100%;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-auto-rows: minmax(min-content, max-content);
-        gap: 50px;
-        grid-template-areas:
-          "contentText1"
-          "contentImage1"
-          "contentText2"
-          "contentImage2"
-          "contentText3";
+        justify-items: stretch;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 950.5px){
+    .bannerBackground {
+        grid-area: overlap;
+        height: 100%;
+        display: grid;
+        justify-items: stretch;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr 1fr;
+        gap: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 928.5px){
+    .bannerText {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 625.5px){
+    .bannerContainer {
+        height: 40vh;
     }
 
-    .contentText1 { 
-        padding: 0;
+    .bannerText {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 370.5px){
+    .bannerContainer {
+        height: 30vh;
     }
 
-    .contentText2 { 
-        padding: 0;
+    .bannerText {
+        font-size: 30px;
     }
+}
 
-    .contentText3 { 
+@media screen and (max-width: 242.5px){
+    .bannerText {
         padding: 0;
     }
 }

@@ -9,6 +9,7 @@ import Image from "../image"
 import { navigationTabs, images } from "../../constants"
 
 import styles from "./style.module.css"
+import { navigationContext } from "../../constants/contexts";
 
 const Header = () => {
 
@@ -30,7 +31,9 @@ const Header = () => {
 
     return (
         <div className={styles.headerContainer}>
-            <Navigation navigationTabs={navTabsWithLogo()} />
+            <navigationContext.Consumer>
+                {value => <Navigation activeTab={value} navigationTabs={navTabsWithLogo()} />}
+            </navigationContext.Consumer>
             <div className={styles.menuContainer}>
                 <BurgerMenu />
             </div>

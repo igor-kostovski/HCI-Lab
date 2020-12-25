@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import styles from "./style.module.css"
 
-const Navigation = ({ navigationTabs }) => (
+const Navigation = ({ navigationTabs, activeTab }) => (
     <div className={styles.navigationContainer}>
         {navigationTabs.map(({ name, linkTo, isComponent, component }) => {
             if (isComponent)
@@ -11,7 +11,11 @@ const Navigation = ({ navigationTabs }) => (
             else
                 return (
                     <Link className={styles.navigationTabContainer} to={linkTo} key={name}>
-                        <div className={styles.navigationTabText}>{name.toUpperCase()}</div>
+                        <div className={styles.navigationTabText}>
+                            {
+                                name === activeTab ? <u>{name.toUpperCase()}</u> : name.toUpperCase()
+                            }
+                        </div>
                     </Link>
                 )
         })}

@@ -139,7 +139,7 @@ body {
     opacity: 0.3;
 }
 
-@media screen and (max-width: 950.5px) {
+@media screen and (max-width: 1200.5px) {
     .contentContainer {
         width: 80%;
         margin-top: 50px;
@@ -167,6 +167,18 @@ body {
 
     .contentText3 { 
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 700.5px){
+    .titleContainer {
+        height: 50vh;
+    }
+}
+
+@media screen and (max-width: 500.5px){
+    .titleContainer {
+        height: 43vh;
     }
 }
 
@@ -249,7 +261,13 @@ body {
     }
 
     .bannerText {
-        font-size: 50px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 400.5px){
+    .bannerText {
+        font-size: 35px;
     }
 }
 
@@ -259,12 +277,52 @@ body {
     }
 
     .bannerText {
-        font-size: 30px;
+        font-size: 25px;
     }
 }
 
 @media screen and (max-width: 242.5px){
     .bannerText {
         padding: 0;
+    }
+}
+
+@media screen and (max-width: 1600.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 1350.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 1200.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 870.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 550.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 350.5px){
+    .contentText1, .contentText2, .contentText3 {
+        font-size: 15px;
+        text-align: center;
     }
 }

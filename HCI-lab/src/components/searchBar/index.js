@@ -10,12 +10,10 @@ const onEnter = ({ charCode, target: { value } }, searchAction) => {
 
 const SearchBar = ({ action }) => {
     return (
-        <div className={styles.searchContainer}>
-            <input className={styles.searchInput}
-                type="text"
-                placeholder="Search"
-                onKeyPress={(event) => onEnter(event, action)} />
-        </div>
+        <input className={styles.searchInput}
+            type="text"
+            placeholder="Search"
+            onKeyPress={(event) => onEnter(event, action)} />
     );
 }
 

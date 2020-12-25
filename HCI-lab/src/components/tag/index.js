@@ -23,11 +23,9 @@ const Tag = ({ title, action }) => {
     }
 
     return (
-        <div className={styles.buttons}>
-            <button onClick={handleOnClick} className={getStyle()}>
-                {title}
-            </button>
-        </div>
+        <button onClick={handleOnClick} className={getStyle()}>
+            {title}
+        </button>
     );
 }
 

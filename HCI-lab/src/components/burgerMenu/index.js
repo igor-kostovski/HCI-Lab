@@ -6,8 +6,6 @@ import OutsideClickHandler from 'react-outside-click-handler';
 
 import { navigationTabs } from "../../constants"
 
-import styles from "./style.css"
-
 const BurgerMenu = () => {
 
     const [isOpen, setIsOpen] = useState(false);

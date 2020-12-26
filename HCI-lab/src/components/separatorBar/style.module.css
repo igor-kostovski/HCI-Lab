@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+.separatorContainer {
+    width: 90%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto max-content auto;
+}
+
+.separatorText {
+    margin: 0 25px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+
+.separatorLine {
+    border-top: 2px solid black;
+    position: relative;
+    top: calc(50% - 1px);
+}
+
+@media screen and (max-width: 950.5px) {
+    .separatorText {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width: 650.5px) {
+    .separatorText {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 500.5px) {
+    .separatorText {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400.5px) {
+    .separatorText {
+        font-size: 15px;
+        margin: 0 15px;
+    }
+}

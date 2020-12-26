@@ -1,12 +1,13 @@
 import React from "react"
 import Card from '../components/card'
-import { images, cardType } from "../constants";
+import SeparatorBar from "../components/separatorBar"
+import { images, cardType, aboutUsSections } from "../constants";
 import styles from './style.module.css'
-import Layout from "../layouts"
-
 
 const AboutUsPage = () => (
-  <Layout>
+  <>
+    <SeparatorBar text={aboutUsSections.companyInfo} />
+    <SeparatorBar text={aboutUsSections.crewMembers} />
     <div style={{
       display: 'flex',
       flexDirection: 'column',
@@ -50,7 +51,7 @@ const AboutUsPage = () => (
         <div className={styles.colorOverlay}></div>
       </div>
     </div>
-  </Layout>
+  </>
 )
 
 export default AboutUsPage

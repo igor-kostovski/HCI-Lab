@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 
 import Navigation from "../navigation"
@@ -12,6 +12,7 @@ import styles from "./style.module.css"
 import { navigationContext } from "../../constants/contexts";
 
 const Header = () => {
+    const [activeTab, setActiveTab] = useState(navigationTabs[0].name);
 
     const navTabsWithLogo = () => {
         const [home] = navigationTabs.filter(tab => tab.name === 'Home');
@@ -21,7 +22,7 @@ const Header = () => {
             ...navigationTabs.slice(0, limiter),
             {
                 isComponent: true,
-                component: <Link className={styles.logoContainer} to={home.linkTo}>
+                component: <Link key={'Logo'} className={styles.logoContainer} to={home.linkTo}>
                     <Image name={images.logo} />
                 </Link>
             },
@@ -31,10 +32,9 @@ const Header = () => {
 
     return (
         <div className={styles.headerContainer}>
-            {/* Someone needs to update activeTab value inside this context */}
-            <navigationContext.Consumer>
-                {value => <Navigation activeTab={value} navigationTabs={navTabsWithLogo()} />}
-            </navigationContext.Consumer>
+            <navigationContext.Provider value={{ activeTab, setActiveTab }}>
+                <Navigation navigationTabs={navTabsWithLogo()} />
+            </navigationContext.Provider>
             <div className={styles.menuContainer}>
                 <BurgerMenu />
             </div>

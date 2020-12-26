@@ -5,7 +5,7 @@ import styles from "./style.module.css"
 import { navigationContext } from "../../constants/contexts";
 
 const Navigation = ({ navigationTabs }) => {
-    var { activeTab, setActiveTab } = useContext(navigationContext);
+    var { setActiveTab } = useContext(navigationContext);
 
     return (
         <div className={styles.navigationContainer}>
@@ -14,14 +14,16 @@ const Navigation = ({ navigationTabs }) => {
                     return component;
                 else
                     return (
-                        <Link className={styles.navigationTabContainer} to={linkTo} key={name} onClick={() => setActiveTab(name)}>
+                        <Link className={styles.navigationTabContainer}
+                            to={linkTo}
+                            key={name}
+                            activeClassName={styles.activenNavigationTabContainer}
+                            onClick={() => setActiveTab(name)}>
                             <div className={styles.navigationTabText}>
-                                {
-                                    name === activeTab ? <u>{name.toUpperCase()}</u> : name.toUpperCase()
-                                }
+                                {name.toUpperCase()}
                             </div>
                         </Link>
-                    )
+                    );
             })}
         </div>
     )

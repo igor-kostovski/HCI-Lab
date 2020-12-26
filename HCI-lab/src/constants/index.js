@@ -33,3 +33,19 @@ export const contactInfo = {
     telephone: "TELEPHONE: +385 98 448 518",
     address: "ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA"
 }
+
+export const aboutUsSections = {
+    companyInfo: "COMPANY INFO",
+    crewMembers: "CREW MEMBERS"
+}
+
+export const contactSections = {
+    faq: "FAQ",
+    findUs: "FIND US",
+    contact: "CONTACT"
+}
+
+export const blogSections = {
+    filterSearch: "FILTER & SEARCH",
+    posts: "POSTS"
+}

@@ -17,6 +17,9 @@ const AboutUsPage = () => (
     <SeparatorBar text={aboutUsSections.crewMembers} />
     <div className={styles.crewMembersContainer}>
       <div className={styles.crewMember1}>
+        <div className={styles.crewPosition}>
+          CAPTAIN
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}
@@ -24,6 +27,9 @@ const AboutUsPage = () => (
         />
       </div>
       <div className={styles.crewMember2}>
+        <div className={styles.crewPosition}>
+          MOTORMAN
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}
@@ -31,6 +37,9 @@ const AboutUsPage = () => (
         />
       </div>
       <div className={styles.crewMember3}>
+        <div className={styles.crewPosition}>
+          CHIEF STEWARDESS
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}
@@ -38,6 +47,9 @@ const AboutUsPage = () => (
         />
       </div>
       <div className={styles.crewMember4}>
+        <div className={styles.crewPosition}>
+          CHEF DE CUISINE
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}
@@ -45,6 +57,9 @@ const AboutUsPage = () => (
         />
       </div>
       <div className={styles.crewMember5}>
+        <div className={styles.crewPosition}>
+          SAILOR
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}
@@ -52,6 +67,9 @@ const AboutUsPage = () => (
         />
       </div>
       <div className={styles.crewMember6}>
+        <div className={styles.crewPosition}>
+          STEWARDESS
+        </div>
         <Card image={images.logo}
               cardType={cardType.crew}
               header={"Crew Card"}

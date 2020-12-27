@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 .companyInfoContainer {
   width: 80%;
   margin: 30px auto;
@@ -13,6 +15,19 @@
   grid-template-areas:
     "crewMember1 crewMember2 crewMember3"
     "crewMember4 crewMember5 crewMember6";
+}
+
+.crewPosition {
+  width: max-content;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #000000;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  color: #ffffff;
+  background-color: #bccbd1;
 }
 
 @media screen and (max-width: 1100.5px) {
@@ -42,7 +57,7 @@
 
 
 .crewMember1 { 
-  grid-area: crewMember1; 
+  grid-area: crewMember1;
 }
 
 .crewMember2 { 

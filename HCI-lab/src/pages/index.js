@@ -28,10 +28,10 @@ const IndexPage = () => (
           {homePageTexts.motivationText}
         </div>
         <div className={styles.contentImage1}>
-          <Image name={images.nightImage} isBackground={false}/>
+          <Image name={images.nightImage}/>
         </div>
         <div className={styles.contentImage2}>
-          <Image name={images.groundPlan} isBackground={false}/>
+          <Image name={images.groundPlan}/>
         </div>
       </div>
       <div className={styles.bannerContainer}>

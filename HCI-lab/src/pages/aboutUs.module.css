@@ -19,10 +19,6 @@
   grid-area: crewMember1; 
 }
 
-.crewMember1:active {
-  background: red;
-}
-
 .crewMember2 { 
   grid-area: crewMember2; 
 }

@@ -8,7 +8,7 @@
   margin: 30px auto;
   width: 80%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: minmax();
   gap: 20px 20px;
   grid-template-areas:
     "crewMember1 crewMember2 crewMember3"
@@ -37,9 +37,4 @@
 
 .crewMember6 { 
   grid-area: crewMember6; 
-}
-
-.crewMoreInfo {
-  width: 100%;
-  display: none;
 }

@@ -13,16 +13,11 @@
     background-image: linear-gradient(315deg,#D2E7F0 50%,#AEB8BC 100%);
   }
   
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
-    cursor: pointer;
-  }
-  
   /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
     color: #343131;
+    border-bottom: 1px solid #000000;
   }
 
   .image {
@@ -41,4 +36,49 @@
     font: 15px;
     font-family: 'Raleway', sans-serif;
     text-align: center;
+  }
+
+  .moreInfoContainer {
+    width: 100%;
+  }
+
+  .expandContainer {
+    overflow: hidden;
+  }
+
+  .moreInfoText {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    margin-top: -100%;
+    transition: all 0.8s;
+  }
+
+  .moreInfoTextExpanded {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    margin-top: 0;
+    transition: all 0.3s;
+  }
+
+  .moreInfoButton {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .moreInfoButtonText {
+    border: 2px solid #000000;
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    width: max-content;
+    padding: 8px;
+  }
+
+  .moreInfoButtonText:hover {
+    cursor: pointer;
   }

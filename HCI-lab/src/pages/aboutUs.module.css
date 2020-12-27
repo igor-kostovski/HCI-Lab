@@ -1,0 +1,49 @@
+.companyInfoContainer {
+  width: 80%;
+  margin: 30px auto;
+}
+
+.crewMembersContainer {
+  display: grid;
+  margin: 30px auto;
+  width: 80%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px 20px;
+  grid-template-areas:
+    "crewMember1 crewMember2 crewMember3"
+    "crewMember4 crewMember5 crewMember6";
+}
+
+.crewMember1 { 
+  grid-area: crewMember1; 
+}
+
+.crewMember1:active {
+  background: red;
+}
+
+.crewMember2 { 
+  grid-area: crewMember2; 
+}
+
+.crewMember3 { 
+  grid-area: crewMember3; 
+}
+
+.crewMember4 { 
+  grid-area: crewMember4; 
+}
+
+.crewMember5 { 
+  grid-area: crewMember5; 
+}
+
+.crewMember6 { 
+  grid-area: crewMember6; 
+}
+
+.crewMoreInfo {
+  width: 100%;
+  display: none;
+}

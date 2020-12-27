@@ -6,6 +6,7 @@
 import React from 'react';
 import Layout from "./src/layouts";
 import { NavigationProvider } from './src/constants/contexts';
+import styles from "./src/global/global.css"
 
 export const wrapPageElement = ({ element }) => {
     return <Layout>{element}</Layout>;

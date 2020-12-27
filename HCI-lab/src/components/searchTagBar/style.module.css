@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+}
+
+.tags {
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 100%;
+}
+
+.search {
+    display: inherit;
+    flex-direction: row;
+    align-content: center;
+    width: 20%;
+}

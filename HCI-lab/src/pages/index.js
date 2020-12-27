@@ -9,7 +9,6 @@ import styles from "./index.module.css"
 
 const IndexPage = () => (
   <>
-    <Layout>
       <div className={styles.titleContainer}>
         <div className={styles.titleImage}>
           <Image name={images.titleImage} isBackground={true}/>
@@ -54,7 +53,6 @@ const IndexPage = () => (
           {homePageTexts.bannerText}
         </div>
       </div>
-    </Layout>
   </>
 )
 

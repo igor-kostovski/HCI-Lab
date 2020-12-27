@@ -1,16 +1,22 @@
-import React from "react"
+import React, { useContext } from "react"
+import { navigationContext } from '../constants/contexts';
+
 
 import Header from "../components/header"
 import Footer from "../components/footer"
+import PageTitle from "../components/pageTitle"
 
-import styles from "./style.module.css"
+const Layout = ({ children }) => {
+    var { activeTab } = useContext(navigationContext);
 
-const Layout = ({children}) => (
-    <>
-        <Header />
-        {children}
-        <Footer />
-    </>
-)
+    return (
+        <>
+            <Header />
+            {activeTab !== 'Home' && <PageTitle />}
+            {children}
+            <Footer />
+        </>
+    );
+}
 
 export default Layout

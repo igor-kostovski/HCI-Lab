@@ -48,3 +48,19 @@ export const homePageTexts = {
     motivationText: "ON OUR LUXURY YACHT ALESSANDRO YOU WILL SHARE AN UNFORGETTABLE HOLIDAY AND WE ARE LOOKING FORWARD TO GET TO KNOW YOU, YOUR FAMILY AND FRIENDS.",
     bannerText: "Unique experience delivered with passion"
 }
+
+export const aboutUsSections = {
+    companyInfo: "COMPANY INFO",
+    crewMembers: "CREW MEMBERS"
+}
+
+export const contactSections = {
+    faq: "FAQ",
+    findUs: "FIND US",
+    contact: "CONTACT"
+}
+
+export const blogSections = {
+    filterSearch: "FILTER & SEARCH",
+    posts: "POSTS"
+}

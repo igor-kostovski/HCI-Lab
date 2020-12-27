@@ -19,8 +19,9 @@
   }
 
   .image {
-    margin-top: 15px;
-    width: 50%;
+    border-radius: 15px;
+    margin: 15px;
+    width: 60%;
     transition: transform 0.2s;
     order: 1;
   }
@@ -36,4 +37,14 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     order: 0;
+  }
+
+  @media screen and (max-width: 1100.5px) {
+    .card {
+      flex-direction: column;
+    }
+
+    .image {
+      width: 80%;
+    }
   }

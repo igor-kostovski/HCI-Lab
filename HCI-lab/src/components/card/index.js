@@ -53,8 +53,8 @@ const Card = ({ header, text, image, cardType }) => {
                                 </div>
                             </div>
                             <div className={styles.moreInfoButton}>
-                                <div className={styles.moreInfoButtonText} onClick={() => onClickMoreInfo()}>
-                                    MORE INFO
+                                <div className={isExpanded ? styles.hideInfoButtonText : styles.moreInfoButtonText} onClick={() => onClickMoreInfo()}>
+                                    {isExpanded ? "HIDE INFO" : "MORE INFO"}
                                 </div>
                             </div>
                           </div>}

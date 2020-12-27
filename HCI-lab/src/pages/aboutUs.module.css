@@ -15,6 +15,32 @@
     "crewMember4 crewMember5 crewMember6";
 }
 
+@media screen and (max-width: 1100.5px) {
+  .crewMembersContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax();
+    grid-template-areas:
+      "crewMember1 crewMember2"
+      "crewMember3 crewMember4"
+      "crewMember5 crewMember6";
+  }
+}
+
+@media screen and (max-width: 730.5px) {
+  .crewMembersContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax();
+    grid-template-areas:
+      "crewMember1"
+      "crewMember2"
+      "crewMember3"
+      "crewMember4"
+      "crewMember5"
+      "crewMember6"
+  }
+}
+
+
 .crewMember1 { 
   grid-area: crewMember1; 
 }

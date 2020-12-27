@@ -40,6 +40,13 @@ const Image = ({ name, className }) => {
                       }
                 }
             }
+            sailsImage: file(relativePath: {eq: "sailsImage.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
         }
     `)
     return <Img className={className} fluid={data[name].childImageSharp.fluid} />

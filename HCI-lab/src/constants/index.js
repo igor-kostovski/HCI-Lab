@@ -12,7 +12,8 @@ export const images = {
     facebook: "facebook",
     youtube: "youtube",
     instagram: "instagram",
-    eu: "eu"
+    eu: "eu",
+    sailsImage: "sailsImage"
 }
 
 export const cardType = {

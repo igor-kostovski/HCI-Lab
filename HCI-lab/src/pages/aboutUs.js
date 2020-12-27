@@ -9,7 +9,7 @@ const AboutUsPage = () => (
   <Layout>
     <SeparatorBar text={aboutUsSections.companyInfo} />
       <div className={styles.companyInfoContainer}>
-        <Card image={images.logo}
+        <Card image={images.sailsImage}
             cardType={cardType.info}
             text={"INFO CARD is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
         />

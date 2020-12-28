@@ -47,6 +47,48 @@ const Image = ({ name, className }) => {
                       }
                 }
             }
+            podrug: file(relativePath: {eq: "podrug.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            borovic: file(relativePath: {eq: "borovic.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            kostovski: file(relativePath: {eq: "kostovski.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sisko: file(relativePath: {eq: "sisko.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            zivkovic: file(relativePath: {eq: "zivkovic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            butic: file(relativePath: {eq: "butic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
         }
     `)
     return <Img className={className} fluid={data[name].childImageSharp.fluid} />

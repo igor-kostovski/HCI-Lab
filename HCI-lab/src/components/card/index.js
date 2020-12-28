@@ -27,7 +27,7 @@ const getStylesFor = (card) => {
     }
 }
 
-const Card = ({ header, text, image, cardType }) => {
+const Card = ({ header, text, image, cardType, shortBio }) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
     const onClickMoreInfo = () => {
@@ -51,20 +51,24 @@ const Card = ({ header, text, image, cardType }) => {
             {cardType===cardTypes.crew && <> 
                                             <div className={styles.contentContainer}>
                                                 <div className={isExpanded ? styles.imageTitleTextMoved : styles.imageTitleText}>
-                                                {image && <Image className={styles.image} name={image} />}
+                                                    {image && <Image className={styles.image} name={image} />}
                                                     <div className={styles.container}>
                                                         <h4 className={styles.header}>
                                                             {header}
                                                         </h4>
-                                                        <p className={styles.text}>{text}</p>
+                                                        <ul className={styles.shortBio}>
+                                                            <li>Date of birth: {shortBio.dateOfBirth}</li>
+                                                            <li>Languages: {shortBio.languages}</li>
+                                                            <li>Experience: {shortBio.experience}</li>
+                                                        </ul>
                                                     </div>
                                                 </div>
                                                 <div className={isExpanded ? styles.moreInfoContainerShown : styles.moreInfoContainerHidden}>
                                                     <div className={styles.moreInfoTitle}>
-                                                        LUKA PODRUG
+                                                        {header}
                                                     </div> 
                                                     <div className={styles.moreInfoText}>
-                                                        LOREM IPSUM DOLOREM SIT AMET LOREM IPSUM DOLEROA AFGSDFWE
+                                                        {text}
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,7 +87,8 @@ Card.propTypes = {
     header: PropTypes.string,
     text: PropTypes.string.isRequired,
     image: PropTypes.string,
-    cardType: PropTypes.number
+    cardType: PropTypes.number,
+    shortBio: PropTypes.object
 }
 
 export default Card;

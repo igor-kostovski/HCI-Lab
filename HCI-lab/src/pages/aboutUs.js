@@ -1,7 +1,7 @@
 import React from "react"
 import Card from '../components/card'
 import SeparatorBar from "../components/separatorBar"
-import { images, cardType, aboutUsSections } from "../constants";
+import { images, cardType, aboutUsSections, crewPositions, crewInfo } from "../constants";
 import styles from './aboutUs.module.css'
 import Layout from "../layouts"
 
@@ -18,62 +18,68 @@ const AboutUsPage = () => (
     <div className={styles.crewMembersContainer}>
       <div className={styles.crewMember1}>
         <div className={styles.crewPosition}>
-          CAPTAIN
+          {crewPositions.captain}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.captain.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.captain.name}
+              shortBio={crewInfo.captain.shortInfo}
+              text={crewInfo.captain.longInfo}
         />
       </div>
       <div className={styles.crewMember2}>
         <div className={styles.crewPosition}>
-          MOTORMAN
+          {crewPositions.motorman}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.motorman.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.motorman.name}
+              shortBio={crewInfo.motorman.shortInfo}
+              text={crewInfo.motorman.longInfo}        
         />
       </div>
       <div className={styles.crewMember3}>
         <div className={styles.crewPosition}>
-          CHIEF STEWARDESS
+          {crewPositions.chiefStewardess}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.chiefStewardess.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.chiefStewardess.name}
+              shortBio={crewInfo.chiefStewardess.shortInfo}
+              text={crewInfo.chiefStewardess.longInfo}        
         />
       </div>
       <div className={styles.crewMember4}>
         <div className={styles.crewPosition}>
-          CHEF DE CUISINE
+         {crewPositions.chefDeCuisine}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.chefDeCuisine.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.chefDeCuisine.name}
+              shortBio={crewInfo.chefDeCuisine.shortInfo}
+              text={crewInfo.chefDeCuisine.longInfo}        
         />
       </div>
       <div className={styles.crewMember5}>
         <div className={styles.crewPosition}>
-          SAILOR
+          {crewPositions.sailor}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.sailor.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.sailor.name}
+              shortBio={crewInfo.sailor.shortInfo}
+              text={crewInfo.sailor.longInfo}        
         />
       </div>
       <div className={styles.crewMember6}>
         <div className={styles.crewPosition}>
-          STEWARDESS
+          {crewPositions.stewardess}
         </div>
-        <Card image={images.logo}
+        <Card image={crewInfo.stewardess.foto}
               cardType={cardType.crew}
-              header={"Crew Card"}
-              text={"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."}
+              header={crewInfo.stewardess.name}
+              shortBio={crewInfo.stewardess.shortInfo}
+              text={crewInfo.stewardess.longInfo}        
         />
       </div>
     </div>

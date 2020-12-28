@@ -63,9 +63,9 @@
 
 @media screen and (max-width: 950.5px) {
     .navigationContainer {
-        display: none;
+        justify-content: flex-start;
     }
-    
+
     .navigationTabContainer {
         display: none;
     }

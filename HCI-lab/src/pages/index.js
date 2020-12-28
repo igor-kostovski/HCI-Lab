@@ -1,6 +1,5 @@
 import React from "react"
 
-import Layout from "../layouts"
 import Image from "../components/image"
 
 import {homePageTexts, images} from "../constants"

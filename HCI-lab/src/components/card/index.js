@@ -6,7 +6,7 @@ import crewStyle from "./crew.module.css"
 import infoStyle from "./info.module.css"
 import specsStyle from "./specs.module.css"
 import Image from '../image';
-import { cardType as cardTypes } from '../../constants';
+import { cardType as cardTypes, crewInfo } from '../../constants';
 
 const getStylesFor = (card) => {
     switch (card) {
@@ -57,9 +57,9 @@ const Card = ({ header, text, image, cardType, shortBio }) => {
                                                             {header}
                                                         </h4>
                                                         <ul className={styles.shortBio}>
-                                                            <li>Date of birth: {shortBio.dateOfBirth}</li>
-                                                            <li>Languages: {shortBio.languages}</li>
-                                                            <li>Experience: {shortBio.experience}</li>
+                                                            <li>{crewInfo.labels.dateOfBirth} {shortBio.dateOfBirth}</li>
+                                                            <li>{crewInfo.labels.languages} {shortBio.languages}</li>
+                                                            <li>{crewInfo.labels.experience} {shortBio.experience}</li>
                                                         </ul>
                                                     </div>
                                                 </div>

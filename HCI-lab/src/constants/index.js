@@ -51,6 +51,10 @@ export const blogSections = {
     posts: "POSTS"
 }
 
+export const aboutUsTexts = {
+    companyInfo: "We offer our guests crystal blue cruising around charming islands in the mid Adriatic sea to enrich their vacation with the most pleasant memories. Our port of call is Split, however the route for your crystal blue voyage may be specifically tailored as per your own wish among secluded bays and beautiful beaches on the islands of Vis, Hvar, Korčula, Mljet and so on. On our luxury yacht Alessandro you will share an unforgettable holiday and we are looking forward to get to know you, your family and friends."
+}
+
 export const crewPositions = {
     captain: "CAPTAIN",
     motorman: "MOTORMAN",
@@ -61,6 +65,11 @@ export const crewPositions = {
 }
 
 export const crewInfo = {
+    labels: {
+        dateOfBirth: "Date of birth: ",
+        languages: "Languages: ",
+        experience: "Experience: "
+    },
     captain: {
         name: "Luka Podrug",
         foto: "podrug",
@@ -97,7 +106,7 @@ export const crewInfo = {
         shortInfo: {
             dateOfBirth: "02.05.1998.",
             languages: "Croatian, English",
-            experience: "1 years"
+            experience: "1 year"
         },
         longInfo: "Chef de cuisine or executive chef is the main chef in a restaurant. The chef de cuisine is in charge of all other functional chefs in the kitchen. The chef de cuisine is in charge of all activities related to the kitchen, which usually includes creating menus, managing kitchen staff, ordering and purchasing stock and equipment, plating design, and ensuring that all meals served in the restaurant are both delicious and nutritious."
     },

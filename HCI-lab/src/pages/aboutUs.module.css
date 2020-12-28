@@ -7,6 +7,13 @@
   line-height: 25px;
 }
 
+@media screen and (max-width: 550.5px) {
+  .companyInfoContainer {
+    font-size: 15px;
+    line-height: 17px;
+  }
+}
+
 .crewMembersContainer {
   display: grid;
   margin: 30px auto;

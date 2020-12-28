@@ -26,6 +26,21 @@
     cursor: pointer;
 }
 
+.activenNavigationTabContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 27px;
+    border-bottom: 2px solid transparent;
+    margin: auto;
+    border-bottom: 2px solid #ffffff;
+}
+
 .navigationTabText {
     transition: transform 0.2s;
 }
@@ -48,9 +63,9 @@
 
 @media screen and (max-width: 950.5px) {
     .navigationContainer {
-        display: none;
+        justify-content: flex-start;
     }
-    
+
     .navigationTabContainer {
         display: none;
     }

@@ -3,10 +3,9 @@ import Card from '../components/card'
 import SeparatorBar from "../components/separatorBar"
 import { images, cardType, aboutUsSections, crewPositions, crewInfo, aboutUsTexts } from "../constants";
 import styles from './aboutUs.module.css'
-import Layout from "../layouts"
 
 const AboutUsPage = () => (
-  <Layout>
+  <>
     <SeparatorBar text={aboutUsSections.companyInfo} />
       <div className={styles.companyInfoContainer}>
         <Card image={images.sailsImage}
@@ -83,7 +82,7 @@ const AboutUsPage = () => (
         />
       </div>
     </div>
-  </Layout>
+  </>
 )
 
 export default AboutUsPage

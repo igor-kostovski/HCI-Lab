@@ -10,7 +10,7 @@
   margin: 30px auto;
   width: 80%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: minmax();
+  grid-template-rows: 1fr 1fr;
   gap: 20px 20px;
   grid-template-areas:
     "crewMember1 crewMember2 crewMember3"
@@ -33,7 +33,7 @@
 @media screen and (max-width: 1100.5px) {
   .crewMembersContainer {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: minmax();
+    grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "crewMember1 crewMember2"
       "crewMember3 crewMember4"
@@ -44,7 +44,7 @@
 @media screen and (max-width: 730.5px) {
   .crewMembersContainer {
     grid-template-columns: 1fr;
-    grid-template-rows: minmax();
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
       "crewMember1"
       "crewMember2"

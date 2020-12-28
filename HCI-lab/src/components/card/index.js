@@ -31,7 +31,6 @@ const Card = ({ header, text, image, cardType }) => {
     const [isExpanded, setIsExpanded] = useState(false)
 
     const onClickMoreInfo = () => {
-        console.log(this)
         setIsExpanded(!isExpanded);
     }
 
@@ -39,25 +38,43 @@ const Card = ({ header, text, image, cardType }) => {
 
     return (
         <div className={styles.card}>
-            {image && <Image className={styles.image} name={image} />}
-            <div className={styles.container}>
-                <h4 className={styles.header}>
-                    {header}
-                </h4>
-                <p className={styles.text}>{text}</p>
-            </div>
-            {cardType===cardTypes.crew && <div className={styles.moreInfoContainer}>
-                            <div className={styles.expandContainer}>
-                                <div className={isExpanded ? styles.moreInfoTextExpanded : styles.moreInfoText}>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                </div>
-                            </div>
-                            <div className={styles.moreInfoButton}>
-                                <div className={isExpanded ? styles.hideInfoButtonText : styles.moreInfoButtonText} onClick={() => onClickMoreInfo()}>
-                                    {isExpanded ? "HIDE INFO" : "MORE INFO"}
-                                </div>
-                            </div>
-                          </div>}
+            {cardType!==cardTypes.crew && <>
+                                            {image && <Image className={styles.image} name={image} />}
+                                            <div className={styles.container}>
+                                                <h4 className={styles.header}>
+                                                    {header}
+                                                </h4>
+                                                <p className={styles.text}>{text}</p>
+                                            </div>
+                                          </>
+            }
+            {cardType===cardTypes.crew && <> 
+                                            <div className={styles.contentContainer}>
+                                                <div className={isExpanded ? styles.imageTitleTextMoved : styles.imageTitleText}>
+                                                {image && <Image className={styles.image} name={image} />}
+                                                    <div className={styles.container}>
+                                                        <h4 className={styles.header}>
+                                                            {header}
+                                                        </h4>
+                                                        <p className={styles.text}>{text}</p>
+                                                    </div>
+                                                </div>
+                                                <div className={isExpanded ? styles.moreInfoContainerShown : styles.moreInfoContainerHidden}>
+                                                    <div className={styles.moreInfoTitle}>
+                                                        LUKA PODRUG
+                                                    </div> 
+                                                    <div className={styles.moreInfoText}>
+                                                        LOREM IPSUM DOLOREM SIT AMET LOREM IPSUM DOLEROA AFGSDFWE
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className={styles.moreInfoButton}>
+                                                <div className={isExpanded ? styles.hideInfoButtonText : styles.moreInfoButtonText} onClick={() => onClickMoreInfo()}>
+                                                    {isExpanded ? "HIDE INFO" : "MORE INFO"}
+                                                </div>
+                                            </div>
+                                          </>
+            }
         </div>
     );
 }

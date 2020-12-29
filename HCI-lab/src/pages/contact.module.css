@@ -34,31 +34,6 @@ textarea:focus {
         "question4 question5 question6";
 }
 
-@media screen and (max-width: 1100.5px) {
-    .faqContainer {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas: 
-        "question1 question2"
-        "question3 question4"
-        "question5 question6";
-    }
-}
-
-@media screen and (max-width: 730.5px) {
-    .faqContainer {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: 
-        "question1"
-        "question2"
-        "question3"
-        "question4"
-        "question5"
-        "question6";
-    }
-}
-
 .question1 {
     grid-area: question1;
     display: grid;
@@ -228,4 +203,83 @@ textarea:focus {
 .addressValue {
     grid-area: addressValue;
     text-align: left;
+}
+
+@media screen and (max-width: 1100.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1 question2"
+        "question3 question4"
+        "question5 question6";
+    }
+}
+
+@media screen and (max-width: 730.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1"
+        "question2"
+        "question3"
+        "question4"
+        "question5"
+        "question6";
+    }
+
+    .findUsContainer {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 550.5px) {
+    .findUsContainer {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 450.5px) {
+    .findUsContainer {
+        font-size: 20px;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content max-content max-content max-content max-content max-content;
+        grid-template-areas: 
+            "telephoneLabel"
+            "telephoneValue"
+            "emailLabel"
+            "emailValue"
+            "addressLabel"
+            "addressValue";
+    }
+
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380.5px) {
+    .findUsContainer {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 350.5px) {
+    .findUsContainer {
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 280.5px) {
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        max-width: 60%;
+        margin: 0 auto;
+    }
 }

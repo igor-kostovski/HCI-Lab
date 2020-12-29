@@ -24,8 +24,56 @@ textarea:focus {
 
 .faqContainer {
     width: 80%;
+    margin: 30px auto;
     display: grid;
-    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 0;
+    grid-template-areas: 
+        "question1 question2 question3"
+        "question4 question5 question6";
+}
+
+.question1 {
+    grid-area: question1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question2 {
+    grid-area: question2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question3 {
+    grid-area: question3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question4 {
+    grid-area: question4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question5 {
+    grid-area: question5;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question6 {
+    grid-area: question6;
+    display: grid;
+    align-items: center;
+    justify-content: center;
 }
 
 .contactFormContainer {

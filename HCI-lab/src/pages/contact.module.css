@@ -232,11 +232,44 @@ textarea:focus {
     .findUsContainer {
         font-size: 20px;
     }
+
+    .contactFormContainer {
+        font-size: 20px;
+    }
+
+    .contactFormNameValue, .contactFormEmailValue, .contactFormMessageValue {
+        font-size: 17px;
+    }
 }
 
 @media screen and (max-width: 550.5px) {
     .findUsContainer {
         font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 480.5px) {
+    .contactFormContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 50px max-content 50px max-content 150px 50px;
+        gap: 10px 0;
+        grid-template-areas: 
+            "contactFormNameLabel"
+            "contactFormNameValue"
+            "contactFormEmailLabel"
+            "contactFormEmailValue"
+            "contactFormMessageLabel"
+            "contactFormMessageValue"
+            "submitButton";
+    }
+
+    .contactFormNameLabel, .contactFormEmailLabel, .contactFormMessageLabel {
+        text-align: center;
+    }
+
+    .submitButton {
+        margin-top: 10px;
+        padding: 7px;
     }
 }
 

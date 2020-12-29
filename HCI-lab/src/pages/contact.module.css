@@ -28,10 +28,35 @@ textarea:focus {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px 0;
+    gap: 30px 20px;
     grid-template-areas: 
         "question1 question2 question3"
         "question4 question5 question6";
+}
+
+@media screen and (max-width: 1100.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1 question2"
+        "question3 question4"
+        "question5 question6";
+    }
+}
+
+@media screen and (max-width: 730.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1"
+        "question2"
+        "question3"
+        "question4"
+        "question5"
+        "question6";
+    }
 }
 
 .question1 {

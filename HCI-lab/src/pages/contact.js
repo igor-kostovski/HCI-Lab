@@ -3,7 +3,7 @@ import React from "react"
 import SeparatorBar from "../components/separatorBar"
 import Card from "../components/card"
 
-import { contactSections } from "../constants"
+import { contactSections, cardType as cardTypes } from "../constants"
 
 import styles from "./contact.module.css"
 
@@ -12,27 +12,33 @@ const ContactPage = () => (
     <SeparatorBar text={contactSections.faq} />
     <div className={styles.faqContainer}>
       <div className={styles.question1}>
-        <Card header={"Lorem ipsum"}
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
               text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
       </div>
       <div className={styles.question2}>
-        <Card header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
+              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike. Iza toga je otisao popiti kavu u kafanu Domacin i narucio je akciju bijela kava plus coca cola"}/>
       </div>
       <div className={styles.question3}>
-        <Card header={"Lorem ipsum"}
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
               text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
       </div>
       <div className={styles.question4}>
-        <Card header={"Lorem ipsum"}
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
               text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
       </div>
       <div className={styles.question5}>
-        <Card header={"Lorem ipsum"}
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
               text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
       </div>
       <div className={styles.question6}>
-        <Card header={"Lorem ipsum"}
+        <Card cardType={cardTypes.crew}
+              header={"Lorem ipsum"}
               text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
       </div>
     </div>

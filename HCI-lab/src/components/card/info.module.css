@@ -1,24 +1,14 @@
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
-    border-radius: 10%;
-    width: 600px;
-    height: 300px;
+    border-radius: 35px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     background-image: linear-gradient(315deg,#D2E7F0 50%,#AEB8BC 100%);
-
-    /* For testing */
-    margin-left: 10%;
-    margin-top: 10%;
-  }
-  
-  /* On mouse-over, add a deeper shadow */
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    margin: 0 auto;
   }
   
   /* Add some padding inside the card container */
@@ -29,8 +19,9 @@
   }
 
   .image {
-    margin-top: 15px;
-    width: 100%;
+    border-radius: 15px;
+    margin: 15px;
+    width: 60%;
     transition: transform 0.2s;
     order: 1;
   }
@@ -46,4 +37,14 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     order: 0;
+  }
+
+  @media screen and (max-width: 1100.5px) {
+    .card {
+      flex-direction: column-reverse;
+    }
+
+    .image {
+      width: 80%;
+    }
   }

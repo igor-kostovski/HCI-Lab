@@ -146,3 +146,8 @@ export const crewInfo = {
         longInfo: "A sailor is a person who works aboard a watercraft as part of its crew, and may work in any one of a number of different fields that are related to the operation and maintenance of a ship. Sailors hold a variety of professions and ranks, each of which carries unique responsibilities which are integral to the successful operation of an ocean-going vessel."
     }
 }
+
+export const buttonTexts = {
+    hide: "HIDE INFO",
+    show: "MORE INFO"
+}

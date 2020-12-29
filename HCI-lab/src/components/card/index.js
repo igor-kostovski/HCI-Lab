@@ -6,7 +6,7 @@ import crewStyle from "./crew.module.css"
 import infoStyle from "./info.module.css"
 import specsStyle from "./specs.module.css"
 import Image from '../image';
-import { cardType as cardTypes, crewInfo } from '../../constants';
+import { cardType as cardTypes, crewInfo, buttonTexts } from '../../constants';
 
 const getStylesFor = (card) => {
     switch (card) {
@@ -74,7 +74,7 @@ const Card = ({ header, text, image, cardType, shortBio }) => {
                                             </div>
                                             <div className={styles.moreInfoButton}>
                                                 <div className={isExpanded ? styles.hideInfoButtonText : styles.moreInfoButtonText} onClick={() => onClickMoreInfo()}>
-                                                    {isExpanded ? "HIDE INFO" : "MORE INFO"}
+                                                    {isExpanded ? buttonTexts.hide : buttonTexts.show}
                                                 </div>
                                             </div>
                                           </>

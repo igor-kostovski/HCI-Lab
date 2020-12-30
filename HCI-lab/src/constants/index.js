@@ -19,7 +19,12 @@ export const images = {
     krknjasi: "krknjasi",
     zlatniRat: "zlatniRat",
     sakarun: "sakarun",
-    palmizana: "palmizana"
+    palmizana: "palmizana",
+    bed: 'bed',
+    cog: 'cog',
+    deck: 'deck',
+    entertainment: 'entertainment',
+    jetSki: 'jetSki'
 }
 
 export const cardType = {

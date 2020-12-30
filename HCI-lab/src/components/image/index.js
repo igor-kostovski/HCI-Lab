@@ -90,9 +90,44 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            bed: file(relativePath: {eq: "bed.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            cog: file(relativePath: {eq: "cog.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            deck: file(relativePath: {eq: "deck.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            entertainment: file(relativePath: {eq: "entertainment.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            jetSki: file(relativePath: {eq: "jetSki.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
         }
     `)
-    return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{height: `100%`}}/> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)
+    return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{ height: `100%` }} /> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)
 }
 
 export default Image

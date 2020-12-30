@@ -1,0 +1,32 @@
+.container {
+    margin: 10px auto;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    gap: 5px 5px;
+    grid-template-areas:
+      "specs1 specs2"
+      "specs3 specs4";
+}
+
+.gridItem1 {
+    grid-area: specs1;
+    justify-self: center;
+}
+
+.gridItem2 {
+    grid-area: specs2;
+    justify-self: center;
+}
+
+.gridItem3 {
+    grid-area: specs3;
+    justify-self: center;
+}
+
+.gridItem4 {
+    grid-area: specs4;
+    justify-self: center;
+}

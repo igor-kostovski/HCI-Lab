@@ -13,18 +13,24 @@ const SpecsPage = () => (
         text='test' />
     </div>
     <div className={styles.gridItem2}>
-      <Card header='Accomodation'
+      <Card header='Deck & Fly brigde'
         image={images.logo}
         cardType={cardType.specs}
         text='test' />
     </div>
     <div className={styles.gridItem3}>
-      <Card header='Onboard entertainment'
+      <Card header='Accomodation'
         image={images.logo}
         cardType={cardType.specs}
         text='test' />
     </div>
     <div className={styles.gridItem4}>
+      <Card header='Onboard entertainment'
+        image={images.logo}
+        cardType={cardType.specs}
+        text='test' />
+    </div>
+    <div className={styles.gridItem5}>
       <Card header='Water sports'
         image={images.logo}
         cardType={cardType.specs}

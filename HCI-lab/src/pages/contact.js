@@ -3,7 +3,7 @@ import React from "react"
 import SeparatorBar from "../components/separatorBar"
 import Card from "../components/card"
 
-import { contactSections, cardType as cardTypes } from "../constants"
+import { contactSections, cardType as cardTypes, faq, findUs, contactForm } from "../constants"
 
 import styles from "./contact.module.css"
 
@@ -13,53 +13,53 @@ const ContactPage = () => (
     <div className={styles.faqContainer}>
       <div className={styles.question1}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+              header={faq.questions.question1}
+              text={faq.answers.answer1}/>
       </div>
       <div className={styles.question2}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike. Iza toga je otisao popiti kavu u kafanu Domacin i narucio je akciju bijela kava plus coca cola"}/>
+              header={faq.questions.question2}
+              text={faq.answers.answer2}/>      
       </div>
       <div className={styles.question3}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+              header={faq.questions.question3}
+              text={faq.answers.answer3}/>      
       </div>
       <div className={styles.question4}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+              header={faq.questions.question4}
+              text={faq.answers.answer4}/>
       </div>
       <div className={styles.question5}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+              header={faq.questions.question5}
+              text={faq.answers.answer5}/>
       </div>
       <div className={styles.question6}>
         <Card cardType={cardTypes.crew}
-              header={"Lorem ipsum"}
-              text={"Lorem ipsum dolorem sit amet. Ante je isao do skole na lijep i suncan dan. Zakasnio je na prvi sat matematike."}/>
+              header={faq.questions.question6}
+              text={faq.answers.answer6}/>
       </div>
     </div>
     <SeparatorBar text={contactSections.findUs} />
     <div className={styles.findUsContainer}>
-      <div className={styles.telephoneLabel}>Telephone: </div>
-      <div className={styles.telephoneValue}>+385 98 448 518</div>
-      <div className={styles.emailLabel}>E-mail: </div>
-      <div className={styles.emailValue}>info@delphinus-yachts.com</div>
-      <div className={styles.addressLabel}>Address: </div>
-      <div className={styles.addressValue}>Put Radoševca 9 21000 Split, Croatia</div>
+      <div className={styles.telephoneLabel}>{findUs.labels.telephone}</div>
+      <div className={styles.telephoneValue}>{findUs.values.telephone}</div>
+      <div className={styles.emailLabel}>{findUs.labels.email}</div>
+      <div className={styles.emailValue}>{findUs.values.email}</div>
+      <div className={styles.addressLabel}>{findUs.labels.address}</div>
+      <div className={styles.addressValue}>{findUs.values.address}</div>
     </div>
     <SeparatorBar text={contactSections.contact} />
     <div className={styles.contactFormContainer}>
-      <div className={styles.contactFormNameLabel}>Name: </div>
+      <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
       <input className={styles.contactFormNameValue}></input>
-      <div className={styles.contactFormEmailLabel}>E-mail: </div>
+      <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
       <input className={styles.contactFormEmailValue}></input>
-      <div className={styles.contactFormMessageLabel}>Message:</div>
+      <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
       <textarea className={styles.contactFormMessageValue}></textarea>
-      <div className={styles.submitButton}>SUBMIT</div>
+      <div className={styles.submitButton}>{contactForm.buttonText}</div>
     </div>
   </>
 )

@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+ul {
+  list-style: none;
+}
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -23,8 +27,7 @@
     color: #343131;
     grid-area: text;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: max-content auto;
     grid-template-areas: 
       "title"
       "shortBio";
@@ -44,6 +47,13 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     grid-area: title;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header:only-child {
+    grid-row: 1 / -1;
   }
 
   .text {
@@ -180,4 +190,5 @@
   .shortBio {
     font-family: 'Raleway', sans-serif;
     grid-area: shortBio;
+    padding: 0 25px;
   }

@@ -25,6 +25,8 @@ const GalleryPage = () => (
         </div>
         <div className={styles.bottomLeftImageCircle}>
         </div>
+        <div className={styles.rightArrowEnabled}/>
+        <div className={styles.leftArrowDisabled}/>
     </div>
   </>
 )

@@ -43,21 +43,21 @@ const Image = ({ name, className, isBackground }) => {
             }
             titleImage: file(relativePath: {eq: "titleImage.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 1500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
             }
             nightImage: file(relativePath: {eq: "nightImage.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
             }
             groundPlan: file(relativePath: {eq: "groundPlan.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -86,6 +86,41 @@ const Image = ({ name, className, isBackground }) => {
             palmizana: file(relativePath: {eq: "palmizana.jpeg"}) {
                 childImageSharp {
                     fluid(maxWidth: 500) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            },
+            firstPerson: file(relativePath: {eq: "firstPerson.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            },
+            frogPerspective: file(relativePath: {eq: "frogPerspective.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            },
+            nextToIsland: file(relativePath: {eq: "nextToIsland.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            },
+            openSeaWithoutSails: file(relativePath: {eq: "openSeaWithoutSails.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            },
+            openSeaWithSails: file(relativePath: {eq: "openSeaWithSails.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }

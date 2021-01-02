@@ -54,6 +54,7 @@
     grid-area: overlap;
     margin-top: -500px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .bottomImageCircle {
@@ -64,6 +65,7 @@
     grid-area: overlap;
     margin-top: 500px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .rightImageCircle {
@@ -74,6 +76,7 @@
     grid-area: overlap;
     margin-right: -500px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .leftImageCircle {
@@ -84,6 +87,7 @@
     grid-area: overlap;
     margin-right: 500px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .topRightImageCircle {
@@ -95,6 +99,7 @@
     margin-top: -350px;
     margin-right: -350px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .topLeftImageCircle {
@@ -106,6 +111,7 @@
     margin-top: -350px;
     margin-right: 350px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .bottomRightImageCircle {
@@ -117,6 +123,7 @@
     margin-top: 350px;
     margin-right: -350px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .bottomLeftImageCircle {
@@ -128,6 +135,7 @@
     margin-top: 350px;
     margin-right: 350px;
     transition: all 0.5s;
+    overflow: hidden;
 }
 
 .topImageCircle:hover, .bottomImageCircle:hover, .rightImageCircle:hover, .leftImageCircle:hover, .topRightImageCircle:hover, .topLeftImageCircle:hover, .bottomRightImageCircle:hover, .bottomLeftImageCircle:hover {

@@ -80,3 +80,14 @@ export const galleryTabsForTagBar = [
     {title: "MAIN DECK"},
     {title: "RECREATION"},
 ]
+
+export const exteriorImages = [
+    "firstPerson",
+    "frogPerspective",
+    "nextToIsland",
+    "nightImage",
+    "openSeaWithoutSails",
+    "openSeaWithSails",
+    "groundPlan",
+    "titleImage"
+]

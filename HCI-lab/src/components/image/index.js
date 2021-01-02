@@ -97,6 +97,13 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            sailsImage: file(relativePath: {eq: "sailsImage.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             cog: file(relativePath: {eq: "cog.png"}) {
                 childImageSharp {
                     fluid(maxWidth: 250) {
@@ -104,9 +111,23 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            podrug: file(relativePath: {eq: "podrug.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             deck: file(relativePath: {eq: "deck.png"}) {
                 childImageSharp {
                     fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                    }
+              }
+            }
+            borovic: file(relativePath: {eq: "borovic.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -118,9 +139,79 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            kostovski: file(relativePath: {eq: "kostovski.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             jetSki: file(relativePath: {eq: "jetSki.png"}) {
                 childImageSharp {
                     fluid(maxWidth: 250) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sisko: file(relativePath: {eq: "sisko.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            zivkovic: file(relativePath: {eq: "zivkovic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            butic: file(relativePath: {eq: "butic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            bag: file(relativePath: {eq: "bag.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            cancel: file(relativePath: {eq: "cancel.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sailing: file(relativePath: {eq: "sailing.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            payment: file(relativePath: {eq: "payment.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            dish: file(relativePath: {eq: "dish.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            helmet: file(relativePath: {eq: "helmet.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { Link } from "gatsby"
 
 import Navigation from "../navigation"
@@ -7,11 +7,12 @@ import BurgerMenu from "../burgerMenu"
 import Image from "../image"
 
 import { navigationTabs, images } from "../../constants"
+import { navigationContext } from "../../constants/contexts";
 
 import styles from "./style.module.css"
 
 const Header = () => {
-
+    var { setActiveTab } = useContext(navigationContext);
     const navTabsWithLogo = () => {
         const [home] = navigationTabs.filter(tab => tab.name === 'Home');
         const limiter = (navigationTabs.length / 2) + navigationTabs.length % 2;
@@ -20,7 +21,7 @@ const Header = () => {
             ...navigationTabs.slice(0, limiter),
             {
                 isComponent: true,
-                component: <Link key={'Logo'} className={styles.logoContainer} to={home.linkTo}>
+                component: <Link onClick={() => setActiveTab(home.name)} key={'Logo'} className={styles.logoContainer} to={home.linkTo}>
                     <Image name={images.logo} />
                 </Link>
             },

@@ -8,7 +8,14 @@ const SpecsPage = () => (
   <div className={styles.container}>
     <div className={styles.gridItem1}>
       <Card header='Technical info'
-        image={images.cog} />
+        image={images.cog}>
+        <ul>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+          <li>Test</li>
+        </ul>
+      </Card>
     </div>
     <div className={styles.gridItem2}>
       <Card header='Deck & Fly bridge'

@@ -22,9 +22,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.captain.foto}
           cardType={cardType.crew}
           header={crewInfo.captain.name}
-          shortBio={crewInfo.captain.shortInfo}
-          text={crewInfo.captain.longInfo}
-        />
+          shortBio={crewInfo.captain.shortInfo}>
+          {crewInfo.captain.longInfo}
+        </Card>
       </div>
       <div className={styles.crewMember2}>
         <div className={styles.crewPosition2}>
@@ -33,9 +33,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.motorman.foto}
           cardType={cardType.crew}
           header={crewInfo.motorman.name}
-          shortBio={crewInfo.motorman.shortInfo}
-          text={crewInfo.motorman.longInfo}
-        />
+          shortBio={crewInfo.motorman.shortInfo}>
+          {crewInfo.motorman.longInfo}
+        </Card>
       </div>
       <div className={styles.crewMember3}>
         <div className={styles.crewPosition3}>
@@ -44,9 +44,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.chiefStewardess.foto}
           cardType={cardType.crew}
           header={crewInfo.chiefStewardess.name}
-          shortBio={crewInfo.chiefStewardess.shortInfo}
-          text={crewInfo.chiefStewardess.longInfo}
-        />
+          shortBio={crewInfo.chiefStewardess.shortInfo}>
+          {crewInfo.chiefStewardess.longInfo}
+        </Card>
       </div>
       <div className={styles.crewMember4}>
         <div className={styles.crewPosition4}>
@@ -55,9 +55,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.chefDeCuisine.foto}
           cardType={cardType.crew}
           header={crewInfo.chefDeCuisine.name}
-          shortBio={crewInfo.chefDeCuisine.shortInfo}
-          text={crewInfo.chefDeCuisine.longInfo}
-        />
+          shortBio={crewInfo.chefDeCuisine.shortInfo}>
+          {crewInfo.chefDeCuisine.longInfo}
+        </Card>
       </div>
       <div className={styles.crewMember5}>
         <div className={styles.crewPosition5}>
@@ -66,9 +66,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.sailor.foto}
           cardType={cardType.crew}
           header={crewInfo.sailor.name}
-          shortBio={crewInfo.sailor.shortInfo}
-          text={crewInfo.sailor.longInfo}
-        />
+          shortBio={crewInfo.sailor.shortInfo}>
+          {crewInfo.sailor.longInfo}
+        </Card>
       </div>
       <div className={styles.crewMember6}>
         <div className={styles.crewPosition6}>
@@ -77,9 +77,9 @@ const AboutUsPage = () => (
         <Card image={crewInfo.stewardess.foto}
           cardType={cardType.crew}
           header={crewInfo.stewardess.name}
-          shortBio={crewInfo.stewardess.shortInfo}
-          text={crewInfo.stewardess.longInfo}
-        />
+          shortBio={crewInfo.stewardess.shortInfo}>
+          {crewInfo.stewardess.longInfo}
+        </Card>
       </div>
     </div>
   </>

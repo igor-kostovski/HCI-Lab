@@ -5,7 +5,7 @@ import styles from './style.module.css';
 import Image from '../image';
 import { crewInfo, buttonTexts } from '../../constants';
 
-const Card = ({ header, text, image, shortBio }) => {
+const Card = ({ header, children, image, shortBio }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
@@ -30,7 +30,7 @@ const Card = ({ header, text, image, shortBio }) => {
                         {header}
                     </div>
                     <div className={styles.moreInfoText}>
-                        {text}
+                        {children}
                     </div>
                 </div>
             </div>
@@ -45,7 +45,6 @@ const Card = ({ header, text, image, shortBio }) => {
 
 Card.propTypes = {
     header: PropTypes.string,
-    text: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     shortBio: PropTypes.object
 }

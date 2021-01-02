@@ -19,69 +19,31 @@ const GalleryPage = () => {
   return(
     <div className={styles.galleryContainer}>
       <Slider {...settings}>
-        <div className={styles.gallerySlide}>
-          <div className={styles.outerCircleLine}>
+        {galleryTabs.map((galleryTab, index) => (
+          <div key={index} className={styles.gallerySlide}>
+            <div className={styles.circleLayout}>
+              <div className={styles.centerCircle}>{galleryTab}</div>
+              <div className={styles.outerCircleLine}>
+              </div>
+              <div className={styles.topImageCircle}>
+              </div>
+              <div className={styles.bottomImageCircle}>
+              </div>
+              <div className={styles.rightImageCircle}>
+              </div>
+              <div className={styles.leftImageCircle}>
+              </div>
+              <div className={styles.topRightImageCircle}>
+              </div>
+              <div className={styles.topLeftImageCircle}>
+              </div>
+              <div className={styles.bottomRightImageCircle}>
+              </div>
+              <div className={styles.bottomLeftImageCircle}>
+              </div>
+            </div>
           </div>
-          <div className={styles.centerCircle}></div>
-          <div className={styles.topImageCircle}>
-          </div>
-          <div className={styles.bottomImageCircle}>
-          </div>
-          <div className={styles.rightImageCircle}>
-          </div>
-          <div className={styles.leftImageCircle}>
-          </div>
-          <div className={styles.topRightImageCircle}>
-          </div>
-          <div className={styles.topLeftImageCircle}>
-          </div>
-          <div className={styles.bottomRightImageCircle}>
-          </div>
-          <div className={styles.bottomLeftImageCircle}>
-          </div>
-        </div>
-        <div className={styles.gallerySlide}>
-          <div className={styles.outerCircleLine}>
-          </div>
-          <div className={styles.centerCircle}></div>
-          <div className={styles.topImageCircle}>
-          </div>
-          <div className={styles.bottomImageCircle}>
-          </div>
-          <div className={styles.rightImageCircle}>
-          </div>
-          <div className={styles.leftImageCircle}>
-          </div>
-          <div className={styles.topRightImageCircle}>
-          </div>
-          <div className={styles.topLeftImageCircle}>
-          </div>
-          <div className={styles.bottomRightImageCircle}>
-          </div>
-          <div className={styles.bottomLeftImageCircle}>
-          </div>
-        </div>
-        <div className={styles.gallerySlide}>
-          <div className={styles.outerCircleLine}>
-          </div>
-          <div className={styles.centerCircle}></div>
-          <div className={styles.topImageCircle}>
-          </div>
-          <div className={styles.bottomImageCircle}>
-          </div>
-          <div className={styles.rightImageCircle}>
-          </div>
-          <div className={styles.leftImageCircle}>
-          </div>
-          <div className={styles.topRightImageCircle}>
-          </div>
-          <div className={styles.topLeftImageCircle}>
-          </div>
-          <div className={styles.bottomRightImageCircle}>
-          </div>
-          <div className={styles.bottomLeftImageCircle}>
-          </div>
-        </div>
+        ))}
       </Slider>
     </div>
   )

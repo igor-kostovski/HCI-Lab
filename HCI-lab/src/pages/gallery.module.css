@@ -1,59 +1,129 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 .galleryContainer {
-    padding: 40px;
-    padding-top: 0px;
-    padding-bottom: 125px;
-    margin-top: 50px;
-    max-width: 100%;
-    height: 80vh;
+    padding-right: 100px;
+    padding-left: 100px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
-
-.gallerySlide {
-    width: 100%;
-    height: 80vh;
-    margin-top: 75px;
-    transition: all 1s;
+.circleLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlap";
+    justify-items: center;
+    align-items: center;
+    margin: 30px 0;
 }
 
 .gallerySlide:focus {
     outline: none;
 }
 
-.outerCircleLine, .centerCircle, .topImageCircle, .bottomImageCircle, .rightImageCircle, .leftImageCircle, .topRightImageCircle, .topLeftImageCircle, .bottomRightImageCircle, .bottomLeftImageCircle {
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.outerCircleLine {
-    width: 600px;
-    height: 600px;
-    border: 1px dotted #000000;
-}
-
-.centerCircle, .topImageCircle, .bottomImageCircle, .rightImageCircle, .leftImageCircle, .topRightImageCircle, .topLeftImageCircle, .bottomRightImageCircle, .bottomLeftImageCircle {
-    position: relative;
-    border: 1px solid #000000;
-}
-
 .centerCircle {
-    width: 200px;
-    height: 200px;
-    top: -410px;
-    transform: scale(1.4);
+    border-radius: 50%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
     background-color: #65b8db;
-    color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
-    font-family: 'Raleway', sans-serif;
+    width: 200px;
+    height: 200px;
+    grid-area: overlap;
 }
 
-.topImageCircle, .bottomImageCircle, .rightImageCircle, .leftImageCircle, .topRightImageCircle, .topLeftImageCircle, .bottomRightImageCircle, .bottomLeftImageCircle {
+.outerCircleLine {
+    border-radius: 50%;
+    border: 2px dotted #000000;
+    width: 500px;
+    height: 500px;
+    grid-area: overlap;
+}
+
+.topImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
     width: 150px;
     height: 150px;
-    transition: all 1s;
+    grid-area: overlap;
+    margin-top: -500px;
+    transition: all 0.5s;
+}
+
+.bottomImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-top: 500px;
+    transition: all 0.5s;
+}
+
+.rightImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-right: -500px;
+    transition: all 0.5s;
+}
+
+.leftImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-right: 500px;
+    transition: all 0.5s;
+}
+
+.topRightImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-top: -350px;
+    margin-right: -350px;
+    transition: all 0.5s;
+}
+
+.topLeftImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-top: -350px;
+    margin-right: 350px;
+    transition: all 0.5s;
+}
+
+.bottomRightImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-top: 350px;
+    margin-right: -350px;
+    transition: all 0.5s;
+}
+
+.bottomLeftImageCircle {
+    border-radius: 50%;
+    border: 1px solid #000000;
+    width: 150px;
+    height: 150px;
+    grid-area: overlap;
+    margin-top: 350px;
+    margin-right: 350px;
+    transition: all 0.5s;
 }
 
 .topImageCircle:hover, .bottomImageCircle:hover, .rightImageCircle:hover, .leftImageCircle:hover, .topRightImageCircle:hover, .topLeftImageCircle:hover, .bottomRightImageCircle:hover, .bottomLeftImageCircle:hover {
@@ -61,128 +131,521 @@
     cursor: pointer;
 }
 
-.topImageCircle {
-    top: -870px;
-}
-
-.bottomImageCircle {
-    top: -430px;
-}
-
-.rightImageCircle {
-    top: -885px;
-    left: 300px;
-}
-
-.leftImageCircle {
-    top: -1035px;
-    right: 300px;
-}
-
-.topRightImageCircle {
-    top: -1390px;
-    left: 210px;
-}
-
-.topLeftImageCircle {
-    top: -1540px;
-    right: 210px;
-}
-
-.bottomRightImageCircle {
-    top: -1270px;
-    left: 210px;
-}
-
-.bottomLeftImageCircle {
-    top: -1420px;
-    right: 210px;
-}
-
-@media screen and (max-width: 1050.5px) {
-    .gallerySlide {
-        height: 650px;
-        transform: scale(0.8);
+@media screen and (max-width: 1000.5px) {
+    .centerCircle {
+        width: 175px;
+        height: 175px;
     }
+    
+    .outerCircleLine {
+        width: 450px;
+        height: 450px;
+    }
+    
+    .topImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: -450px;
+    }
+    
+    .bottomImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: 450px;
+    }
+    
+    .rightImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-right: -450px;
+    }
+    
+    .leftImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-right: 450px;
+    }
+    
+    .topRightImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: -300px;
+        margin-right: -300px;
+    }
+    
+    .topLeftImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: -300px;
+        margin-right: 300px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: 300px;
+        margin-right: -300px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 125px;
+        height: 125px;
+        margin-top: 300px;
+        margin-right: 300px;
+    }
+}
 
+@media screen and (max-width: 850.5px) {
     .galleryContainer {
-        padding-bottom: 0;
-        margin-top: -20px;
+        padding-right: 50px;
+        padding-left: 50px;
     }
 }
 
-@media screen and (max-width: 800.5px) {
-    .gallerySlide {
-        height: 540px;
-        transform: scale(0.6);
+@media screen and (max-width: 750.5px) {
+    .centerCircle {
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
     }
-
-    .galleryContainer {
-        margin-bottom: -90px;
-        margin-top: -90px;
+    
+    .outerCircleLine {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .topImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -400px;
+    }
+    
+    .bottomImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 400px;
+    }
+    
+    .rightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-right: -400px;
+    }
+    
+    .leftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-right: 400px;
+    }
+    
+    .topRightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -275px;
+        margin-right: -275px;
+    }
+    
+    .topLeftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -275px;
+        margin-right: 275px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 275px;
+        margin-right: -275px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 275px;
+        margin-right: 275px;
     }
 }
 
 @media screen and (max-width: 650.5px) {
-    .gallerySlide {
-        height: 500px;
-        transform: scale(0.5);
-        margin-top: -50px;
+    .galleryContainer {
+        padding-right: 30px;
+        padding-left: 30px;
     }
 
     .outerCircleLine {
-        visibility: hidden;
+        width: 350px;
+        height: 350px;
     }
-
-    .galleryContainer {
-        margin-bottom: -250px;
-        margin-top: 0px;
+    
+    .topImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -350px;
+    }
+    
+    .bottomImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 350px;
+    }
+    
+    .rightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-right: -350px;
+    }
+    
+    .leftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-right: 350px;
+    }
+    
+    .topRightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -250px;
+        margin-right: -250px;
+    }
+    
+    .topLeftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: -250px;
+        margin-right: 250px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 250px;
+        margin-right: -250px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 100px;
+        height: 100px;
+        margin-top: 250px;
+        margin-right: 250px;
     }
 }
 
-@media screen and (max-width: 540.5px) {
-    .gallerySlide {
-        height: 450px;
-        transform: scale(0.4);
-        margin-top: -50px;
+@media screen and (max-width: 580.5px) {
+    .centerCircle {
+        width: 125px;
+        height: 125px;
+        font-size: 17px;
     }
 
-    .galleryContainer {
-        margin-bottom: -310px;
-        margin-top: -20px;
+    .outerCircleLine {
+        width: 325px;
+        height: 325px;
+    }
+    
+    .topImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -325px;
+    }
+    
+    .bottomImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 325px;
+    }
+    
+    .rightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-right: -325px;
+    }
+    
+    .leftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-right: 325px;
+    }
+    
+    .topRightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -225px;
+        margin-right: -225px;
+    }
+    
+    .topLeftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -225px;
+        margin-right: 225px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 225px;
+        margin-right: -225px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 225px;
+        margin-right: 225px;
     }
 }
 
-@media screen and (max-width: 420.5px) {
-    .gallerySlide {
-        height: 450px;
-        transform: scale(0.35);
-        margin-top: -50px;
+@media screen and (max-width: 500.5px) {
+    .outerCircleLine {
+        width: 290px;
+        height: 290px;
+    }
+    
+    .topImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -295px;
+    }
+    
+    .bottomImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 295px;
+    }
+    
+    .rightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-right: -295px;
+    }
+    
+    .leftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-right: 295px;
+    }
+    
+    .topRightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -205px;
+        margin-right: -205px;
+    }
+    
+    .topLeftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: -205px;
+        margin-right: 205px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 205px;
+        margin-right: -205px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 80px;
+        height: 80px;
+        margin-top: 205px;
+        margin-right: 205px;
     }
 }
 
-@media screen and (max-width: 350.5px) {
-    .gallerySlide {
-        height: 400px;
-        transform: scale(0.3);
-        margin-top: -50px;
+@media screen and (max-width: 450.5px) {
+    .centerCircle {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
     }
 
-    .galleryContainer {
-        margin-bottom: -360px;
-        margin-top: -20px;
+    .outerCircleLine {
+        width: 225px;
+        height: 225px;
+    }
+    
+    .topImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: -225px;
+    }
+    
+    .bottomImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: 225px;
+    }
+    
+    .rightImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-right: -225px;
+    }
+    
+    .leftImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-right: 225px;
+    }
+    
+    .topRightImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: -160px;
+        margin-right: -160px;
+    }
+    
+    .topLeftImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: -160px;
+        margin-right: 160px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: 160px;
+        margin-right: -160px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 65px;
+        height: 65px;
+        margin-top: 160px;
+        margin-right: 160px;
     }
 }
 
-@media screen and (max-width: 300.5px) {
-    .gallerySlide {
-        height: 400px;
-        transform: scale(0.26);
-        margin-top: -50px;
+@media screen and (max-width: 375.5px) {
+    .centerCircle {
+        width: 100px;
+        height: 100px;
+        font-size: 14px;
     }
 
-    .galleryContainer {
-        margin-bottom: -370px;
-        margin-top: -20px;
+    .outerCircleLine {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .topImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: -200px;
+    }
+    
+    .bottomImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: 200px;
+    }
+    
+    .rightImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-right: -200px;
+    }
+    
+    .leftImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-right: 200px;
+    }
+    
+    .topRightImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: -140px;
+        margin-right: -140px;
+    }
+    
+    .topLeftImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: -140px;
+        margin-right: 140px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: 140px;
+        margin-right: -140px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 60px;
+        height: 60px;
+        margin-top: 140px;
+        margin-right: 140px;
+    }
+}
+
+@media screen and (max-width: 340.5px) {
+    .centerCircle {
+        width: 80px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .outerCircleLine {
+        width: 175px;
+        height: 175px;
+    }
+    
+    .topImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: -175px;
+    }
+    
+    .bottomImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: 175px;
+    }
+    
+    .rightImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-right: -175px;
+    }
+    
+    .leftImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-right: 175px;
+    }
+    
+    .topRightImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: -120px;
+        margin-right: -120px;
+    }
+    
+    .topLeftImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: -120px;
+        margin-right: 120px;
+    }
+    
+    .bottomRightImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: 120px;
+        margin-right: -120px;
+    }
+    
+    .bottomLeftImageCircle {
+        width: 50px;
+        height: 50px;
+        margin-top: 120px;
+        margin-right: 120px;
     }
 }

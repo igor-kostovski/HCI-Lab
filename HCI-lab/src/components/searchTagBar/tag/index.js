@@ -7,7 +7,7 @@ const Tag = ({ title, action }) => {
 
     const handleOnClick = () => {
         setIsClicked(!isClicked);
-        action();
+        action(title);
     }
 
     const getStyle = () => {

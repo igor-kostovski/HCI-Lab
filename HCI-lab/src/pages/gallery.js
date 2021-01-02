@@ -1,24 +1,38 @@
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 
 import Slider from "react-slick";
 
-import { galleryTabs } from "../constants"
+import TagBar from "../components/searchTagBar"
+
+import { galleryTabs, galleryTabsForTagBar } from "../constants"
 
 import styles from "./gallery.module.css"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const GalleryPage = () => {
-  var settings = {
+  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const gallerySlider = useRef(null);
+
+  const galleryTagChange = (clickedTag) => {
+    let newIndex = galleryTabsForTagBar.findIndex(tab => tab.title === clickedTag)
+    gallerySlider.current.slickGoTo(newIndex)
+  }
+
+  var carouselSettings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    beforeChange: (oldIndex, newIndex) => setActiveTabIndex(newIndex)
   }
+
   return(
+    <>
+    <TagBar tags={galleryTabsForTagBar} onTagAction={galleryTagChange}/>
     <div className={styles.galleryContainer}>
-      <Slider {...settings}>
+      <Slider ref={gallerySlider} {...carouselSettings }>
         {galleryTabs.map((galleryTab, index) => (
           <div key={index} className={styles.gallerySlide}>
             <div className={styles.circleLayout}>
@@ -46,6 +60,7 @@ const GalleryPage = () => {
         ))}
       </Slider>
     </div>
+    </>
   )
 }
 

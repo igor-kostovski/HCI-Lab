@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+.tagBarContainer {
+    height: max-content;
+}
+
 .galleryContainer {
     padding-right: 100px;
     padding-left: 100px;
@@ -587,8 +591,8 @@
 
 @media screen and (max-width: 340.5px) {
     .centerCircle {
-        width: 80px;
-        height: 80px;
+        width: 90px;
+        height: 90px;
         font-size: 14px;
     }
 

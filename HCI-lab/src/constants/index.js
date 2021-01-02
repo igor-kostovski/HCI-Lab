@@ -72,3 +72,11 @@ export const galleryTabs = [
     "MAIN DECK",
     "RECREATION"
 ]
+
+export const galleryTabsForTagBar = [
+    {title: "EXTERIOR"},
+    {title: "INTERIOR"},
+    {title: "FLY BRIDGE"},
+    {title: "MAIN DECK"},
+    {title: "RECREATION"},
+]

@@ -20,7 +20,13 @@ export const images = {
     krknjasi: "krknjasi",
     zlatniRat: "zlatniRat",
     sakarun: "sakarun",
-    palmizana: "palmizana"
+    palmizana: "palmizana",
+    travel: 'bag',
+    cancel: 'cancel',
+    sailing: 'sailing',
+    payment: 'payment',
+    food: 'dish',
+    safety: 'helmet'
 }
 
 export const cardType = {

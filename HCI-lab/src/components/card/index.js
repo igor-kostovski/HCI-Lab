@@ -12,7 +12,7 @@ const Card = ({ header, children, image, shortBio }) => {
         <div className={styles.card}>
             <div className={styles.contentContainer}>
                 <div className={isExpanded ? styles.imageTitleTextMoved : styles.imageTitleText}>
-                    <Image className={styles.image} name={image} />
+                    <Image className={shortBio ? styles.roundedImage : styles.image} name={image} />
                     <div className={styles.container}>
                         <h4 className={styles.header}>
                             {header}

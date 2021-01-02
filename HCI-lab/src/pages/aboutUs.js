@@ -3,16 +3,16 @@ import Card from '../components/card'
 import SeparatorBar from "../components/separatorBar"
 import { images, cardType, aboutUsSections, crewPositions, crewInfo, aboutUsTexts } from "../constants";
 import styles from './aboutUs.module.css'
+import InfoCard from "../components/infoCard";
 
 const AboutUsPage = () => (
   <>
     <SeparatorBar text={aboutUsSections.companyInfo} />
-      <div className={styles.companyInfoContainer}>
-        <Card image={images.sailsImage}
-            cardType={cardType.info}
-            text={aboutUsTexts.companyInfo}
-        />
-      </div>
+    <div className={styles.companyInfoContainer}>
+      <InfoCard image={images.sailsImage}
+        text={aboutUsTexts.companyInfo}
+      />
+    </div>
     <SeparatorBar text={aboutUsSections.crewMembers} />
     <div className={styles.crewMembersContainer}>
       <div className={styles.crewMember1}>
@@ -20,10 +20,10 @@ const AboutUsPage = () => (
           {crewPositions.captain}
         </div>
         <Card image={crewInfo.captain.foto}
-              cardType={cardType.crew}
-              header={crewInfo.captain.name}
-              shortBio={crewInfo.captain.shortInfo}
-              text={crewInfo.captain.longInfo}
+          cardType={cardType.crew}
+          header={crewInfo.captain.name}
+          shortBio={crewInfo.captain.shortInfo}
+          text={crewInfo.captain.longInfo}
         />
       </div>
       <div className={styles.crewMember2}>
@@ -31,10 +31,10 @@ const AboutUsPage = () => (
           {crewPositions.motorman}
         </div>
         <Card image={crewInfo.motorman.foto}
-              cardType={cardType.crew}
-              header={crewInfo.motorman.name}
-              shortBio={crewInfo.motorman.shortInfo}
-              text={crewInfo.motorman.longInfo}        
+          cardType={cardType.crew}
+          header={crewInfo.motorman.name}
+          shortBio={crewInfo.motorman.shortInfo}
+          text={crewInfo.motorman.longInfo}
         />
       </div>
       <div className={styles.crewMember3}>
@@ -42,21 +42,21 @@ const AboutUsPage = () => (
           {crewPositions.chiefStewardess}
         </div>
         <Card image={crewInfo.chiefStewardess.foto}
-              cardType={cardType.crew}
-              header={crewInfo.chiefStewardess.name}
-              shortBio={crewInfo.chiefStewardess.shortInfo}
-              text={crewInfo.chiefStewardess.longInfo}        
+          cardType={cardType.crew}
+          header={crewInfo.chiefStewardess.name}
+          shortBio={crewInfo.chiefStewardess.shortInfo}
+          text={crewInfo.chiefStewardess.longInfo}
         />
       </div>
       <div className={styles.crewMember4}>
         <div className={styles.crewPosition4}>
-         {crewPositions.chefDeCuisine}
+          {crewPositions.chefDeCuisine}
         </div>
         <Card image={crewInfo.chefDeCuisine.foto}
-              cardType={cardType.crew}
-              header={crewInfo.chefDeCuisine.name}
-              shortBio={crewInfo.chefDeCuisine.shortInfo}
-              text={crewInfo.chefDeCuisine.longInfo}        
+          cardType={cardType.crew}
+          header={crewInfo.chefDeCuisine.name}
+          shortBio={crewInfo.chefDeCuisine.shortInfo}
+          text={crewInfo.chefDeCuisine.longInfo}
         />
       </div>
       <div className={styles.crewMember5}>
@@ -64,10 +64,10 @@ const AboutUsPage = () => (
           {crewPositions.sailor}
         </div>
         <Card image={crewInfo.sailor.foto}
-              cardType={cardType.crew}
-              header={crewInfo.sailor.name}
-              shortBio={crewInfo.sailor.shortInfo}
-              text={crewInfo.sailor.longInfo}        
+          cardType={cardType.crew}
+          header={crewInfo.sailor.name}
+          shortBio={crewInfo.sailor.shortInfo}
+          text={crewInfo.sailor.longInfo}
         />
       </div>
       <div className={styles.crewMember6}>
@@ -75,10 +75,10 @@ const AboutUsPage = () => (
           {crewPositions.stewardess}
         </div>
         <Card image={crewInfo.stewardess.foto}
-              cardType={cardType.crew}
-              header={crewInfo.stewardess.name}
-              shortBio={crewInfo.stewardess.shortInfo}
-              text={crewInfo.stewardess.longInfo}        
+          cardType={cardType.crew}
+          header={crewInfo.stewardess.name}
+          shortBio={crewInfo.stewardess.shortInfo}
+          text={crewInfo.stewardess.longInfo}
         />
       </div>
     </div>

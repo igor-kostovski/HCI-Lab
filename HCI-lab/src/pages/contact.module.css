@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
+
+input {
+    padding-left: 10px;
+    border: 1px solid #000000;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    padding-left: 10px;
+    padding-top: 5px;
+    border: 1px solid #000000;
+    resize: none;
+    height: 100%;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.faqContainer {
+    width: 80%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px 20px;
+    grid-template-areas: 
+        "question1 question2 question3"
+        "question4 question5 question6";
+}
+
+.question1 {
+    grid-area: question1;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question2 {
+    grid-area: question2;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question3 {
+    grid-area: question3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question4 {
+    grid-area: question4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question5 {
+    grid-area: question5;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.question6 {
+    grid-area: question6;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactFormContainer {
+    width: max-content;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px 50px 150px 50px;
+    gap: 30px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    grid-template-areas: 
+        "contactFormNameLabel contactFormNameValue"
+        "contactFormEmailLabel contactFormEmailValue"
+        "contactFormMessageLabel contactFormMessageValue"
+        "submitButton submitButton";
+}
+
+.contactFormNameLabel {
+    grid-area: contactFormNameLabel;
+    text-align: right;
+    font-weight: 700;
+    display: grid;
+    align-items: center;
+}
+
+.contactFormNameValue {
+    grid-area: contactFormNameValue;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.contactFormEmailLabel {
+    grid-area: contactFormEmailLabel;
+    text-align: right;
+    font-weight: 700;
+    display: grid;
+    align-items: center;
+}
+
+.contactFormEmailValue {
+    grid-area: contactFormEmailValue;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.contactFormMessageLabel {
+    grid-area: contactFormMessageLabel;
+    text-align: right;
+    font-weight: 700;
+    display: grid;
+    align-items: center;
+}
+
+.contactFormMessageValue {
+    grid-area: contactFormMessageValue;
+    border-radius: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+}
+
+.submitButton {
+    grid-area: submitButton;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: all 0.7s;
+    background-color: #ffffff;
+}
+
+.submitButton:hover {
+    color: #ffffff;
+    background-color: #000000;
+    cursor: pointer;
+}
+
+.findUsContainer {
+    width: max-content;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 30px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    grid-template-areas: 
+        "telephoneLabel telephoneValue"
+        "emailLabel emailValue"
+        "addressLabel addressValue";
+}
+
+.telephoneLabel {
+    grid-area: telephoneLabel;
+    text-align: right;
+    font-weight: 700;
+}
+
+.telephoneValue {
+    grid-area: telephoneValue;
+    text-align: left;
+}
+
+.emailLabel {
+    grid-area: emailLabel;
+    text-align: right;
+    font-weight: 700;
+}
+
+.emailValue {
+    grid-area: emailValue;
+    text-align: left;
+}
+
+.addressLabel {
+    grid-area: addressLabel;
+    text-align: right;
+    font-weight: 700;
+}
+
+.addressValue {
+    grid-area: addressValue;
+    text-align: left;
+}
+
+@media screen and (max-width: 1100.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1 question2"
+        "question3 question4"
+        "question5 question6";
+    }
+}
+
+@media screen and (max-width: 730.5px) {
+    .faqContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "question1"
+        "question2"
+        "question3"
+        "question4"
+        "question5"
+        "question6";
+    }
+
+    .findUsContainer {
+        font-size: 20px;
+    }
+
+    .contactFormContainer {
+        font-size: 20px;
+    }
+
+    .contactFormNameValue, .contactFormEmailValue, .contactFormMessageValue {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 550.5px) {
+    .findUsContainer {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 480.5px) {
+    .contactFormContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 50px max-content 50px max-content 150px 50px;
+        gap: 10px 0;
+        grid-template-areas: 
+            "contactFormNameLabel"
+            "contactFormNameValue"
+            "contactFormEmailLabel"
+            "contactFormEmailValue"
+            "contactFormMessageLabel"
+            "contactFormMessageValue"
+            "submitButton";
+    }
+
+    .contactFormNameLabel, .contactFormEmailLabel, .contactFormMessageLabel {
+        text-align: center;
+    }
+
+    .submitButton {
+        margin-top: 10px;
+        padding: 7px;
+    }
+}
+
+@media screen and (max-width: 450.5px) {
+    .findUsContainer {
+        font-size: 20px;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content max-content max-content max-content max-content max-content;
+        grid-template-areas: 
+            "telephoneLabel"
+            "telephoneValue"
+            "emailLabel"
+            "emailValue"
+            "addressLabel"
+            "addressValue";
+    }
+
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 380.5px) {
+    .findUsContainer {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 350.5px) {
+    .findUsContainer {
+        font-size: 17px;
+        max-width: 100%;
+    }
+
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 280.5px) {
+    .telephoneLabel, .telephoneValue, .emailLabel, .emailValue, .addressLabel, .addressValue {
+        max-width: 60%;
+        margin: 0 auto;
+    }
+}

@@ -90,9 +90,100 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            sailsImage: file(relativePath: {eq: "sailsImage.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            podrug: file(relativePath: {eq: "podrug.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            borovic: file(relativePath: {eq: "borovic.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            kostovski: file(relativePath: {eq: "kostovski.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sisko: file(relativePath: {eq: "sisko.jpeg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            zivkovic: file(relativePath: {eq: "zivkovic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            butic: file(relativePath: {eq: "butic.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            bag: file(relativePath: {eq: "bag.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            cancel: file(relativePath: {eq: "cancel.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            sailing: file(relativePath: {eq: "sailing.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            payment: file(relativePath: {eq: "payment.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            dish: file(relativePath: {eq: "dish.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            helmet: file(relativePath: {eq: "helmet.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
         }
     `)
-    return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{height: `100%`}}/> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)
+    return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{ height: `100%` }} /> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)
 }
 
 export default Image

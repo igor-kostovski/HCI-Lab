@@ -44,7 +44,7 @@ const Card = ({ header, children, image, shortBio }) => {
 }
 
 Card.propTypes = {
-    header: PropTypes.string,
+    header: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     shortBio: PropTypes.object
 }

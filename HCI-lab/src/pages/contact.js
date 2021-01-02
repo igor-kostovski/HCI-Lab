@@ -3,7 +3,7 @@ import React from "react"
 import SeparatorBar from "../components/separatorBar"
 import Card from "../components/card"
 
-import { contactSections, cardType as cardTypes, faq, findUs, contactForm } from "../constants"
+import { contactSections, faq, findUs, contactForm, images } from "../constants"
 
 import styles from "./contact.module.css"
 
@@ -12,34 +12,34 @@ const ContactPage = () => (
     <SeparatorBar text={contactSections.faq} />
     <div className={styles.faqContainer}>
       <div className={styles.question1}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question1}
-              text={faq.answers.answer1}/>
+        <Card image={images.facebook} header={faq.questions.question1}>
+          {faq.answers.answer1}
+        </Card>
       </div>
       <div className={styles.question2}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question2}
-              text={faq.answers.answer2}/>      
+        <Card image={images.facebook} header={faq.questions.question2}>
+          {faq.answers.answer2}
+        </Card>
       </div>
       <div className={styles.question3}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question3}
-              text={faq.answers.answer3}/>      
+        <Card image={images.facebook} header={faq.questions.question3}>
+          {faq.answers.answer3}
+        </Card>
       </div>
       <div className={styles.question4}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question4}
-              text={faq.answers.answer4}/>
+        <Card image={images.facebook} header={faq.questions.question4}>
+          {faq.answers.answer4}
+        </Card>
       </div>
       <div className={styles.question5}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question5}
-              text={faq.answers.answer5}/>
+        <Card image={images.facebook} header={faq.questions.question5}>
+          {faq.answers.answer5}
+        </Card>
       </div>
       <div className={styles.question6}>
-        <Card cardType={cardTypes.crew}
-              header={faq.questions.question6}
-              text={faq.answers.answer6}/>
+        <Card image={images.facebook} header={faq.questions.question6}>
+          {faq.answers.answer6}
+        </Card>
       </div>
     </div>
     <SeparatorBar text={contactSections.findUs} />

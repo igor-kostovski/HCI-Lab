@@ -1,5 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+.rodalContainer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: max-content auto max-content;
+    gap: 0 70px;
+    align-items: center;
+}
+
+.rodalLeftArrowDisabled {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #000000;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid transparent;
+    transition: all 0.6s;
+    cursor: not-allowed;
+}
+
+.rodalRightArrowDisabled {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #000000;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    transition: all 0.6s;
+    cursor: not-allowed;
+}
+
+.rodalLeftArrowEnabled {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #65b8db;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid transparent;
+    transition: all 0.6s;
+}
+
+.rodalRightArrowEnabled {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #65b8db;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    transition: all 0.6s;
+}
+
+.rodalLeftArrowEnabled:hover, .rodalRightArrowEnabled:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
 .tagBarContainer {
     height: max-content;
 }
@@ -143,7 +198,35 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 1500.5px) {
+    .rodalContainer {
+        gap: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1400.5px) {
+    .rodalContainer {
+        gap: 0 40px;
+    }
+}
+
+@media screen and (max-width: 1250.5px) {
+    .rodalContainer {
+        gap: 0 35px;
+    }
+}
+
+@media screen and (max-width: 1100.5px) {
+    .rodalContainer {
+        gap: 0 35px;
+    }
+}
+
 @media screen and (max-width: 1000.5px) {
+    .rodalContainer {
+        gap: 0 30px;
+    }
+
     .centerCircle {
         width: 175px;
         height: 175px;
@@ -208,6 +291,10 @@
 }
 
 @media screen and (max-width: 850.5px) {
+    .rodalContainer {
+        gap: 0 25px;
+    }
+
     .galleryContainer {
         padding-right: 50px;
         padding-left: 50px;
@@ -280,6 +367,38 @@
 }
 
 @media screen and (max-width: 650.5px) {
+    .rodalContainer {
+        gap: 0 25px;
+    }
+
+    .rodalLeftArrowDisabled {
+        border-right: 15px solid #000000;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 15px solid transparent;
+    }
+    
+    .rodalRightArrowDisabled {
+        border-left: 15px solid #000000;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-right: 15px solid transparent;
+    }
+    
+    .rodalLeftArrowEnabled {
+        border-right: 15px solid #65b8db;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-left: 15px solid transparent;
+    }
+    
+    .rodalRightArrowEnabled {
+        border-left: 15px solid #65b8db;
+        border-top: 25px solid transparent;
+        border-bottom: 25px solid transparent;
+        border-right: 15px solid transparent;
+    }
+
     .galleryContainer {
         padding-right: 30px;
         padding-left: 30px;
@@ -409,6 +528,38 @@
 }
 
 @media screen and (max-width: 500.5px) {
+    .rodalContainer {
+        gap: 0 20px;
+    }
+
+    .rodalLeftArrowDisabled {
+        border-right: 10px solid #000000;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 10px solid transparent;
+    }
+    
+    .rodalRightArrowDisabled {
+        border-left: 10px solid #000000;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-right: 10px solid transparent;
+    }
+    
+    .rodalLeftArrowEnabled {
+        border-right: 10px solid #65b8db;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-left: 10px solid transparent;
+    }
+    
+    .rodalRightArrowEnabled {
+        border-left: 10px solid #65b8db;
+        border-top: 18px solid transparent;
+        border-bottom: 18px solid transparent;
+        border-right: 10px solid transparent;
+    }
+
     .outerCircleLine {
         width: 290px;
         height: 290px;
@@ -468,6 +619,38 @@
 }
 
 @media screen and (max-width: 450.5px) {
+    .rodalContainer {
+        gap: 0 15px;
+    }
+
+    .rodalLeftArrowDisabled {
+        border-right: 8px solid #000000;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 8px solid transparent;
+    }
+    
+    .rodalRightArrowDisabled {
+        border-left: 8px solid #000000;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 8px solid transparent;
+    }
+    
+    .rodalLeftArrowEnabled {
+        border-right: 8px solid #65b8db;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 8px solid transparent;
+    }
+    
+    .rodalRightArrowEnabled {
+        border-left: 8px solid #65b8db;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-right: 8px solid transparent;
+    }
+
     .centerCircle {
         width: 100px;
         height: 100px;

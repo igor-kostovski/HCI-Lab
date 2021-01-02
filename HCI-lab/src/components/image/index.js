@@ -92,7 +92,7 @@ const Image = ({ name, className, isBackground }) => {
             }
             bed: file(relativePath: {eq: "bed.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -106,7 +106,7 @@ const Image = ({ name, className, isBackground }) => {
             }
             cog: file(relativePath: {eq: "cog.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -120,7 +120,7 @@ const Image = ({ name, className, isBackground }) => {
             }
             deck: file(relativePath: {eq: "deck.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                     }
               }
@@ -134,7 +134,7 @@ const Image = ({ name, className, isBackground }) => {
             }
             entertainment: file(relativePath: {eq: "entertainment.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -148,7 +148,7 @@ const Image = ({ name, className, isBackground }) => {
             }
             jetSki: file(relativePath: {eq: "jetSki.png"}) {
                 childImageSharp {
-                    fluid(maxWidth: 250) {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }

@@ -1,39 +1,37 @@
 import React from "react"
 
-import Card from '../components/testCard';
-import { cardType, images } from "../constants";
+import Card from '../components/card';
+import { images, faq } from "../constants";
 import styles from './specs.module.css'
 
 const SpecsPage = () => (
   <div className={styles.container}>
-    <div className={styles.gridItem1}>
-      <Card header='Technical info'
-        image={images.cog}>
-        <ul>
-          <li>Test</li>
-          <li>Test</li>
-          <li>Test</li>
-          <li>Test</li>
-        </ul>
+    <div className={styles.techInfo}>
+      <Card image={images.cog} header='Technical info'>
+        {faq.answers.answer1}
       </Card>
     </div>
-    <div className={styles.gridItem2}>
-      <Card header='Deck & Fly bridge'
-        image={images.deck} />
+    <div className={styles.deckAndFlyBridge}>
+      <Card image={images.deck} header='Deck & Fly bridge'>
+        {faq.answers.answer2}
+      </Card>
     </div>
-    <div className={styles.gridItem3}>
-      <Card header='Accomodation'
-        image={images.bed} />
+    <div className={styles.accomodation}>
+      <Card image={images.bed} header='Accomodation'>
+        {faq.answers.answer3}
+      </Card>
     </div>
-    <div className={styles.gridItem4}>
-      <Card header='Onboard entertainment'
-        image={images.entertainment} />
+    <div className={styles.entertainment}>
+      <Card image={images.entertainment} header='Onboard entertainment'>
+        {faq.answers.answer4}
+      </Card>
     </div>
-    <div className={styles.gridItem5}>
-      <Card header='Water sports'
-        image={images.jetSki} />
+    <div className={styles.waterSports}>
+      <Card image={images.jetSki} header='Water sports'>
+        {faq.answers.answer5}
+      </Card>
     </div>
   </div>
-)
+);
 
 export default SpecsPage

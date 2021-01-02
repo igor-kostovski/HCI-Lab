@@ -64,3 +64,11 @@ export const blogSections = {
     filterSearch: "FILTER & SEARCH",
     posts: "POSTS"
 }
+
+export const galleryTabs = [
+    "EXTERIOR",
+    "INTERIOR",
+    "FLY BRIDGE",
+    "MAIN DECK",
+    "RECREATION"
+]

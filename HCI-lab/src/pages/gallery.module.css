@@ -1,39 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
 .galleryContainer {
-    height: 800px;
-    padding-top: 150px;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 100% 100% 100%;
-    grid-template-areas: 
-        "galleryLeftSlide galleryMainSlide galleryRightSlide";
+    padding: 40px;
+    padding-top: 0px;
+    padding-bottom: 125px;
+    margin-top: 50px;
+    max-width: 100%;
+    height: 80vh;
 }
 
-.galleryMainSlide {
-    grid-area: galleryMainSlide;
+.gallerySlide {
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: 80vh;
+    margin-top: 75px;
     transition: all 1s;
 }
 
-.galleryLeftSlide {
-    grid-area: galleryLeftSlide;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    right: 100%;
-    transition: all 1s;
-}
-
-.galleryRightSlide {
-    grid-area: galleryRightSlide;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    right: 100%;
-    transition: all 1s;
+.gallerySlide:focus {
+    outline: none;
 }
 
 .outerCircleLine, .centerCircle, .topImageCircle, .bottomImageCircle, .rightImageCircle, .leftImageCircle, .topRightImageCircle, .topLeftImageCircle, .bottomRightImageCircle, .bottomLeftImageCircle {
@@ -115,91 +99,32 @@
     right: 210px;
 }
 
-.rightArrowEnabled, .rightArrowDisabled, .leftArrowEnabled, .leftArrowDisabled {
-    width: 0px;
-    height: 0px;
-    position: relative;
-    margin: 0 auto;
-    transition: all 1s;
-}
-
-.leftArrowEnabled {
-    top: -1840px;
-    right: 570px;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-right: 60px solid #65b8db;
-}
-
-.leftArrowDisabled {
-    top: -1840px;
-    right: 570px;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-right: 60px solid #000000;
-}
-
-.rightArrowEnabled {
-    top: -1760px;
-    left: 570px;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-left: 60px solid #65b8db;
-}
-
-.rightArrowDisabled {
-    top: -1760px;
-    left: 570px;
-    border-top: 40px solid transparent;
-    border-bottom: 40px solid transparent;
-    border-left: 60px solid #000000;
-}
-
-.rightArrowEnabled:hover, .leftArrowEnabled:hover {
-    transform: scale(1.3);
-    cursor: pointer;
-}
-
-@media screen and (max-width: 1300.5px) {
-    .rightArrowEnabled, .rightArrowDisabled {
-        left: 450px;
-    }
-
-    .leftArrowEnabled, .leftArrowDisabled {
-        right: 450px;
-    }
-}
-
 @media screen and (max-width: 1050.5px) {
-    .galleryContainer {
-        height: 680px;
-        padding-top: 65px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 650px;
         transform: scale(0.8);
+    }
+
+    .galleryContainer {
+        padding-bottom: 0;
+        margin-top: -20px;
     }
 }
 
 @media screen and (max-width: 800.5px) {
-    .galleryContainer {
-        height: 580px;
-        padding-top: 0;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 540px;
         transform: scale(0.6);
+    }
+
+    .galleryContainer {
+        margin-bottom: -90px;
+        margin-top: -90px;
     }
 }
 
 @media screen and (max-width: 650.5px) {
-    .galleryContainer {
-        height: 470px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 500px;
         transform: scale(0.5);
         margin-top: -50px;
@@ -208,26 +133,28 @@
     .outerCircleLine {
         visibility: hidden;
     }
+
+    .galleryContainer {
+        margin-bottom: -250px;
+        margin-top: 0px;
+    }
 }
 
 @media screen and (max-width: 540.5px) {
-    .galleryContainer {
-        height: 420px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 450px;
         transform: scale(0.4);
         margin-top: -50px;
     }
+
+    .galleryContainer {
+        margin-bottom: -310px;
+        margin-top: -20px;
+    }
 }
 
 @media screen and (max-width: 420.5px) {
-    .galleryContainer {
-        height: 400px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 450px;
         transform: scale(0.35);
         margin-top: -50px;
@@ -235,25 +162,27 @@
 }
 
 @media screen and (max-width: 350.5px) {
-    .galleryContainer {
-        height: 365px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 400px;
         transform: scale(0.3);
         margin-top: -50px;
     }
+
+    .galleryContainer {
+        margin-bottom: -360px;
+        margin-top: -20px;
+    }
 }
 
 @media screen and (max-width: 300.5px) {
-    .galleryContainer {
-        height: 345px;
-    }
-
-    .galleryMainSlide {
+    .gallerySlide {
         height: 400px;
         transform: scale(0.26);
         margin-top: -50px;
+    }
+
+    .galleryContainer {
+        margin-bottom: -370px;
+        margin-top: -20px;
     }
 }

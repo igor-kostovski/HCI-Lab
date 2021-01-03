@@ -1,6 +1,6 @@
 .blogContainer {
-    width: 80%;
-    margin: 30px auto;
+    width: 95%;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(min-content, max-content);

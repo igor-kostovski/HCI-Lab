@@ -1,10 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import styles from './style.module.css'
 
-// tags, date, title, text, subtitle, link
 const BlogCard = ({ post }) => {
-    console.log(post);
     return (
         <div className={`${styles.blogCard} ${styles.springFever}`}>
             <div className={styles.titleContent}>
@@ -15,10 +14,10 @@ const BlogCard = ({ post }) => {
             </div>
             <div className={styles.cardInfo}>
                 {post.text}
-                <p>
+                <a href={post.link} target='blank'>
                     Read Article
                     <span className={`${styles.licon} ${styles.iconArr} ${styles.iconBlack}`}></span>
-                </p>
+                </a>
             </div>
             <div className={styles.utilityInfo}>
                 <ul className={styles.utilityList}>
@@ -30,6 +29,10 @@ const BlogCard = ({ post }) => {
             <div className={styles.colorOverlay}></div>
         </div>
     );
+}
+
+BlogCard.propTypes = {
+    post: PropTypes.object.isRequired
 }
 
 export default BlogCard;

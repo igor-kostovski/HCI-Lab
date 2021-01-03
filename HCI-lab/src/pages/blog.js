@@ -27,7 +27,7 @@ const BlogPage = () => (
           title: 'Blog post title',
           subtitle: 'Blog post subtitle',
           date: '03 jan 2021',
-          link: '',
+          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
           text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
           tags: ['Blog', 'Post']
         }} />
@@ -36,7 +36,7 @@ const BlogPage = () => (
           title: 'Blog post title',
           subtitle: 'Blog post subtitle',
           date: '03 jan 2021',
-          link: '',
+          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
           text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
           tags: ['Blog', 'Post']
         }
@@ -46,7 +46,7 @@ const BlogPage = () => (
           title: 'Blog post title',
           subtitle: 'Blog post subtitle',
           date: '03 jan 2021',
-          link: '',
+          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
           text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
           tags: ['Blog', 'Post']
         }

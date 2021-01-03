@@ -6,7 +6,7 @@ import Rodal from 'rodal/lib/rodal'
 import TagBar from "../components/searchTagBar"
 import Image from "../components/image"
 
-import { galleryTabs, galleryImages } from "../constants"
+import { galleryTabs, galleryImages, galleryConstants } from "../constants"
 
 import styles from "./gallery.module.css"
 import 'rodal/lib/rodal.css'
@@ -14,10 +14,10 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 const GalleryPage = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [activeTabName, setActiveTabName] = useState(galleryTabs[0].title)
+  const [activeTabIndex, setActiveTabIndex] = useState(galleryConstants.minImageIndex);
+  const [activeTabName, setActiveTabName] = useState(galleryTabs[galleryConstants.minImageIndex].title)
   const [rodalOpened, setRodalOpened] = useState(false);
-  const [rodalImage, setRodalImage] = useState(0)
+  const [rodalImage, setRodalImage] = useState(galleryConstants.minImageIndex)
   const gallerySlider = useRef(null);
 
   const updateActiveTabState = (newIndex) => {
@@ -63,7 +63,7 @@ const GalleryPage = () => {
     maxHeight: "80vh"
   }
 
-  return(
+  return (
     <>
     <TagBar tags={galleryTabs} onTagAction={galleryTagChange} activeTag={activeTabName}/>
     <div className={styles.galleryContainer}>
@@ -103,9 +103,9 @@ const GalleryPage = () => {
       </Slider>
       <Rodal visible={rodalOpened} onClose={() => {setRodalOpened(false)}} customStyles={rodalStyle}>
         <div className={styles.rodalContainer}>
-          <div className={rodalImage === 0 ? styles.rodalLeftArrowDisabled : styles.rodalLeftArrowEnabled} onClick={() => {rodalPreviousImage()}} />
+          <div className={rodalImage === galleryConstants.minImageIndex ? styles.rodalLeftArrowDisabled : styles.rodalLeftArrowEnabled} onClick={() => {rodalPreviousImage()}} />
           <Image name={galleryImages[activeTabIndex % 3][rodalImage]} />
-          <div className={rodalImage === 7 ? styles.rodalRightArrowDisabled : styles.rodalRightArrowEnabled} onClick={() => {rodalNextImage()}} />
+          <div className={rodalImage === galleryConstants.maxImageIndex ? styles.rodalRightArrowDisabled : styles.rodalRightArrowEnabled} onClick={() => {rodalNextImage()}} />
         </div>
       </Rodal>
     </div>

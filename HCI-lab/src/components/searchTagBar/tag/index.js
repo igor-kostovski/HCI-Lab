@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import styles from './style.module.css'
 
-const Tag = ({ title, action }) => {
+const Tag = ({ title, action, activeTag }) => {
     const [isClicked, setIsClicked] = useState(false);
 
-    const handleOnClick = () => {
-        setIsClicked(!isClicked);
-        action(title);
-    }
+    useEffect(() => {
+        if(activeTag === title) {
+            setIsClicked(true);
+        } 
+        else {
+            setIsClicked(false);
+        }
+    })
 
     const getStyle = () => {
         let style = `${styles.btn}`;
@@ -23,7 +27,7 @@ const Tag = ({ title, action }) => {
     }
 
     return (
-        <button onClick={handleOnClick} className={getStyle()}>
+        <button onClick={() => action(title)} className={getStyle()}>
             {title}
         </button>
     );

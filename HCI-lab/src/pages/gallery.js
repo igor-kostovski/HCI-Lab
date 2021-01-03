@@ -15,9 +15,15 @@ import "slick-carousel/slick/slick-theme.css"
 
 const GalleryPage = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabName, setActiveTabName] = useState(galleryTabs[0])
   const [rodalOpened, setRodalOpened] = useState(false);
   const [rodalImage, setRodalImage] = useState(0)
   const gallerySlider = useRef(null);
+
+  const updateActiveTabState = (newIndex) => {
+    setActiveTabIndex(newIndex);
+    setActiveTabName(galleryTabs[newIndex]);
+  }
 
   const galleryTagChange = (clickedTag) => {
     let newIndex = galleryTabsForTagBar.findIndex(tab => tab.title === clickedTag)
@@ -47,7 +53,7 @@ const GalleryPage = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    beforeChange: (oldIndex, newIndex) => setActiveTabIndex(newIndex)
+    beforeChange: (oldIndex, newIndex) => {updateActiveTabState(newIndex)}
   }
 
   const rodalStyle = {
@@ -59,7 +65,7 @@ const GalleryPage = () => {
 
   return(
     <>
-    <TagBar tags={galleryTabsForTagBar} onTagAction={galleryTagChange}/>
+    <TagBar tags={galleryTabsForTagBar} onTagAction={galleryTagChange} activeTag={activeTabName}/>
     <div className={styles.galleryContainer}>
       <Slider ref={gallerySlider} {...carouselSettings }>
         {galleryTabs.map((galleryTab, index) => (

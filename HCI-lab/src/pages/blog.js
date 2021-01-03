@@ -6,6 +6,8 @@ import BlogCard from "../components/blogCard";
 
 import styles from './blog.module.css';
 
+import Pagination from '@material-ui/lab/Pagination';
+
 const onSearchAction = (value) => {
   console.log('searching for ' + value);
 }
@@ -51,6 +53,10 @@ const BlogPage = () => (
           tags: ['Blog', 'Post']
         }
       } />
+      <Pagination count={5}
+        color='primary'
+        variant="outlined"
+        className={styles.pagination} />
     </div>
   </>
 )

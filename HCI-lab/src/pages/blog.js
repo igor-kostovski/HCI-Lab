@@ -30,22 +30,30 @@ const posts = () => {
   return posts;
 };
 
+let filter = (post) => true;
+
 const BlogPage = () => {
   const [activePosts, setActivePosts] = useState(posts().slice(0, PAGE_COUNT));
+  const [activeTags, setActiveTags] = useState(['Blog']);
 
   const onSearchAction = (value) => {
     //this should also use graphql query
     console.log('searching for ' + value);
   }
 
-  const onTagAction = () => {
+  const onTagAction = (value) => {
     //this should also use graphql query
     console.log('clicked tag');
+    setActiveTags([...activeTags, value]);
+    if (activeTags.length == 0)
+      filter = (post) => true;
+    else
+      filter = (post) => activeTags.every(tag => post.tags.includes(tag));
   }
 
   const onPageChange = (pageNumber) => {
-    //this should also use graphql query
-    setActivePosts(posts().slice(pageNumber * PAGE_COUNT, (pageNumber + 1) * PAGE_COUNT));
+    //this should also use graphql query with limit/skip parameters instead of posts().slice
+    setActivePosts(posts().filter(filter).slice(pageNumber * PAGE_COUNT, (pageNumber + 1) * PAGE_COUNT));
   }
 
   return (

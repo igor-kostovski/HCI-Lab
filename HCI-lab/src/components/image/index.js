@@ -90,9 +90,23 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            bed: file(relativePath: {eq: "bed.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             sailsImage: file(relativePath: {eq: "sailsImage.jpg"}) {
                 childImageSharp {
                     fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            cog: file(relativePath: {eq: "cog.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -104,6 +118,13 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            deck: file(relativePath: {eq: "deck.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                    }
+              }
+            }
             borovic: file(relativePath: {eq: "borovic.jpeg"}) {
                 childImageSharp {
                     fluid(maxWidth: 1000) {
@@ -111,9 +132,23 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            entertainment: file(relativePath: {eq: "entertainment.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             kostovski: file(relativePath: {eq: "kostovski.jpeg"}) {
                 childImageSharp {
                     fluid(maxWidth: 1000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            jetSki: file(relativePath: {eq: "jetSki.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
                         ...GatsbyImageSharpFluid
                       }
                 }

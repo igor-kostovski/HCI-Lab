@@ -8,6 +8,7 @@ const SpecsPage = () => (
   <div className={styles.container}>
     <div className={styles.techInfo}>
       <Card image={images.cog} header='Technical info'>
+        {/* TODO: umisto faq napisi tekst iz onog manuala sa trenutne stranice */}
         {faq.answers.answer1}
       </Card>
     </div>

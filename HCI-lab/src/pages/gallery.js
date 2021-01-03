@@ -6,7 +6,7 @@ import Rodal from 'rodal/lib/rodal'
 import TagBar from "../components/searchTagBar"
 import Image from "../components/image"
 
-import { galleryTabs, galleryTabsForTagBar, exteriorImages } from "../constants"
+import { galleryTabs, galleryImages } from "../constants"
 
 import styles from "./gallery.module.css"
 import 'rodal/lib/rodal.css'
@@ -15,18 +15,18 @@ import "slick-carousel/slick/slick-theme.css"
 
 const GalleryPage = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
-  const [activeTabName, setActiveTabName] = useState(galleryTabs[0])
+  const [activeTabName, setActiveTabName] = useState(galleryTabs[0].title)
   const [rodalOpened, setRodalOpened] = useState(false);
   const [rodalImage, setRodalImage] = useState(0)
   const gallerySlider = useRef(null);
 
   const updateActiveTabState = (newIndex) => {
     setActiveTabIndex(newIndex);
-    setActiveTabName(galleryTabs[newIndex]);
+    setActiveTabName(galleryTabs[newIndex].title);
   }
 
   const galleryTagChange = (clickedTag) => {
-    let newIndex = galleryTabsForTagBar.findIndex(tab => tab.title === clickedTag)
+    let newIndex = galleryTabs.findIndex(tab => tab.title === clickedTag)
     gallerySlider.current.slickGoTo(newIndex)
   }
 
@@ -65,37 +65,37 @@ const GalleryPage = () => {
 
   return(
     <>
-    <TagBar tags={galleryTabsForTagBar} onTagAction={galleryTagChange} activeTag={activeTabName}/>
+    <TagBar tags={galleryTabs} onTagAction={galleryTagChange} activeTag={activeTabName}/>
     <div className={styles.galleryContainer}>
       <Slider ref={gallerySlider} {...carouselSettings }>
         {galleryTabs.map((galleryTab, index) => (
           <div key={index} className={styles.gallerySlide}>
             <div className={styles.circleLayout}>
-              <div className={styles.centerCircle}>{galleryTab}</div>
+              <div className={styles.centerCircle}>{galleryTab.title}</div>
               <div className={styles.outerCircleLine}></div>
               <div className={styles.topImageCircle} onClick={() => {rodalClickHandler(0)}}>
-                <Image name={exteriorImages[0]} isBackground={true} />
+                <Image name={galleryImages[index % 3][0]} isBackground={true} />
               </div>
               <div className={styles.bottomImageCircle} onClick={() => {rodalClickHandler(1)}}>
-                <Image name={exteriorImages[1]} isBackground={true} />
+                <Image name={galleryImages[index % 3][1]} isBackground={true} />
               </div>
               <div className={styles.rightImageCircle} onClick={() => {rodalClickHandler(2)}}>
-                <Image name={exteriorImages[2]} isBackground={true} />
+                <Image name={galleryImages[index % 3][2]} isBackground={true} />
               </div>
               <div className={styles.leftImageCircle} onClick={() => {rodalClickHandler(3)}}>
-                <Image name={exteriorImages[3]} isBackground={true} />
+                <Image name={galleryImages[index % 3][3]} isBackground={true} />
               </div>
               <div className={styles.topRightImageCircle} onClick={() => {rodalClickHandler(4)}}>
-                <Image name={exteriorImages[4]} isBackground={true} />
+                <Image name={galleryImages[index % 3][4]} isBackground={true} />
               </div>
               <div className={styles.topLeftImageCircle} onClick={() => {rodalClickHandler(5)}}>
-                <Image name={exteriorImages[5]} isBackground={true} />
+                <Image name={galleryImages[index % 3][5]} isBackground={true} />
               </div>
               <div className={styles.bottomRightImageCircle} onClick={() => {rodalClickHandler(6)}}>
-                <Image name={exteriorImages[6]} isBackground={true} />
+                <Image name={galleryImages[index % 3][6]} isBackground={true} />
               </div>
               <div className={styles.bottomLeftImageCircle} onClick={() => {rodalClickHandler(7)}}>
-                <Image name={exteriorImages[7]} isBackground={true} />
+                <Image name={galleryImages[index % 3][7]} isBackground={true} />
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ const GalleryPage = () => {
       <Rodal visible={rodalOpened} onClose={() => {setRodalOpened(false)}} customStyles={rodalStyle}>
         <div className={styles.rodalContainer}>
           <div className={rodalImage === 0 ? styles.rodalLeftArrowDisabled : styles.rodalLeftArrowEnabled} onClick={() => {rodalPreviousImage()}} />
-          <Image name={exteriorImages[rodalImage]} />
+          <Image name={galleryImages[activeTabIndex % 3][rodalImage]} />
           <div className={rodalImage === 7 ? styles.rodalRightArrowDisabled : styles.rodalRightArrowEnabled} onClick={() => {rodalNextImage()}} />
         </div>
       </Rodal>

@@ -73,19 +73,43 @@ export const blogSections = {
 }
 
 export const galleryTabs = [
-    "EXTERIOR",
-    "INTERIOR",
-    "FLY BRIDGE",
-    "MAIN DECK",
-    "RECREATION"
-]
-
-export const galleryTabsForTagBar = [
     {title: "EXTERIOR"},
     {title: "INTERIOR"},
     {title: "FLY BRIDGE"},
-    {title: "MAIN DECK"},
-    {title: "RECREATION"},
+    {title: "MAIN DECK"}
+]
+
+export const galleryImages = [
+    [
+        "firstPerson",
+        "frogPerspective",
+        "nextToIsland",
+        "nightImage",
+        "openSeaWithoutSails",
+        "openSeaWithSails",
+        "groundPlan",
+        "titleImage"
+    ],
+    [
+        "livingRoom",
+        "livingAreaDay",
+        "livingAreaNight",
+        "masterBedroom",
+        "masterBathroom",
+        "secondBedroom",
+        "secondBathroom",
+        "kidsBedroom"
+    ],
+    [
+        "mainDeckFrontDay",
+        "mainDeckSide",
+        "mainDeckBehind",
+        "outsideTableDay",
+        "mainDeckFrontNight",
+        "mainDeckFrontNight2",
+        "outsideTableDay2",
+        "outsideTableNight"
+    ]
 ]
 
 export const exteriorImages = [
@@ -98,6 +122,29 @@ export const exteriorImages = [
     "groundPlan",
     "titleImage"
 ]
+
+export const interiorImages = [
+    "livingRoom",
+    "livingAreaDay",
+    "livingAreaNight",
+    "masterBedroom",
+    "masterBathroom",
+    "secondBedroom",
+    "secondBathroom",
+    "kidsBedroom"
+]
+
+export const mainDeckImages = [
+    "mainDeckFrontDay",
+    "mainDeckSide",
+    "mainDeckBehind",
+    "outsideTableDay",
+    "mainDeckFrontNight",
+    "mainDeckFrontNight2",
+    "outsideTableDay2",
+    "outsideTableNight"
+]
+
 export const aboutUsTexts = {
     companyInfo: "We offer our guests crystal blue cruising around charming islands in the mid Adriatic sea to enrich their vacation with the most pleasant memories. Our port of call is Split, however the route for your crystal blue voyage may be specifically tailored as per your own wish among secluded bays and beautiful beaches on the islands of Vis, Hvar, Korčula, Mljet and so on. On our luxury yacht Alessandro you will share an unforgettable holiday and we are looking forward to get to know you, your family and friends."
 }

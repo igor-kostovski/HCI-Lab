@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
 import { blogSections } from "../constants"
@@ -8,57 +8,63 @@ import styles from './blog.module.css';
 
 import Pagination from '@material-ui/lab/Pagination';
 
-const onSearchAction = (value) => {
-  console.log('searching for ' + value);
-}
+const PAGE_COUNT = 3;
 
-const onTagAction = () => {
-  console.log('clicked tag');
-}
+const post = {
+  title: 'Blog post title',
+  subtitle: 'Blog post subtitle',
+  date: '03 jan 2021',
+  link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
+  text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
+  tags: []
+};
 
-const BlogPage = () => (
-  <>
-    <SeparatorBar text={blogSections.filterSearch} />
-    <SearchTagBar tags={[{ title: 'Tag 1' }, { title: 'Tag 2' }, { title: 'Tag 3' }, { title: 'Tag 4' }, { title: 'Tag 5' }]}
-      onTagAction={onTagAction}
-      onSearchAction={onSearchAction} />
-    <SeparatorBar text={blogSections.posts} />
-    <div className={styles.blogContainer}>
-      <BlogCard post={
-        {
-          title: 'Blog post title',
-          subtitle: 'Blog post subtitle',
-          date: '03 jan 2021',
-          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
-          text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
-          tags: ['Blog', 'Post']
-        }} />
-      <BlogCard post={
-        {
-          title: 'Blog post title',
-          subtitle: 'Blog post subtitle',
-          date: '03 jan 2021',
-          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
-          text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
-          tags: ['Blog', 'Post']
-        }
-      } />
-      <BlogCard post={
-        {
-          title: 'Blog post title',
-          subtitle: 'Blog post subtitle',
-          date: '03 jan 2021',
-          link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
-          text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
-          tags: ['Blog', 'Post']
-        }
-      } />
-      <Pagination count={5}
-        color='primary'
-        variant="outlined"
-        className={styles.pagination} />
-    </div>
-  </>
-)
+const posts = () => {
+  var posts = [];
+  for (let i = 0; i < 12; i++) {
+    let newPost = { ...post, tags: [] };
+    newPost.title += i
+    newPost.tags.push(i % 2 === 0 ? 'Blog' : 'Post');
+    posts.push(newPost);
+  }
+  return posts;
+};
+
+const BlogPage = () => {
+  const [activePosts, setActivePosts] = useState(posts().slice(0, PAGE_COUNT));
+
+  const onSearchAction = (value) => {
+    //this should also use graphql query
+    console.log('searching for ' + value);
+  }
+
+  const onTagAction = () => {
+    //this should also use graphql query
+    console.log('clicked tag');
+  }
+
+  const onPageChange = (pageNumber) => {
+    //this should also use graphql query
+    setActivePosts(posts().slice(pageNumber * PAGE_COUNT, (pageNumber + 1) * PAGE_COUNT));
+  }
+
+  return (
+    <>
+      <SeparatorBar text={blogSections.filterSearch} />
+      <SearchTagBar tags={[{ title: 'Tag 1' }, { title: 'Tag 2' }, { title: 'Tag 3' }, { title: 'Tag 4' }, { title: 'Tag 5' }]}
+        onTagAction={onTagAction}
+        onSearchAction={onSearchAction} />
+      <SeparatorBar text={blogSections.posts} />
+      <div className={styles.blogContainer}>
+        {activePosts.map((post, index) => <BlogCard key={post.title + post.date + index} post={post} />)}
+        <Pagination count={4}
+          color='primary'
+          variant="outlined"
+          className={styles.pagination}
+          onChange={(event, number) => onPageChange(number - 1)} />
+      </div>
+    </>
+  );
+}
 
 export default BlogPage

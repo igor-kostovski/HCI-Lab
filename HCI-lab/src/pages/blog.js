@@ -43,7 +43,9 @@ const BlogPage = () => {
 
   const onTagAction = (value) => {
     //this should also use graphql query
-    let newTags = [...tags.filter(tag => tag.title !== value.title), value];
+    var index = tags.findIndex(tag => tag.title === value.title);
+    let newTags = [...tags];
+    newTags.splice(index, 1, value);
 
     setTags(newTags);
     if (newTags.filter(tag => tag.isActive).length === 0)

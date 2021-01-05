@@ -23,7 +23,7 @@ const posts = () => {
   for (let i = 0; i < 12; i++) {
     let newPost = { ...post, tags: [] };
     newPost.title += i
-    newPost.tags.push(i % 2 === 0 ? 'Blog' : 'Post');
+    newPost.tags.push(i % 2 === 0 ? 'Blog1' : 'Post2');
     posts.push(newPost);
   }
   return posts;
@@ -32,8 +32,8 @@ const posts = () => {
 let filter = (post) => true;
 
 const BlogPage = () => {
-  const [activePosts, setActivePosts] = useState(posts().slice(0, PAGE_COUNT));
-  const [activeTags, setActiveTags] = useState(['Blog']);
+  const [activePosts, setActivePosts] = useState(posts().filter(filter).slice(0, PAGE_COUNT));
+  const [tags, setTags] = useState([{ title: 'Blog1', isActive: false }, { title: 'Post1', isActive: false }, { title: 'Blog2', isActive: false }, { title: 'Post2', isActive: false }, { title: 'Blog3', isActive: false }]);
   const [pageCount, setPageCount] = useState(posts().length / PAGE_COUNT);
 
   const onSearchAction = (value) => {
@@ -43,11 +43,14 @@ const BlogPage = () => {
 
   const onTagAction = (value) => {
     //this should also use graphql query
-    setActiveTags([...activeTags, value]);
-    if (activeTags.length == 0)
+    let newTags = [...tags.filter(tag => tag.title !== value.title), value];
+
+    setTags(newTags);
+    if (newTags.filter(tag => tag.isActive).length === 0)
       filter = (post) => true;
     else
-      filter = (post) => activeTags.every(tag => post.tags.includes(tag));
+      filter = (post) => newTags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title));
+
     setPageCount(posts().filter(filter).length / PAGE_COUNT);
     setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
   }
@@ -60,7 +63,7 @@ const BlogPage = () => {
   return (
     <>
       <SeparatorBar text={blogSections.filterSearch} />
-      <SearchTagBar tags={[{ title: 'Tag 1' }, { title: 'Tag 2' }, { title: 'Tag 3' }, { title: 'Tag 4' }, { title: 'Tag 5' }]}
+      <SearchTagBar tags={tags}
         onTagAction={onTagAction}
         onSearchAction={onSearchAction} />
       <SeparatorBar text={blogSections.posts} />

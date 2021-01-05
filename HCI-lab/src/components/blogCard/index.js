@@ -8,9 +8,6 @@ const BlogCard = ({ post }) => {
         <div className={`${styles.blogCard} ${styles.springFever}`}>
             <div className={styles.titleContent}>
                 <h3>{post.title}</h3>
-                <div className={styles.intro}>
-                    <p>{post.subtitle}</p>
-                </div>
             </div>
             <div className={styles.cardInfo}>
                 {post.text}

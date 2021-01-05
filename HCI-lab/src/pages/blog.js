@@ -12,7 +12,6 @@ const PAGE_COUNT = 3;
 
 const post = {
   title: 'Blog post title',
-  subtitle: 'Blog post subtitle',
   date: '03 jan 2021',
   link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
   text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
@@ -35,6 +34,7 @@ let filter = (post) => true;
 const BlogPage = () => {
   const [activePosts, setActivePosts] = useState(posts().slice(0, PAGE_COUNT));
   const [activeTags, setActiveTags] = useState(['Blog']);
+  const [pageCount, setPageCount] = useState(posts().length / PAGE_COUNT);
 
   const onSearchAction = (value) => {
     //this should also use graphql query
@@ -43,12 +43,13 @@ const BlogPage = () => {
 
   const onTagAction = (value) => {
     //this should also use graphql query
-    console.log('clicked tag');
     setActiveTags([...activeTags, value]);
     if (activeTags.length == 0)
       filter = (post) => true;
     else
       filter = (post) => activeTags.every(tag => post.tags.includes(tag));
+    setPageCount(posts().filter(filter).length / PAGE_COUNT);
+    setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
   }
 
   const onPageChange = (pageNumber) => {
@@ -65,7 +66,7 @@ const BlogPage = () => {
       <SeparatorBar text={blogSections.posts} />
       <div className={styles.blogContainer}>
         {activePosts.map((post, index) => <BlogCard key={post.title + post.date + index} post={post} />)}
-        <Pagination count={4}
+        <Pagination count={pageCount}
           color='primary'
           variant="outlined"
           className={styles.pagination}

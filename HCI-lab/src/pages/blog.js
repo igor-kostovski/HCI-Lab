@@ -36,9 +36,18 @@ const BlogPage = () => {
   const [tags, setTags] = useState([{ title: 'Blog1', isActive: false }, { title: 'Post1', isActive: false }, { title: 'Blog2', isActive: false }, { title: 'Post2', isActive: false }, { title: 'Blog3', isActive: false }]);
   const [pageCount, setPageCount] = useState(posts().length / PAGE_COUNT);
 
-  const onSearchAction = (value) => {
+  const onSearchAction = (searchValue) => {
     //this should also use graphql query
-    console.log('searching for ' + value);
+    if (searchValue.length === 0)
+      filter = (post) => true;
+    else
+      filter = (post) => post.title.includes(searchValue);
+
+    setPageCount(posts().filter(filter).length / PAGE_COUNT);
+    setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
+
+    tags.forEach(tag => tag.isActive = false);
+    setTags([...tags]);
   }
 
   const onTagAction = (value) => {

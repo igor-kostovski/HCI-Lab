@@ -44,17 +44,16 @@ const BlogPage = () => {
   const onTagAction = (value) => {
     //this should also use graphql query
     var index = tags.findIndex(tag => tag.title === value.title);
-    let newTags = [...tags];
-    newTags.splice(index, 1, value);
+    tags.splice(index, 1, value);
 
-    setTags(newTags);
-    if (newTags.filter(tag => tag.isActive).length === 0)
+    if (tags.filter(tag => tag.isActive).length === 0)
       filter = (post) => true;
     else
-      filter = (post) => newTags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title));
+      filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title));
 
     setPageCount(posts().filter(filter).length / PAGE_COUNT);
     setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
+    setTags([...tags]);
   }
 
   const onPageChange = (pageNumber) => {

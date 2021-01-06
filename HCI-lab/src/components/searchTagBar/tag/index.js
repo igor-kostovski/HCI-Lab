@@ -1,23 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 import styles from './style.module.css'
 
-const Tag = ({ title, action, activeTag }) => {
-    const [isClicked, setIsClicked] = useState(false);
-
-    useEffect(() => {
-        if(activeTag === title) {
-            setIsClicked(true);
-        } 
-        else {
-            setIsClicked(false);
-        }
-    })
+const Tag = ({ title, action, isActive }) => {
 
     const getStyle = () => {
         let style = `${styles.btn}`;
 
-        if (isClicked) {
+        if (isActive) {
             style += ` ${styles.clicked}`;
         } else {
             style += ` ${styles.effect}`;
@@ -27,7 +17,7 @@ const Tag = ({ title, action, activeTag }) => {
     }
 
     return (
-        <button onClick={() => action(title)} className={getStyle()}>
+        <button onClick={() => action({ title, isActive: !isActive })} className={getStyle()}>
             {title}
         </button>
     );

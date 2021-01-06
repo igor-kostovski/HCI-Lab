@@ -1,5 +1,5 @@
 import React, { createContext, useState } from 'react';
-import { navigationTabs, galleryTabs } from '.';
+import { navigationTabs } from '.';
 
 export const navigationContext = createContext({
     activeTab: navigationTabs[0].name,

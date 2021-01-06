@@ -78,10 +78,10 @@ export const blogSections = {
 }
 
 export const galleryTabs = [
-    {title: "EXTERIOR"},
-    {title: "INTERIOR"},
-    {title: "FLY BRIDGE"},
-    {title: "MAIN DECK"}
+    { title: "EXTERIOR", isActive: true },
+    { title: "INTERIOR", isActive: false },
+    { title: "FLY BRIDGE", isActive: false },
+    { title: "MAIN DECK", isActive: false }
 ]
 
 export const galleryImages = [

@@ -43,21 +43,21 @@ const Image = ({ name, className, isBackground }) => {
             }
             titleImage: file(relativePath: {eq: "titleImage.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 1500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
             }
             nightImage: file(relativePath: {eq: "nightImage.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
             }
             groundPlan: file(relativePath: {eq: "groundPlan.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 500) {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }
@@ -90,6 +90,41 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            firstPerson: file(relativePath: {eq: "firstPerson.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            frogPerspective: file(relativePath: {eq: "frogPerspective.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            nextToIsland: file(relativePath: {eq: "nextToIsland.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            openSeaWithoutSails: file(relativePath: {eq: "openSeaWithoutSails.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            openSeaWithSails: file(relativePath: {eq: "openSeaWithSails.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
             bed: file(relativePath: {eq: "bed.png"}) {
                 childImageSharp {
                     fluid(maxWidth: 150) {
@@ -99,7 +134,119 @@ const Image = ({ name, className, isBackground }) => {
             }
             sailsImage: file(relativePath: {eq: "sailsImage.jpg"}) {
                 childImageSharp {
-                    fluid(maxWidth: 1000) {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            livingRoom: file(relativePath: {eq: "livingRoom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            livingAreaDay: file(relativePath: {eq: "livingAreaDay.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            livingAreaNight: file(relativePath: {eq: "livingAreaNight.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            masterBedroom: file(relativePath: {eq: "masterBedroom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            masterBathroom: file(relativePath: {eq: "masterBathroom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            secondBedroom: file(relativePath: {eq: "secondBedroom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            secondBathroom: file(relativePath: {eq: "secondBathroom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            kidsBedroom: file(relativePath: {eq: "kidsBedroom.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            mainDeckFrontDay: file(relativePath: {eq: "mainDeckFrontDay.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            mainDeckFrontNight: file(relativePath: {eq: "mainDeckFrontNight.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            mainDeckFrontNight2: file(relativePath: {eq: "mainDeckFrontNight2.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            mainDeckBehind: file(relativePath: {eq: "mainDeckBehind.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            mainDeckSide: file(relativePath: {eq: "mainDeckSide.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            outsideTableDay: file(relativePath: {eq: "outsideTableDay.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            outsideTableDay2: file(relativePath: {eq: "outsideTableDay2.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
+            outsideTableNight: file(relativePath: {eq: "outsideTableNight.jpg"}) {
+                childImageSharp {
+                    fluid(maxWidth: 2000) {
                         ...GatsbyImageSharpFluid
                       }
                 }

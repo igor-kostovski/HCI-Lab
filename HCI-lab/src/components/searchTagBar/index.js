@@ -18,9 +18,11 @@ const SearchTagBar = ({ tags, onTagAction, onSearchAction }) => {
                     ))
                 }
             </div>
-            <div className={styles.search}>
-                <SearchBar action={onSearchAction} />
-            </div>
+            {onSearchAction &&
+                <div className={styles.search}>
+                    <SearchBar action={onSearchAction} />
+                </div>
+            }
         </div>
     )
 }

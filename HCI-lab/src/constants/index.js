@@ -77,6 +77,51 @@ export const blogSections = {
     posts: "POSTS"
 }
 
+export const galleryTabs = [
+    { title: "EXTERIOR", isActive: true },
+    { title: "INTERIOR", isActive: false },
+    { title: "FLY BRIDGE", isActive: false },
+    { title: "MAIN DECK", isActive: false }
+]
+
+export const galleryImages = [
+    [
+        "firstPerson",
+        "frogPerspective",
+        "nextToIsland",
+        "nightImage",
+        "openSeaWithoutSails",
+        "openSeaWithSails",
+        "groundPlan",
+        "titleImage"
+    ],
+    [
+        "livingRoom",
+        "livingAreaDay",
+        "livingAreaNight",
+        "masterBedroom",
+        "masterBathroom",
+        "secondBedroom",
+        "secondBathroom",
+        "kidsBedroom"
+    ],
+    [
+        "mainDeckFrontDay",
+        "mainDeckSide",
+        "mainDeckBehind",
+        "outsideTableDay",
+        "mainDeckFrontNight",
+        "mainDeckFrontNight2",
+        "outsideTableDay2",
+        "outsideTableNight"
+    ]
+]
+
+export const galleryConstants = {
+    minImageIndex: 0,
+    maxImageIndex: 7
+}
+
 export const aboutUsTexts = {
     companyInfo: "We offer our guests crystal blue cruising around charming islands in the mid Adriatic sea to enrich their vacation with the most pleasant memories. Our port of call is Split, however the route for your crystal blue voyage may be specifically tailored as per your own wish among secluded bays and beautiful beaches on the islands of Vis, Hvar, Korčula, Mljet and so on. On our luxury yacht Alessandro you will share an unforgettable holiday and we are looking forward to get to know you, your family and friends."
 }

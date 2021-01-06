@@ -12,18 +12,23 @@ import { blogPosts, blogTags } from "../constants/mocks";
 const POSTS_PER_PAGE = 3;
 
 const BlogPage = () => {
-  let filter = (post) => true;
-
+  //https://medium.com/swlh/how-to-store-a-function-with-the-usestate-hook-in-react-8a88dd4eede1
+  const [filter, setFilter] = useState(() => (post) => true);
   const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
   const [tags, setTags] = useState(blogTags);
   const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
 
   const onSearchAction = (searchValue) => {
     //this should also use graphql query
-    if (searchValue.length === 0)
+    let filter;
+    if (searchValue.length === 0) {
       filter = (post) => true;
-    else
+      setFilter(() => (post) => true);
+    }
+    else {
       filter = (post) => post.title.includes(searchValue);
+      setFilter(() => (post) => post.title.includes(searchValue));
+    }
 
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
@@ -37,10 +42,16 @@ const BlogPage = () => {
     var index = tags.findIndex(tag => tag.title === value.title);
     tags.splice(index, 1, value);
 
-    if (tags.filter(tag => tag.isActive).length === 0)
+    let filter;
+
+    if (tags.filter(tag => tag.isActive).length === 0) {
       filter = (post) => true;
-    else
+      setFilter(() => (post) => true);
+    }
+    else {
       filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
+      setFilter(() => (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter));
+    }
 
     console.log('Inside onTag', tags.filter(tag => tag.isActive), blogPosts.filter(filter));
 

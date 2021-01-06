@@ -80,9 +80,10 @@ const GalleryPage = () => {
                 <div className={styles.centerCircle}>{galleryTab.title}</div>
                 <div className={styles.outerCircleLine}></div>
                 {
-                  imagePositions.map((name, index) => (
-                    <div className={styles[name]} onClick={() => rodalClickHandler(index)}>
-                      <Image name={galleryImages[index % 3][index]} isBackground={true} />
+                  imagePositions.map((name, secondaryIndex) => (
+
+                    <div className={styles[name]} onClick={() => rodalClickHandler(secondaryIndex)}>
+                      <Image name={galleryImages[index % 3][secondaryIndex]} isBackground={true} />
                     </div>
                   ))
                 }

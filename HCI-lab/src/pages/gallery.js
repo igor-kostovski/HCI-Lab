@@ -90,11 +90,11 @@ const GalleryPage = () => {
             </div>
           ))}
         </Slider>
-        <Rodal visible={rodalOpened} onClose={() => { setRodalOpened(false) }} customStyles={rodalStyle}>
+        <Rodal visible={rodalOpened} onClose={() => setRodalOpened(false)} customStyles={rodalStyle}>
           <div className={styles.rodalContainer}>
-            <div className={rodalImage === galleryConstants.minImageIndex ? styles.rodalLeftArrowDisabled : styles.rodalLeftArrowEnabled} onClick={() => { rodalPreviousImage() }} />
+            <div className={rodalImage === galleryConstants.minImageIndex ? styles.rodalLeftArrowDisabled : styles.rodalLeftArrowEnabled} onClick={() => rodalPreviousImage()} />
             <Image name={galleryImages[activeTabIndex % 3][rodalImage]} />
-            <div className={rodalImage === galleryConstants.maxImageIndex ? styles.rodalRightArrowDisabled : styles.rodalRightArrowEnabled} onClick={() => { rodalNextImage() }} />
+            <div className={rodalImage === galleryConstants.maxImageIndex ? styles.rodalRightArrowDisabled : styles.rodalRightArrowEnabled} onClick={() => rodalNextImage()} />
           </div>
         </Rodal>
       </div>

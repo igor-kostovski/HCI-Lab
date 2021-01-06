@@ -66,6 +66,9 @@ const GalleryPage = () => {
     maxHeight: "80vh"
   }
 
+  const imagePositions = ['topImageCircle', 'bottomImageCircle', 'rightImageCircle', 'leftImageCircle', 'topRightImageCircle',
+    'topLeftImageCircle', 'bottomRightImageCircle', 'bottomLeftImageCircle'];
+
   return (
     <>
       <TagBar tags={tabs} onTagAction={galleryTagChange} />
@@ -76,30 +79,13 @@ const GalleryPage = () => {
               <div className={styles.circleLayout}>
                 <div className={styles.centerCircle}>{galleryTab.title}</div>
                 <div className={styles.outerCircleLine}></div>
-                <div className={styles.topImageCircle} onClick={() => { rodalClickHandler(0) }}>
-                  <Image name={galleryImages[index % 3][0]} isBackground={true} />
-                </div>
-                <div className={styles.bottomImageCircle} onClick={() => { rodalClickHandler(1) }}>
-                  <Image name={galleryImages[index % 3][1]} isBackground={true} />
-                </div>
-                <div className={styles.rightImageCircle} onClick={() => { rodalClickHandler(2) }}>
-                  <Image name={galleryImages[index % 3][2]} isBackground={true} />
-                </div>
-                <div className={styles.leftImageCircle} onClick={() => { rodalClickHandler(3) }}>
-                  <Image name={galleryImages[index % 3][3]} isBackground={true} />
-                </div>
-                <div className={styles.topRightImageCircle} onClick={() => { rodalClickHandler(4) }}>
-                  <Image name={galleryImages[index % 3][4]} isBackground={true} />
-                </div>
-                <div className={styles.topLeftImageCircle} onClick={() => { rodalClickHandler(5) }}>
-                  <Image name={galleryImages[index % 3][5]} isBackground={true} />
-                </div>
-                <div className={styles.bottomRightImageCircle} onClick={() => { rodalClickHandler(6) }}>
-                  <Image name={galleryImages[index % 3][6]} isBackground={true} />
-                </div>
-                <div className={styles.bottomLeftImageCircle} onClick={() => { rodalClickHandler(7) }}>
-                  <Image name={galleryImages[index % 3][7]} isBackground={true} />
-                </div>
+                {
+                  imagePositions.map((name, index) => (
+                    <div className={styles[name]} onClick={() => rodalClickHandler(index)}>
+                      <Image name={galleryImages[index % 3][index]} isBackground={true} />
+                    </div>
+                  ))
+                }
               </div>
             </div>
           ))}

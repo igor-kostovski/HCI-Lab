@@ -9,11 +9,21 @@ const SearchTagBar = ({ tags, onTagAction, onSearchAction }) => {
     return (
         <div className={styles.container}>
             <div className={styles.tags}>
-                {tags.map((tag, index) => (<Tag key={`${index}.tag`} title={tag.title} action={onTagAction} />))}
+                {
+                    tags.map((tag, index) =>
+                        (
+                            <Tag key={`${index}.tag`}
+                                title={tag.title}
+                                action={onTagAction}
+                                isActive={tag.isActive} />
+                        ))
+                }
             </div>
-            <div className={styles.search}>
-                <SearchBar action={onSearchAction} />
-            </div>
+            {onSearchAction &&
+                <div className={styles.search}>
+                    <SearchBar action={onSearchAction} />
+                </div>
+            }
         </div>
     )
 }

@@ -7,34 +7,16 @@ import BlogCard from "../components/blogCard";
 import styles from './blog.module.css';
 
 import Pagination from '@material-ui/lab/Pagination';
+import { blogPosts, blogTags } from "../constants/mocks";
 
-const PAGE_COUNT = 3;
-
-const post = {
-  title: 'Blog post title',
-  date: '03 jan 2021',
-  link: 'http://www.hrvatski-plivacki-savez.hr/Sadrzaj/Home.php?id=Hom&lang=Hrv',
-  text: 'The join() method creates and returns a new string by concatenating all of the elements in an array (or an array-like object), separated by commas or a specified separator string.',
-  tags: []
-};
-
-const posts = () => {
-  var posts = [];
-  for (let i = 0; i < 12; i++) {
-    let newPost = { ...post, tags: [] };
-    newPost.title += i
-    newPost.tags.push(i % 2 === 0 ? 'Blog1' : 'Post2');
-    posts.push(newPost);
-  }
-  return posts;
-};
-
-let filter = (post) => true;
+const POSTS_PER_PAGE = 3;
 
 const BlogPage = () => {
-  const [activePosts, setActivePosts] = useState(posts().filter(filter).slice(0, PAGE_COUNT));
-  const [tags, setTags] = useState([{ title: 'Blog1', isActive: false }, { title: 'Post1', isActive: false }, { title: 'Blog2', isActive: false }, { title: 'Post2', isActive: false }, { title: 'Blog3', isActive: false }]);
-  const [pageCount, setPageCount] = useState(posts().length / PAGE_COUNT);
+  let filter = (post) => true;
+
+  const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
+  const [tags, setTags] = useState(blogTags);
+  const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
 
   const onSearchAction = (searchValue) => {
     //this should also use graphql query
@@ -43,8 +25,8 @@ const BlogPage = () => {
     else
       filter = (post) => post.title.includes(searchValue);
 
-    setPageCount(posts().filter(filter).length / PAGE_COUNT);
-    setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
+    setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
+    setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
 
     tags.forEach(tag => tag.isActive = false);
     setTags([...tags]);
@@ -58,16 +40,19 @@ const BlogPage = () => {
     if (tags.filter(tag => tag.isActive).length === 0)
       filter = (post) => true;
     else
-      filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title));
+      filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
 
-    setPageCount(posts().filter(filter).length / PAGE_COUNT);
-    setActivePosts(posts().filter(filter).slice(0, PAGE_COUNT));
+    console.log('Inside onTag', tags.filter(tag => tag.isActive), blogPosts.filter(filter));
+
+    setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
+    setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
     setTags([...tags]);
   }
 
   const onPageChange = (pageNumber) => {
-    //this should also use graphql query with limit/skip parameters instead of posts().slice
-    setActivePosts(posts().filter(filter).slice(pageNumber * PAGE_COUNT, (pageNumber + 1) * PAGE_COUNT));
+    //this should also use graphql query with limit/skip parameters instead of blogPosts.slice
+    console.log('Inside onPage', tags.filter(tag => tag.isActive), blogPosts.filter(filter), filter);
+    setActivePosts(blogPosts.filter(filter).slice(pageNumber * POSTS_PER_PAGE, (pageNumber + 1) * POSTS_PER_PAGE));
   }
 
   return (

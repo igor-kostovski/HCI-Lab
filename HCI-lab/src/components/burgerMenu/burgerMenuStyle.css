@@ -57,6 +57,10 @@
     top: 0;
 }
 
+.activeBurgerMenuItem {
+    border-bottom: 1px solid #ffffff;
+}
+
 @media screen and (max-width: 500.5px) {
     .bm-menu-wrap {
         top: 0;

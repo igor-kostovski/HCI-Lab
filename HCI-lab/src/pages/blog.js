@@ -15,8 +15,16 @@ const BlogPage = () => {
 
   const [filter, setFilter] = useState(() => (post) => true);
   const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
-  const [tags, setTags] = useState(blogTags);
+  const [tags, setTags] = useState([...blogTags]);
   const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+
+  const onClearAction = () => {
+    let filter = (post) => true;
+    setFilter(() => filter);
+    setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
+    setTags([...blogTags]);
+    setPageCount(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+  }
 
   const onSearchAction = (searchValue) => {
     //this should also use graphql query
@@ -54,7 +62,8 @@ const BlogPage = () => {
       <SeparatorBar text={blogSections.filterSearch} />
       <SearchTagBar tags={tags}
         onTagAction={onTagAction}
-        onSearchAction={onSearchAction} />
+        onSearchAction={onSearchAction}
+        onClearAction={onClearAction} />
       <SeparatorBar text={blogSections.posts} />
       <div className={styles.blogContainer}>
         {

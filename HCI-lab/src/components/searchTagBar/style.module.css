@@ -8,7 +8,7 @@
     display: inherit;
     flex-direction: row;
     justify-content: space-evenly;
-    width: 80%;
+    width: 75%;
     height: 100%;
     flex-grow: 1;
 }
@@ -18,4 +18,23 @@
     flex-direction: row;
     align-content: center;
     width: 20%;
+}
+
+.clear {
+    flex-direction: row;
+    display: inherit;
+    width: 5%;
+}
+
+.clearBtn {
+    color: red;
+    border: none;
+    background-color: transparent;
+    transition: transform 0.2s;
+    font: 20px;
+    outline:none;
+}
+
+.clearBtn:hover {
+    transform: scale(1.5)
 }

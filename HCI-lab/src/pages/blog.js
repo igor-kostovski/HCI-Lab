@@ -12,7 +12,7 @@ import { blogPosts, blogTags } from "../constants/mocks";
 const POSTS_PER_PAGE = 3;
 
 const BlogPage = () => {
-  //https://medium.com/swlh/how-to-store-a-function-with-the-usestate-hook-in-react-8a88dd4eede1
+
   const [filter, setFilter] = useState(() => (post) => true);
   const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
   const [tags, setTags] = useState(blogTags);
@@ -20,15 +20,8 @@ const BlogPage = () => {
 
   const onSearchAction = (searchValue) => {
     //this should also use graphql query
-    let filter;
-    if (searchValue.length === 0) {
-      filter = (post) => true;
-      setFilter(() => (post) => true);
-    }
-    else {
-      filter = (post) => post.title.includes(searchValue);
-      setFilter(() => (post) => post.title.includes(searchValue));
-    }
+    let filter = (post) => searchValue.length === 0 || post.title.includes(searchValue);
+    setFilter(() => filter);
 
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
@@ -37,23 +30,13 @@ const BlogPage = () => {
     setTags([...tags]);
   }
 
-  const onTagAction = (value) => {
+  const onTagAction = (newTagValue) => {
     //this should also use graphql query
-    var index = tags.findIndex(tag => tag.title === value.title);
-    tags.splice(index, 1, value);
+    var index = tags.findIndex(tag => tag.title === newTagValue.title);
+    tags.splice(index, 1, newTagValue);
 
-    let filter;
-
-    if (tags.filter(tag => tag.isActive).length === 0) {
-      filter = (post) => true;
-      setFilter(() => (post) => true);
-    }
-    else {
-      filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
-      setFilter(() => (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter));
-    }
-
-    console.log('Inside onTag', tags.filter(tag => tag.isActive), blogPosts.filter(filter));
+    let filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
+    setFilter(() => filter);
 
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
@@ -62,7 +45,6 @@ const BlogPage = () => {
 
   const onPageChange = (pageNumber) => {
     //this should also use graphql query with limit/skip parameters instead of blogPosts.slice
-    console.log('Inside onPage', tags.filter(tag => tag.isActive), blogPosts.filter(filter), filter);
     setActivePosts(blogPosts.filter(filter).slice(pageNumber * POSTS_PER_PAGE, (pageNumber + 1) * POSTS_PER_PAGE));
   }
 
@@ -74,7 +56,12 @@ const BlogPage = () => {
         onSearchAction={onSearchAction} />
       <SeparatorBar text={blogSections.posts} />
       <div className={styles.blogContainer}>
-        {activePosts.map((post, index) => <BlogCard key={post.title + post.date + index} post={post} />)}
+        {
+          activePosts.length === 0 ?
+            <div className={styles.error}>
+              <p className={styles.errorMsg}>No items to display!</p>
+            </div>
+            : activePosts.map((post, index) => <BlogCard key={post.title + post.date + index} post={post} />)}
         <Pagination count={pageCount}
           color='primary'
           variant="outlined"

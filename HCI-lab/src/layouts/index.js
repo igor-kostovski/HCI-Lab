@@ -1,13 +1,24 @@
-import React, { useContext } from "react"
+import React, { useContext, useEffect } from "react"
 import { navigationContext } from '../constants/contexts';
-
 
 import Header from "../components/header"
 import Footer from "../components/footer"
 import PageTitle from "../components/pageTitle"
 
 const Layout = ({ children }) => {
-    var { activeTab } = useContext(navigationContext);
+    var { activeTab, setActiveTab } = useContext(navigationContext);
+
+    const capitalize = (string) => {
+        if (typeof string !== 'string') return ''
+        else if (string === '') return 'Home'
+        else if (string === 'aboutUs') return 'About us'
+        return string.charAt(0).toUpperCase() + string.slice(1)
+      }
+
+    useEffect(() => {
+        console.log("AAAAAAAAAAAAAAAAAA")
+        setActiveTab(capitalize(String(children.key.slice(1, -1))))
+    })
 
     return (
         <>

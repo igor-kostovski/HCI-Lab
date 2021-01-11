@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './style.module.css'
+import styles from './style.module.css';
+
+import _ from 'lodash';
+
 
 const onEnter = ({ charCode, target: { value } }, searchAction) => {
+    let wait = 350;
     if (charCode === 13) {
-        //maybe we can use debounce instead on char code and search immediately after user stops writing (setting optimal offset from last key stroke)
-        searchAction(value);
+        wait = 0;
     }
+
+    _.debounce(() => searchAction(value), wait)();
 }
 
 const SearchBar = ({ action }) => {
@@ -14,7 +19,7 @@ const SearchBar = ({ action }) => {
         <input className={styles.searchInput}
             type="text"
             placeholder="Search"
-            onKeyPress={(event) => onEnter(event, action)} />
+            onKeyUp={(event) => onEnter(event, action)} />
     );
 }
 

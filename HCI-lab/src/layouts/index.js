@@ -16,7 +16,6 @@ const Layout = ({ children }) => {
       }
 
     useEffect(() => {
-        console.log("AAAAAAAAAAAAAAAAAA")
         setActiveTab(capitalize(String(children.key.slice(1, -1))))
     })
 

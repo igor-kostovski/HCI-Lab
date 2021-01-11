@@ -24,11 +24,13 @@ const BlogPage = () => {
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
     setTags([...blogTags]);
     setPageCount(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+    //hacky need to figure out better design for search bar
+    document.getElementById('#hackyInput').value = '';
   }
 
   const onSearchAction = (searchValue) => {
     //this should also use graphql query
-    let filter = (post) => searchValue.length === 0 || post.title.includes(searchValue);
+    let filter = (post) => searchValue.length === 0 || post.title.toLowerCase().includes(searchValue.toLowerCase());
     setFilter(() => filter);
 
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));

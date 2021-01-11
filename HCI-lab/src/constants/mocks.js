@@ -55,6 +55,7 @@ export const blogPosts = [
         text: 'In a recent interview, a member of a NASA team whose family heritage is Croatian, detailed how her current project will go to Mars in 2021!',
         tags: ['Croatia', 'Adventure']
     },
+    // ================ Add at least this much blog posts ====================
     {
         title: 'Post Covid-19 travel predictions',
         date: '03 jan 2021',

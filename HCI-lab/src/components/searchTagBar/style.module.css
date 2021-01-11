@@ -33,6 +33,7 @@
     transition: transform 0.2s;
     font: 20px;
     outline:none;
+    cursor: pointer;
 }
 
 .clearBtn:hover {

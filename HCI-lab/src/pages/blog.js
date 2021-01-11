@@ -35,7 +35,8 @@ const BlogPage = () => {
     var index = tags.findIndex(tag => tag.title === newTagValue.title);
     tags.splice(index, 1, newTagValue);
 
-    let filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
+    //let filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title), filter);
+    let filter = (post) => tags.filter(tag => tag.isActive).every(tag => post.tags.includes(tag.title));
     setFilter(() => filter);
 
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));

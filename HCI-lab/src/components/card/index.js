@@ -18,9 +18,12 @@ const Card = ({ header, children, image, shortBio }) => {
                             {header}
                         </h4>
                         {shortBio && <ul className={styles.shortBio}>
-                            <li>{crewInfo.labels.dateOfBirth} {shortBio.dateOfBirth}</li>
-                            <li>{crewInfo.labels.languages} {shortBio.languages}</li>
-                            <li>{crewInfo.labels.experience} {shortBio.experience}</li>
+                            <li className={styles.dateOfBirthLabel}>{crewInfo.labels.dateOfBirth}</li>
+                            <li className={styles.dateOfBirthValue}>{shortBio.dateOfBirth}</li>
+                            <li className={styles.languagesLabel}>{crewInfo.labels.languages}</li>
+                            <li className={styles.languagesValue}>{shortBio.languages}</li>
+                            <li className={styles.experienceLabel}>{crewInfo.labels.experience}</li>
+                            <li className={styles.experienceValue}>{shortBio.experience}</li>
                         </ul>
                         }
                     </div>

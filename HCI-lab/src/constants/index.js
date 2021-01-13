@@ -137,9 +137,9 @@ export const crewPositions = {
 
 export const crewInfo = {
     labels: {
-        dateOfBirth: "Date of birth: ",
-        languages: "Languages: ",
-        experience: "Experience: "
+        dateOfBirth: "DATE OF BIRTH",
+        languages: "LANGUAGES",
+        experience: "EXPERIENCE"
     },
     captain: {
         name: "Luka Podrug",
@@ -156,7 +156,7 @@ export const crewInfo = {
         foto: "kostovski",
         shortInfo: {
             dateOfBirth: "16.04.1992.",
-            languages: "Croatian, English, Italian",
+            languages: "Croatian, Italian",
             experience: "7 years"
         },
         longInfo: "A motorman, also known as a qualified member of the engineering department (QMED), is the seniormost rate in the engine room of a ship. The motorman performs a variety of tasks connected with the maintenance and repair of engine room, fireroom, machine shop, ice-machine room, and steering-engine room equipment. The motorman inspects equipment such as pumps, turbines, distilling plants, and condensers, and prepares record of condition."
@@ -166,7 +166,7 @@ export const crewInfo = {
         foto: "zivkovic",
         shortInfo: {
             dateOfBirth: "15.01.1995.",
-            languages: "Croatian, English, Spanish",
+            languages: "Croatian, Spanish",
             experience: "3 years"
         },
         longInfo: "A chief steward is the senior crew member working in the steward's department of a ship. The chief steward directs, instructs, and assigns personnel performing such functions as preparing and serving meals, ensuring that they are both delicious and nutritious. Moreover, the steward oversees cleaning and maintaining officers' quarters and steward department areas; and receiving, issuing, and inventorying stores."
@@ -186,7 +186,7 @@ export const crewInfo = {
         foto: "sisko",
         shortInfo: {
             dateOfBirth: "15.08.1994.",
-            languages: "Croatian, English, Portugese",
+            languages: "Croatian, German",
             experience: "3 years"
         },
         longInfo: "Ship stewards and ship stewardesses work on board the vessel to provide services to passengers such as serving meals, housekeeping, welcoming passengers and explaining safety procedures. Cabin stewardesses are responsible for keeping passengers' cabins clean and tidy. Duties include vacuuming, changing sheets, washing windows, cleaning bathrooms etc."

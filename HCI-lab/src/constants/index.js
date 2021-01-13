@@ -156,7 +156,7 @@ export const crewInfo = {
         foto: "kostovski",
         shortInfo: {
             dateOfBirth: "16.04.1992.",
-            languages: "Croatian, Italian",
+            languages: "Croatian, Italian, Spanish",
             experience: "7 years"
         },
         longInfo: "A motorman, also known as a qualified member of the engineering department (QMED), is the seniormost rate in the engine room of a ship. The motorman performs a variety of tasks connected with the maintenance and repair of engine room, fireroom, machine shop, ice-machine room, and steering-engine room equipment. The motorman inspects equipment such as pumps, turbines, distilling plants, and condensers, and prepares record of condition."
@@ -176,7 +176,7 @@ export const crewInfo = {
         foto: "borovic",
         shortInfo: {
             dateOfBirth: "02.05.1998.",
-            languages: "Croatian, English",
+            languages: "Croatian, English, Portugese",
             experience: "1 year"
         },
         longInfo: "Chef de cuisine or executive chef is the main chef in a restaurant. The chef de cuisine is in charge of all other functional chefs in the kitchen. The chef de cuisine is in charge of all activities related to the kitchen, which usually includes creating menus, managing kitchen staff, ordering and purchasing stock and equipment, plating design, and ensuring that all meals served in the restaurant are both delicious and nutritious."
@@ -186,7 +186,7 @@ export const crewInfo = {
         foto: "sisko",
         shortInfo: {
             dateOfBirth: "15.08.1994.",
-            languages: "Croatian, German",
+            languages: "Croatian, English, German",
             experience: "3 years"
         },
         longInfo: "Ship stewards and ship stewardesses work on board the vessel to provide services to passengers such as serving meals, housekeeping, welcoming passengers and explaining safety procedures. Cabin stewardesses are responsible for keeping passengers' cabins clean and tidy. Duties include vacuuming, changing sheets, washing windows, cleaning bathrooms etc."

@@ -1,0 +1,5 @@
+.activeBurgerMenuItem {
+    border-bottom: 2px solid #ffffff;
+    width: max-content;
+    margin: 0 auto;
+}

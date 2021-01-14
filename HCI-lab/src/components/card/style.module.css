@@ -10,7 +10,7 @@ ul {
     transition: 0.3s;
     border-radius: 35px;
     width: 100%;
-    height: 100%;
+    height: 90%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto max-content;
@@ -31,7 +31,7 @@ ul {
     grid-template-areas: 
       "title"
       "shortBio";
-    height: 70%;
+    height: max-content;
   }
 
   .image {
@@ -147,7 +147,7 @@ ul {
   .imageTitleText {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: max-content max-content;
     grid-template-areas:
       "image"
       "text";
@@ -163,7 +163,7 @@ ul {
   .imageTitleTextMoved {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr;
+    grid-template-rows: max-content max-content;
     grid-template-areas:
       "image"
       "text";
@@ -202,4 +202,43 @@ ul {
     grid-area: shortBio;
     padding: 0 25px;
     font-size: 22px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-template-areas: 
+      "dateOfBirthLabel"
+      "dateOfBirthValue"
+      "languagesLabel"
+      "languagesValue"
+      "experienceLabel"
+      "experienceValue";
+  }
+
+  .dateOfBirthLabel {
+    grid-area: dateOfBirthLabel;
+  }
+
+  .dateOfBirthValue {
+    grid-area: dateOfBirthValue;
+  }
+
+  .languagesLabel {
+    grid-area: languagesLabel;
+  }
+
+  .languagesValue {
+    grid-area: languagesValue;
+  }
+
+  .experienceLabel {
+    grid-area: experienceLabel;
+  }
+
+  .experienceValue {
+    grid-area: experienceValue;
+  }
+
+  .dateOfBirthValue, .languagesValue {
+    margin-bottom: 15px;
   }

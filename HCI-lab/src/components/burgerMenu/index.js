@@ -7,10 +7,11 @@ import OutsideClickHandler from 'react-outside-click-handler';
 import { navigationTabs } from "../../constants"
 import { navigationContext } from "../../constants/contexts";
 
-import styles from "./style.css"
+import burgerStyles from "./burgerMenuStyle.css"
+import styles from "./style.module.css"
 
 const BurgerMenu = () => {
-    var { setActiveTab } = useContext(navigationContext);
+    var { activeTab, setActiveTab } = useContext(navigationContext);
     const [isOpen, setIsOpen] = useState(false);
 
     const handleStateChange = ({ isOpen }) => {
@@ -26,7 +27,7 @@ const BurgerMenu = () => {
             <Menu isOpen={isOpen} onStateChange={(menuState) => handleStateChange(menuState)} right>
                 {navigationTabs.map(({ name, linkTo }) => (
                     <Link onClick={() => {closeMenu(); setActiveTab(name)}} to={linkTo} key={name}>
-                        <div>{name.toUpperCase()}</div>
+                        <div className={name === activeTab ? styles.activeBurgerMenuItem : ""}>{name.toUpperCase()}</div>
                     </Link>
                 ))}
             </Menu>

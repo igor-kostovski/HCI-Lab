@@ -10,7 +10,7 @@
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
-    margin: 2px;
+    margin: 5px 0;
   }
   
   .btn:hover {
@@ -67,4 +67,28 @@
     left: 120%;
     -webkit-transform: rotate(40deg);
     transform: rotate(40deg);
+  }
+
+  @media screen and (max-width: 1360.5px) {
+    .btn {
+      max-width: 150px;
+    }
+  }
+
+  @media screen and (max-width: 1300.5px) {
+    .btn {
+      max-width: 140px;
+    }
+  }
+
+  @media screen and (max-width: 1250.5px) {
+    .btn {
+      max-width: 130px;
+    }
+  }
+
+  @media screen and (max-width: 1250.5px) {
+    .btn {
+      max-width: 120px;
+    }
   }

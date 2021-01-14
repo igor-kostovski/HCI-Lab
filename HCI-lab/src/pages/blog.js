@@ -73,10 +73,14 @@ const BlogPage = () => {
             <div className={styles.error}>
               <p className={styles.errorMsg}>No items to display!</p>
             </div>
-            : activePosts.map((post, index) =>
-              <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
-                key={post.title + post.date + index}
-                post={post} />)}
+            : activePosts.map((post, index) => { 
+              let postClass = "post" + index
+              return (
+              <div className={styles.[postClass]}>
+                <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
+                  key={post.title + post.date + index}
+                  post={post} />
+              </div>)})}
         <Pagination count={pageCount}
           color='primary'
           variant="outlined"

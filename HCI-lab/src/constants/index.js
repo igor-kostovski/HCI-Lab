@@ -42,28 +42,28 @@ export const cardType = {
 }
 
 export const footerTitles = {
-    socialMedia: "FIND US ON:",
-    contact: "CONTACT INFO:",
-    eu: "IN COOPERATION WITH:"
+    socialMedia: "Find us on:",
+    contact: "Contact:",
+    eu: "In cooperation with:"
 }
 
 export const contactInfo = {
-    email: "MAIL: info@delphinus-yachts.com",
-    telephone: "TELEPHONE: +385 98 448 518",
-    address: "ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA"
+    email: "Email: info@delphinus-yachts.com",
+    telephone: "Telephone: +385 98 448 518",
+    address: "Address: Put Radoševca 9, Split 21000 Croatia"
 }
 
 export const homePageTexts = {
-    titleText: "ENJOY ADRIATIC WITH US",
-    offerText: "WE OFFER OUR GUESTS CRYSTAL BLUE CRUISING AROUND CHARMING ISLANDS IN THE MID ADRIATIC SEA TO ENRICH THEIR VACATION WITH THE MOST PLEASANT MEMORIES.",
-    locationText: "OUR PORT OF CALL IS SPLIT, HOWEVER THE ROUTE FOR YOUR CRYSTAL BLUE VOYAGE MAY BE SPECIFICALLY TAILORED AS PER YOUR OWN WISH AMONG SECLUDED BAYS AND BEAUTIFUL BEACHES ON THE ISLANDS OF VIS, HVAR, KORČULA, MLJET AND SO ON.",
-    motivationText: "ON OUR LUXURY YACHT ALESSANDRO YOU WILL SHARE AN UNFORGETTABLE HOLIDAY AND WE ARE LOOKING FORWARD TO GET TO KNOW YOU, YOUR FAMILY AND FRIENDS.",
+    titleText: "Enjoy Adriatic with Us",
+    offerText: "We offer our guests crystal blue cruising around charming islands in the mid-Adriatic sea to enrich their vacation with the most pleasant memories.",
+    locationText: "Our port of call is Split, however, the route for your crystal blue voyage may be specifically tailored as per your own wish among secluded bays and beautiful beaches on the islands of Vis, Hvar, Korčula, Mljet, and so on.",
+    motivationText: "On our luxury yacht Alessandro you will share an unforgettable holiday and we are looking forward to getting to know you, your family, and your friends.",
     bannerText: "Unique experience delivered with passion"
 }
 
 export const aboutUsSections = {
-    companyInfo: "COMPANY INFO",
-    crewMembers: "CREW MEMBERS"
+    companyInfo: "Company info",
+    crewMembers: "Crew members"
 }
 
 export const contactSections = {

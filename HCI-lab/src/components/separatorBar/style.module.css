@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-
 .separatorContainer {
     width: 90%;
     margin: 20px auto;
@@ -10,12 +8,13 @@
 
 .separatorText {
     margin: 0 25px;
-    font-family: 'Raleway', sans-serif;
+    font-family: omnes-pro, sans-serif;
     font-size: 40px;
+    color: white;
 }
 
 .separatorLine {
-    border-top: 2px solid black;
+    border-top: 2px solid white;
     position: relative;
     top: calc(50% - 1px);
 }

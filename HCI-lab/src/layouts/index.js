@@ -21,14 +21,12 @@ const Layout = ({ children }) => {
     })
 
     return (
-        <>
-            <div className={styles.gradient}>
-                <Header />
-                {activeTab !== 'Home' && <PageTitle />}
-                {children}
-                <Footer />
-            </div>
-        </>
+        <div className={styles.gradient}>
+            <Header />
+            {activeTab !== 'Home' && <PageTitle />}
+            {children}
+            <Footer />
+        </div>
     );
 }
 

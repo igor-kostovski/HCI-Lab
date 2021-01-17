@@ -78,10 +78,10 @@ export const blogSections = {
 }
 
 export const galleryTabs = [
-    { title: "EXTERIOR", isActive: true },
-    { title: "INTERIOR", isActive: false },
-    { title: "FLY BRIDGE", isActive: false },
-    { title: "MAIN DECK", isActive: false }
+    { title: "Exterior", isActive: true },
+    { title: "Interior", isActive: false },
+    { title: "Fly bridge", isActive: false },
+    { title: "Main deck", isActive: false }
 ]
 
 export const galleryImages = [
@@ -196,11 +196,6 @@ export const crewInfo = {
     }
 }
 
-export const buttonTexts = {
-    hide: "HIDE INFO",
-    show: "MORE INFO"
-}
-
 export const faq = {
     questions: {
         question1: "Provided safety equipment",
@@ -223,7 +218,7 @@ export const faq = {
 export const findUs = {
     labels: {
         telephone: "Telephone: ",
-        email: "E-mail: ",
+        email: "Email: ",
         address: "Address: "
     },
     values: {
@@ -239,5 +234,5 @@ export const contactForm = {
         email: "E-mail: ",
         message: "Message: "
     },
-    buttonText: "SUBMIT"
+    buttonText: "Submit"
 }

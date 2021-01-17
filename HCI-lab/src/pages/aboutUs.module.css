@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-
 .companyInfoContainer {
   width: 80%;
   margin: 30px auto;
@@ -17,69 +15,26 @@
 .crewMembersContainer {
   display: grid;
   margin: 0 auto;
-  margin-top: -15px;
-  margin-bottom: 80px;
+  margin-top: 25px;
+  margin-bottom: 70px;
   width: 80%;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content 1fr max-content 1fr;
-  gap: 20px 20px;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px 20px;
   grid-template-areas:
-    "positionCrewMember1 positionCrewMember2 positionCrewMember3"
     "crewMember1 crewMember2 crewMember3"
-    "positionCrewMember4 positionCrewMember5 positionCrewMember6"
     "crewMember4 crewMember5 crewMember6";
-}
-
-.crewPosition1, .crewPosition2, .crewPosition3, .crewPosition4, .crewPosition5, .crewPosition6 {
-  width: max-content;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #000000;
-  margin: 0 auto;
-  margin-bottom: 15px;
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  color: #ffffff;
-  background-color: #bccbd1;
-  font-weight: 600;
-}
-
-.crewPosition1 {
-  grid-area: positionCrewMember1;
-}
-
-.crewPosition2 {
-  grid-area: positionCrewMember2;
-}
-
-.crewPosition3 {
-  grid-area: positionCrewMember3;
-}
-
-.crewPosition4 {
-  grid-area: positionCrewMember4;
-}
-
-.crewPosition5 {
-  grid-area: positionCrewMember5;
-}
-
-.crewPosition6 {
-  grid-area: positionCrewMember6;
 }
 
 @media screen and (max-width: 1100.5px) {
   .crewMembersContainer {
     margin-top: -20px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: max-content 1fr max-content 1fr max-content 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
-      "positionCrewMember1 positionCrewMember2"
       "crewMember1 crewMember2"
-      "positionCrewMember3 positionCrewMember4"
       "crewMember3 crewMember4"
-      "positionCrewMember5 positionCrewMember6"
       "crewMember5 crewMember6";
   }
 }
@@ -88,20 +43,14 @@
   .crewMembersContainer {
     margin-top: -20px;
     grid-template-columns: 1fr;
-    grid-template-rows: max-content 1fr max-content 1fr max-content 1fr max-content 1fr max-content 1fr max-content 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 20px 20px;
     grid-template-areas:
-      "positionCrewMember1"
       "crewMember1"
-      "positionCrewMember2"
       "crewMember2"
-      "positionCrewMember3"
       "crewMember3"
-      "positionCrewMember4"
       "crewMember4"
-      "positionCrewMember5"
       "crewMember5"
-      "positionCrewMember6"
       "crewMember6"
   }
 }

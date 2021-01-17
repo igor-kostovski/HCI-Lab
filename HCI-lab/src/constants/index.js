@@ -127,25 +127,23 @@ export const aboutUsTexts = {
 }
 
 export const crewPositions = {
-    captain: "CAPTAIN",
-    motorman: "MOTORMAN",
-    chiefStewardess: "CHIEF STEWARDESS",
-    chefDeCuisine: "CHEF DE CUISINE",
-    stewardess: "STEWARDESS",
-    sailor: "SAILOR"
+    captain: "Captain",
+    motorman: "Motorman",
+    chiefStewardess: "Chief Stewardess",
+    chefDeCuisine: "Chef de cuisine",
+    stewardess: "Stewardess",
+    sailor: "Sailor"
 }
 
 export const crewInfo = {
     labels: {
-        dateOfBirth: "DATE OF BIRTH",
-        languages: "LANGUAGES",
-        experience: "EXPERIENCE"
+        languages: "Languages",
+        experience: "Experience"
     },
     captain: {
         name: "Luka Podrug",
         foto: "podrug",
         shortInfo: {
-            dateOfBirth: "20.10.1998.",
             languages: "Croatian, English",
             experience: "4 years"
         },
@@ -155,7 +153,6 @@ export const crewInfo = {
         name: "Igor Kostovski",
         foto: "kostovski",
         shortInfo: {
-            dateOfBirth: "16.04.1992.",
             languages: "Croatian, Italian, Spanish",
             experience: "7 years"
         },
@@ -165,7 +162,6 @@ export const crewInfo = {
         name: "Ivan Zivkovic",
         foto: "zivkovic",
         shortInfo: {
-            dateOfBirth: "15.01.1995.",
             languages: "Croatian, Spanish",
             experience: "3 years"
         },
@@ -175,7 +171,6 @@ export const crewInfo = {
         name: "Boris Borovic",
         foto: "borovic",
         shortInfo: {
-            dateOfBirth: "02.05.1998.",
             languages: "Croatian, English, Portugese",
             experience: "1 year"
         },
@@ -185,7 +180,6 @@ export const crewInfo = {
         name: "Matija Sisko",
         foto: "sisko",
         shortInfo: {
-            dateOfBirth: "15.08.1994.",
             languages: "Croatian, English, German",
             experience: "3 years"
         },
@@ -195,7 +189,6 @@ export const crewInfo = {
         name: "Zvonimir Butic",
         foto: "butic",
         shortInfo: {
-            dateOfBirth: "12.02.1982.",
             languages: "Croatian",
             experience: "10 years"
         },

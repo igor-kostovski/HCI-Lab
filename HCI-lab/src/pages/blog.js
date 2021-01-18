@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
 import { blogSections, images } from "../constants"
@@ -17,6 +17,12 @@ const BlogPage = () => {
   const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
   const [tags, setTags] = useState([...blogTags]);
   const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+
+  useEffect(() => {
+    fetch('https://cdn.contentful.com/spaces/{{SPACE_ID}}/environments/master/entries?access_token={{ACCESS_TOKEN}}')
+      .then(res => res.json())
+      .then(({ items }) => console.log(items.map(x => x.fields)));
+  })
 
   const onClearAction = () => {
     let filter = (post) => true;
@@ -73,14 +79,15 @@ const BlogPage = () => {
             <div className={styles.error}>
               <p className={styles.errorMsg}>No items to display!</p>
             </div>
-            : activePosts.map((post, index) => { 
+            : activePosts.map((post, index) => {
               let postClass = "post" + index
               return (
-              <div className={styles.[postClass]}>
-                <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
-                  key={post.title + post.date + index}
-                  post={post} />
-              </div>)})}
+                <div className={styles.[postClass]}>
+                  <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
+                    key={post.title + post.date + index}
+                    post={post} />
+                </div>)
+            })}
         <Pagination count={pageCount}
           color='primary'
           variant="outlined"

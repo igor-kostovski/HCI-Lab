@@ -12,11 +12,11 @@ import { blogPosts, blogTags } from "../constants/mocks";
 const POSTS_PER_PAGE = 3;
 
 const BlogPage = () => {
-
   const [filter, setFilter] = useState(() => (post) => true);
   const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
   const [tags, setTags] = useState([...blogTags]);
   const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+  const [currentPage, setCurrentPage] = useState(1)
 
   const onClearAction = () => {
     let filter = (post) => true;
@@ -26,6 +26,7 @@ const BlogPage = () => {
     setPageCount(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
     //hacky need to figure out better design for search bar
     document.getElementById('#hackyInput').value = '';
+    setCurrentPage(1);
   }
 
   const onSearchAction = (searchValue) => {
@@ -37,6 +38,7 @@ const BlogPage = () => {
 
     tags.forEach(tag => tag.isActive = false);
     setTags([...tags]);
+    setCurrentPage(1);
   }
 
   const onTagAction = (newTagValue) => {
@@ -50,9 +52,11 @@ const BlogPage = () => {
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
     setTags([...tags]);
+    setCurrentPage(1);
   }
 
   const onPageChange = (pageNumber) => {
+    setCurrentPage(pageNumber + 1);
     setActivePosts(blogPosts.filter(filter).slice(pageNumber * POSTS_PER_PAGE, (pageNumber + 1) * POSTS_PER_PAGE));
   }
 
@@ -80,6 +84,7 @@ const BlogPage = () => {
                 </div>)
             })}
         <Pagination count={pageCount}
+          page={currentPage}
           color='primary'
           variant="outlined"
           className={styles.pagination}

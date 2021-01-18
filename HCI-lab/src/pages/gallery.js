@@ -26,6 +26,10 @@ const GalleryPage = () => {
     setTabs([...tabs]);
   }
 
+  if(tabs[activeTabIndex].isActive === false) {
+    updateActiveTabState(activeTabIndex)
+  }
+
   const galleryTagChange = (clickedTag) => {
     if (clickedTag.isActive === false)
       return;

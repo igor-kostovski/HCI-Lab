@@ -31,7 +31,8 @@ export const images = {
     sailing: 'sailing',
     payment: 'payment',
     food: 'dish',
-    safety: 'helmet'
+    safety: 'helmet',
+    firstPerson: 'firstPerson'
 }
 
 export const cardType = {

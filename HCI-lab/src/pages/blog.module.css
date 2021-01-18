@@ -33,6 +33,7 @@
 
 @media screen and (max-width: 1300.5px) {
     .blogContainer {
+        width: 90%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: max-content max-content max-content;
         grid-template-areas: 
@@ -68,6 +69,7 @@
 
 @media screen and (max-width: 850.5px) {
     .blogContainer {
+        width: 80%;
         grid-template-columns: 1fr;
         grid-template-rows: max-content max-content max-content max-content;
         grid-template-areas: 

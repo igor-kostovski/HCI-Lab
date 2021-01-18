@@ -50,12 +50,24 @@ const GalleryPage = () => {
     }
   }
 
+  const LeftSlickArrow = (props) => {
+    const { classNameCustom, onClick } = props;
+    return <div className={classNameCustom} onClick={onClick} />
+  }
+
+  const RightSlickArrow = (props) => {
+    const { classNameCustom, onClick } = props;
+    return <div className={classNameCustom} onClick={onClick} />
+  }
+
   const carouselSettings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <RightSlickArrow classNameCustom={styles.slickRightArrow} />,
+    prevArrow: <LeftSlickArrow classNameCustom={styles.slickLeftArrow} />,
     beforeChange: (oldIndex, newIndex) => { updateActiveTabState(newIndex) }
   }
 
@@ -81,7 +93,6 @@ const GalleryPage = () => {
                 <div className={styles.outerCircleLine}></div>
                 {
                   imagePositions.map((name, secondaryIndex) => (
-
                     <div className={styles[name]} onClick={() => rodalClickHandler(secondaryIndex)}>
                       <Image name={galleryImages[index % 3][secondaryIndex]} isBackground={true} />
                     </div>

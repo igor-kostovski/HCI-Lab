@@ -198,6 +198,37 @@
     cursor: pointer;
 }
 
+.slickLeftArrow {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #65b8db;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid transparent;
+    transition: all 0.6s;
+    top: 45.4%;
+    left: -40px;
+    position: absolute;
+}
+
+.slickRightArrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #65b8db;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    transition: all 0.6s;
+    top: 45.4%;
+    right: -40px;
+    position: absolute;
+}
+
+.slickLeftArrow:hover, .slickRightArrow:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1500.5px) {
     .rodalContainer {
         gap: 0 50px;
@@ -363,6 +394,10 @@
         height: 100px;
         margin-top: 275px;
         margin-right: 275px;
+    }
+
+    .slickLeftArrow, .slickRightArrow {
+        display: none;
     }
 }
 

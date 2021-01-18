@@ -16,12 +16,11 @@
 
 .error {
     background-color: red;
-    opacity: 0.9;
-    grid-column: 2 / 3;
+    grid-column: 1 / 4;
     grid-row: 1;
     justify-self: center;
     margin: 20px;
-    border-radius: 15%;
+    border-radius: 10px;
     padding: 10px;
 }
 
@@ -43,7 +42,7 @@
     }
 
     .error {
-        grid-column: 2 / 4;
+        grid-column: 1 / 5;
     }
 
     .post0 {

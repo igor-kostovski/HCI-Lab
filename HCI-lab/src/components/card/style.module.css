@@ -144,7 +144,7 @@ ul {
     font-family: proxima-nova, sans-serif;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     font-size: 20px;
   }
 
@@ -152,10 +152,8 @@ ul {
     font-family: proxima-nova, sans-serif;
     text-align: center;
     line-height: 20px;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    height: calc(100% - 49px);
+    height: calc(100% - 65px);
     font-weight: 200;
     margin: 0 auto;
     padding-bottom: 10px;

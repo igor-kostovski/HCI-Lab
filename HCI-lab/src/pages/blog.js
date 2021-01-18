@@ -52,6 +52,7 @@ const BlogPage = () => {
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
     setTags([...tags]);
+    document.getElementById('#hackyInput').value = '';
     setCurrentPage(1);
   }
 
@@ -73,6 +74,7 @@ const BlogPage = () => {
           activePosts.length === 0 ?
             <div className={styles.error}>
               <p className={styles.errorMsg}>No items to display!</p>
+              
             </div>
             : activePosts.map((post, index) => {
               let postClass = "post" + index

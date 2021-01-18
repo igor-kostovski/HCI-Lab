@@ -12,6 +12,7 @@
     margin: 5px 0;
     outline: none;
     border: none;
+    border-radius: 10px;
   }
   
   .btn:hover {

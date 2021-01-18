@@ -12,6 +12,10 @@
   }
 }
 
+.text {
+  margin-bottom: 20px;
+}
+
 .crewMembersContainer {
   display: grid;
   margin: 0 auto;

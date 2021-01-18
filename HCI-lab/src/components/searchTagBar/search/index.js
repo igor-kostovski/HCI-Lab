@@ -6,18 +6,25 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import _ from 'lodash';
 
-const onType = ({ charCode, target: { value } }, searchAction) => {
+const onType = ({ charCode, target: { value } }, searchAction, resetButtonAction) => {
     let wait = 350;
     if (charCode === 13) {
         wait = 0;
+    }
+    
+    if(value !== '') {
+        resetButtonAction(true)
+    }
+    else {
+        resetButtonAction(false)
     }
 
     _.debounce(() => searchAction(value), wait)();
 }
 
-const SearchBar = ({ action }) => {
+const SearchBar = ({ action, resetButtonAction }) => {
     return (
-        <TextField id="#hackyInput" label="Search" type="text" variant="outlined" autocomplete="off" onKeyUp={(event) => onType(event, action)}/>
+        <TextField id="#hackyInput" label="Search" type="text" variant="outlined" autocomplete="off" onKeyUp={(event) => onType(event, action, resetButtonAction)}/>
     );
 }
 

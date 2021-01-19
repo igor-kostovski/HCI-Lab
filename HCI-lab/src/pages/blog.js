@@ -7,22 +7,27 @@ import BlogCard from "../components/blogCard";
 import styles from './blog.module.css';
 
 import Pagination from '@material-ui/lab/Pagination';
-import { blogPosts, blogTags } from "../constants/mocks";
+import { blogTags } from "../constants/mocks";
 
 const POSTS_PER_PAGE = 3;
 
 const BlogPage = () => {
-
+  const [blogPosts, setBlogPosts] = useState([]);
   const [filter, setFilter] = useState(() => (post) => true);
-  const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
+  const [activePosts, setActivePosts] = useState([]);
   const [tags, setTags] = useState([...blogTags]);
-  const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
+  const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    fetch('https://cdn.contentful.com/spaces/{{SPACE_ID}}/environments/master/entries?access_token={{ACCESS_TOKEN}}')
+    fetch(`https://cdn.contentful.com/spaces/${process.env.GATSBY_SPACE_ID}/environments/master/entries?access_token=${process.env.GATSBY_ACCESS_KEY}`)
       .then(res => res.json())
-      .then(({ items }) => console.log(items.map(x => x.fields)));
-  })
+      .then(({ items }) => {
+        var posts = items.map(x => x.fields)
+        setActivePosts([...posts].slice(0, POSTS_PER_PAGE));
+        setBlogPosts([...posts]);
+        setPageCount(Math.ceil(posts.length / POSTS_PER_PAGE))
+      });
+  }, []);
 
   const onClearAction = () => {
     let filter = (post) => true;
@@ -83,7 +88,7 @@ const BlogPage = () => {
               let postClass = "post" + index
               return (
                 <div className={styles.[postClass]}>
-                  <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
+                  <BlogCard imageName={post.imageName}
                     key={post.title + post.date + index}
                     post={post} />
                 </div>)

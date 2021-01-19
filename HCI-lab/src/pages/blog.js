@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
-import { blogSections, images } from "../constants"
+import { blogSections, contentfulEndpoint } from "../constants"
 import BlogCard from "../components/blogCard";
 
 import styles from './blog.module.css';
@@ -19,15 +19,18 @@ const BlogPage = () => {
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    fetch(`https://cdn.contentful.com/spaces/${process.env.GATSBY_SPACE_ID}/environments/master/entries?access_token=${process.env.GATSBY_ACCESS_KEY}`)
+    fetch(contentfulEndpoint(process.env.GATSBY_ACCESS_KEY, process.env.GATSBY_SPACE_ID))
       .then(res => res.json())
       .then(({ items }) => {
-        var posts = items.map(x => x.fields)
-        setActivePosts([...posts].slice(0, POSTS_PER_PAGE));
-        setBlogPosts([...posts]);
-        setPageCount(Math.ceil(posts.length / POSTS_PER_PAGE))
+        setInitialState(items.map(x => x.fields));
       });
   }, []);
+
+  const setInitialState = (posts) => {
+    setActivePosts([...posts].slice(0, POSTS_PER_PAGE));
+    setBlogPosts([...posts]);
+    setPageCount(Math.ceil(posts.length / POSTS_PER_PAGE))
+  }
 
   const onClearAction = () => {
     let filter = (post) => true;

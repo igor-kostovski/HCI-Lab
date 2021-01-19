@@ -248,3 +248,7 @@ export const contactForm = {
     },
     buttonText: "SUBMIT"
 }
+
+export const contentfulEndpoint = (accessKey, spaceKey) => {
+    return `https://cdn.contentful.com/spaces/${spaceKey}/environments/master/entries?access_token=${accessKey}`;
+}

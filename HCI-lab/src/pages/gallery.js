@@ -5,6 +5,7 @@ import Rodal from 'rodal/lib/rodal'
 
 import TagBar from "../components/searchTagBar"
 import Image from "../components/image"
+import SeparatorBar from "../components/separatorBar"
 
 import { galleryTabs, galleryImages, galleryConstants } from "../constants"
 
@@ -87,6 +88,7 @@ const GalleryPage = () => {
 
   return (
     <>
+      <SeparatorBar text="Sections" />
       <TagBar tags={tabs} onTagAction={galleryTagChange} />
       <div className={styles.galleryContainer}>
         <Slider ref={gallerySlider} {...carouselSettings}>
@@ -97,7 +99,7 @@ const GalleryPage = () => {
                 <div className={styles.outerCircleLine}></div>
                 {
                   imagePositions.map((name, secondaryIndex) => (
-                    <div className={styles[name]} onClick={() => rodalClickHandler(secondaryIndex)}>
+                    <div key={index + secondaryIndex} className={styles[name]} onClick={() => rodalClickHandler(secondaryIndex)}>
                       <Image name={galleryImages[index % 3][secondaryIndex]} isBackground={true} />
                     </div>
                   ))

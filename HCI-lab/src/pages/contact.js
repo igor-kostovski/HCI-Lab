@@ -2,6 +2,7 @@ import React from "react"
 
 import SeparatorBar from "../components/separatorBar"
 import Card from "../components/card"
+import Tag from "../components/searchTagBar/tag"
 
 import { contactSections, faq, findUs, contactForm, images } from "../constants"
 
@@ -59,7 +60,9 @@ const ContactPage = () => (
       <input className={styles.contactFormEmailValue}></input>
       <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
       <textarea className={styles.contactFormMessageValue}></textarea>
-      <div className={styles.submitButton}>{contactForm.buttonText}</div>
+      <div className={styles.submitButton}>
+        <Tag title={contactForm.buttonText} action={() => {}} resetButtonAction={() => {}} />
+      </div>
     </div>
   </>
 )

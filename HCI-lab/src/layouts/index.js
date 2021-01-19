@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
         if (typeof string !== 'string') return ''
         else if (string === '') return 'Home'
         else if (string === 'aboutUs') return 'About us'
+        else if (string === 'specs') return 'Specifications'
         return string.charAt(0).toUpperCase() + string.slice(1)
     }
 
@@ -23,7 +24,6 @@ const Layout = ({ children }) => {
     return (
         <div className={styles.gradient}>
             <Header />
-            {activeTab !== 'Home' && <PageTitle />}
             {children}
             <Footer />
         </div>

@@ -21,6 +21,8 @@ const AboutUsPage = () => (
           header={crewPositions.captain}
           shortBio={crewInfo.captain.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.captain.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.captain.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>
@@ -35,6 +37,8 @@ const AboutUsPage = () => (
           header={crewPositions.motorman}
           shortBio={crewInfo.motorman.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.motorman.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.motorman.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>
@@ -49,6 +53,8 @@ const AboutUsPage = () => (
           header={crewPositions.chiefStewardess}
           shortBio={crewInfo.chiefStewardess.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.chiefStewardess.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.chiefStewardess.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>
@@ -63,6 +69,8 @@ const AboutUsPage = () => (
           header={crewPositions.chefDeCuisine}
           shortBio={crewInfo.chefDeCuisine.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.chefDeCuisine.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.chefDeCuisine.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>
@@ -77,6 +85,8 @@ const AboutUsPage = () => (
           header={crewPositions.sailor}
           shortBio={crewInfo.sailor.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.sailor.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.sailor.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>
@@ -91,6 +101,8 @@ const AboutUsPage = () => (
           header={crewPositions.stewardess}
           shortBio={crewInfo.stewardess.shortInfo}>
           {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.stewardess.name}</div> 
             <div className={styles.label}>Languages:</div> 
             <div className={styles.text}>{crewInfo.stewardess.shortInfo.languages}</div> 
             <div className={styles.label}>Experience:</div>

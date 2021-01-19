@@ -84,7 +84,9 @@
     border-radius: 50%;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
-    background-color: #65b8db;
+    background-color: #0080FF;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +97,7 @@
 
 .outerCircleLine {
     border-radius: 50%;
-    border: 2px dotted #000000;
+    border: 2px dotted #ffffff;
     width: 500px;
     height: 500px;
     grid-area: overlap;
@@ -103,51 +105,55 @@
 
 .topImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-top: -500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-top: 500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .rightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-right: -500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .leftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-right: 500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topRightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -155,11 +161,12 @@
     margin-right: -350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topLeftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -167,11 +174,12 @@
     margin-right: 350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomRightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -179,11 +187,12 @@
     margin-right: -350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomLeftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -191,6 +200,7 @@
     margin-right: 350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topImageCircle:hover, .bottomImageCircle:hover, .rightImageCircle:hover, .leftImageCircle:hover, .topRightImageCircle:hover, .topLeftImageCircle:hover, .bottomRightImageCircle:hover, .bottomLeftImageCircle:hover {
@@ -201,7 +211,7 @@
 .slickLeftArrow {
     width: 0;
     height: 0;
-    border-right: 20px solid #65b8db;
+    border-right: 20px solid #ffffff;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-left: 20px solid transparent;
@@ -214,7 +224,7 @@
 .slickRightArrow {
     width: 0;
     height: 0;
-    border-left: 20px solid #65b8db;
+    border-left: 20px solid #ffffff;
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-right: 20px solid transparent;

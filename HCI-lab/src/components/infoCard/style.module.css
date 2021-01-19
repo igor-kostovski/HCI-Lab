@@ -18,14 +18,16 @@
   }
 
   .image {
-    border-radius: 5px;
+    border-radius: 20px;
     margin: 15px;
     width: 60%;
     transition: transform 0.2s;
+    box-shadow: 0 4px 8px 0 #0080FF;
   }
 
   .text {
-    font: 15px;
+    font-size: 28px;
+    line-height: 32px;
     font-family: proxima-nova, sans-serif;
     text-align: center;
   }
@@ -39,3 +41,25 @@
       width: 80%;
     }
   }
+
+  @media screen and (max-width: 1600.5px){
+    .text {
+        font-size: 25px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 1350.5px){
+    .text {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+@media screen and (max-width: 350.5px){
+    .text {
+        font-size: 15px;
+        text-align: center;
+        line-height: 18px;
+    }
+}

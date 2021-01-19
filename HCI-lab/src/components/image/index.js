@@ -363,6 +363,13 @@ const Image = ({ name, className, isBackground }) => {
                       }
                 }
             }
+            noItems: file(relativePath: {eq: "noItems.png"}) {
+                childImageSharp {
+                    fluid(maxWidth: 150) {
+                        ...GatsbyImageSharpFluid
+                      }
+                }
+            }
         }
     `)
     return (isBackground ? <BackgroundImage className={className} fluid={data[name].childImageSharp.fluid} style={{ height: `100%` }} /> : <Img className={className} fluid={data[name].childImageSharp.fluid} />)

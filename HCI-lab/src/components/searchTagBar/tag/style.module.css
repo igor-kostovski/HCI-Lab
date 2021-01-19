@@ -9,10 +9,11 @@
     text-decoration: none;
     text-transform: uppercase;
     width: 100%;
-    margin: 5px 0;
+    margin: 5px 5px;
     outline: none;
     border: none;
     border-radius: 10px;
+    font-family: proxima-nova, sans-serif;;
   }
   
   .btn:hover {
@@ -90,5 +91,11 @@
   @media screen and (max-width: 1250.5px) {
     .btn {
       max-width: 120px;
+    }
+  }
+
+  @media screen and (max-width: 676.5px) {
+    .btn {
+      line-height: 30px;
     }
   }

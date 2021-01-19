@@ -32,6 +32,7 @@ export const images = {
     payment: 'payment',
     food: 'dish',
     safety: 'helmet',
+    noItems: 'noItems',
     firstPerson: 'firstPerson'
 }
 

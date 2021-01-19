@@ -22,7 +22,7 @@ const onType = ({ charCode, target: { value } }, searchAction, resetButtonAction
 
 const SearchBar = ({ action, resetButtonAction }) => {
     return (
-        <input id="#hackyInput" className={styles.input} autoComplete="off" onKeyUp={(event) => onType(event, action, resetButtonAction)}/>
+        <input id="hackyInput" placeholder="Search" className={styles.input} autoComplete="off" onKeyUp={(event) => onType(event, action, resetButtonAction)}/>
     );
 }
 

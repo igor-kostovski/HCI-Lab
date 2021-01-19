@@ -73,14 +73,23 @@
   
 .contentImage1 { 
     grid-area: contentImage1; 
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 #0080FF;
+    overflow: hidden;
 }
   
 .contentImage2 { 
     grid-area: contentImage2; 
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 #0080FF;
+    overflow: hidden;
 }
 
 .contentImage3 { 
     grid-area: contentImage3; 
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 #0080FF;
+    overflow: hidden;
 }
 
 .bannerContainer {

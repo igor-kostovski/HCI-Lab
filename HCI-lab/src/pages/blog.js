@@ -3,6 +3,7 @@ import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
 import { blogSections, images } from "../constants"
 import BlogCard from "../components/blogCard";
+import Image from "../components/image"
 
 import styles from './blog.module.css';
 
@@ -25,7 +26,7 @@ const BlogPage = () => {
     setTags([...blogTags]);
     setPageCount(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
     //hacky need to figure out better design for search bar
-    document.getElementById('#hackyInput').value = '';
+    document.getElementById('hackyInput').value = '';
     setCurrentPage(1);
   }
 
@@ -52,7 +53,7 @@ const BlogPage = () => {
     setPageCount(Math.ceil(blogPosts.filter(filter).length / POSTS_PER_PAGE));
     setActivePosts(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
     setTags([...tags]);
-    document.getElementById('#hackyInput').value = '';
+    document.getElementById('hackyInput').value = '';
     setCurrentPage(1);
   }
 
@@ -72,14 +73,22 @@ const BlogPage = () => {
       <div className={styles.blogContainer}>
         {
           activePosts.length === 0 ?
-            <div className={styles.error}>
-              <p className={styles.errorMsg}>No items to display!</p>
-              
+            <div className={styles.errorCard}>
+              <div className={styles.contentContainer}>
+                <div className={styles.imageTitleText}>
+                  <div className={styles.image}>
+                    <Image name={images.noItems} />
+                  </div>
+                  <div className={styles.container}>
+                    <p>No blog post matching your filter were found!</p>
+                  </div>
+                </div>
+              </div>
             </div>
             : activePosts.map((post, index) => {
               let postClass = "post" + index
               return (
-                <div className={styles.[postClass]}>
+                <div key={index} className={styles.[postClass]}>
                   <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
                     key={post.title + post.date + index}
                     post={post} />
@@ -87,7 +96,7 @@ const BlogPage = () => {
             })}
         <Pagination count={pageCount}
           page={currentPage}
-          color='primary'
+          color='standard'
           variant="outlined"
           className={styles.pagination}
           onChange={(event, number) => onPageChange(number - 1)} />

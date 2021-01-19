@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 
 import SeparatorBar from "../components/separatorBar"
 import Card from "../components/card"
@@ -7,8 +7,29 @@ import { contactSections, faq, findUs, contactForm, images } from "../constants"
 
 import styles from "./contact.module.css"
 
-const ContactPage = () => (
-  <>
+const ContactPage = () => {
+  const [canSubmit, setCanSubmit] = useState(true);
+
+  const submit = () => {
+    const now = new Date();
+    let tommorow = new Date(now);
+    tommorow.setDate(tommorow.getDate() + 1);
+    localStorage.setItem('expiryDate', tommorow.toISOString());
+    setCanSubmit(false);
+  }
+
+  //checks if email is never sent or expiry date has passed
+  const isEmailSentInPast = () => {
+    var lastSentString = localStorage.getItem('expiryDate');
+    return !!!lastSentString ||
+      (new Date() - new Date(Date.parse(lastSentString))) > 0;
+  }
+
+  useEffect(() => {
+    setCanSubmit(isEmailSentInPast());
+  }, []);
+
+  return (<>
     <SeparatorBar text={contactSections.faq} />
     <div className={styles.faqContainer}>
       <div className={styles.question1}>
@@ -52,16 +73,19 @@ const ContactPage = () => (
       <div className={styles.addressValue}>{findUs.values.address}</div>
     </div>
     <SeparatorBar text={contactSections.contact} />
-    <div className={styles.contactFormContainer}>
-      <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
-      <input className={styles.contactFormNameValue}></input>
-      <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
-      <input className={styles.contactFormEmailValue}></input>
-      <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
-      <textarea className={styles.contactFormMessageValue}></textarea>
-      <div className={styles.submitButton}>{contactForm.buttonText}</div>
-    </div>
-  </>
-)
+    {canSubmit ?
+      <div className={styles.contactFormContainer}>
+        <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
+        <input className={styles.contactFormNameValue}></input>
+        <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
+        <input className={styles.contactFormEmailValue}></input>
+        <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
+        <textarea className={styles.contactFormMessageValue}></textarea>
+        <div className={styles.submitButton} onClick={submit}>{contactForm.buttonText}</div>
+      </div> :
+      "You have already sent an email today"
+    }
+  </>)
+}
 
 export default ContactPage

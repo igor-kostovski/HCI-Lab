@@ -60,11 +60,8 @@
 }
 
 .galleryContainer {
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    width: 80%;
 }
 .circleLayout {
     display: grid;
@@ -337,8 +334,7 @@
     }
 
     .galleryContainer {
-        padding-right: 50px;
-        padding-left: 50px;
+        width: 85%;
     }
 }
 
@@ -442,11 +438,6 @@
         border-top: 25px solid transparent;
         border-bottom: 25px solid transparent;
         border-right: 15px solid transparent;
-    }
-
-    .galleryContainer {
-        padding-right: 30px;
-        padding-left: 30px;
     }
 
     .outerCircleLine {

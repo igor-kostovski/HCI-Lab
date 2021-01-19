@@ -19,7 +19,7 @@ const BlogPage = () => {
   const [pageCount, setPageCount] = useState(0);
 
   useEffect(() => {
-    fetch(contentfulEndpoint(process.env.GATSBY_ACCESS_KEY, process.env.GATSBY_SPACE_ID))
+    fetch(contentfulEndpoint(process.env.GATSBY_CONTENTFUL_ACCESS_KEY, process.env.GATSBY_CONTENTFUL_SPACE_ID))
       .then(res => res.json())
       .then(({ items }) => {
         setInitialState(items.map(x => x.fields));

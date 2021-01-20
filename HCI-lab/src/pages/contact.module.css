@@ -184,7 +184,6 @@ textarea:focus {
 .findUsContainer {
     width: max-content;
     justify-content: center;
-    justify-items: center;
     margin: 40px auto;
     display: grid;
     grid-template-columns: max-content max-content;

@@ -22,12 +22,18 @@ const ContactPage = () => {
 
   //checks if email is never sent or expiry date has passed
   const isEmailSentInPast = () => {
+    if(window === undefined){
+      return true;
+    }
     var lastSentString = localStorage.getItem('expiryDate');
     return !!!lastSentString ||
       (new Date() - new Date(Date.parse(lastSentString))) > 0;
   }
 
   const calculateDiff = () => {
+    if(window === undefined) {
+      return true;
+    }
     let now = new Date();
     var expiryDateString = localStorage.getItem('expiryDate');
     let expiryDate = new Date(Date.parse(expiryDateString));

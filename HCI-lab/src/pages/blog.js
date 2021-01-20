@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
 import { blogSections, contentfulEndpoint, images } from "../constants"
+import {blogPostsMock} from "../constants/mocks.js"
 import BlogCard from "../components/blogCard";
 import Image from "../components/image"
 import { makeStyles } from '@material-ui/core/styles';
@@ -46,11 +47,16 @@ const BlogPage = () => {
   const classes = useStyles();
 
   useEffect(() => {
+    if(!!process.env.GATSBY_CONTENTFUL_ACCESS_KEY) {
     fetch(contentfulEndpoint(process.env.GATSBY_CONTENTFUL_ACCESS_KEY, process.env.GATSBY_CONTENTFUL_SPACE_ID))
       .then(res => res.json())
       .then(({ items }) => {
         setInitialState(items.map(x => x.fields));
       });
+    }
+    else {
+      setInitialState(blogPostsMock)
+    }
   }, []);
 
   const setInitialState = (posts) => {

@@ -219,6 +219,154 @@ h3:after {
 
 }
 
+@media screen and (min-width:1300px) and (max-width: 1450px) {
+  .blog-card {
+    display: grid;
+  }
+
+  .mainPart {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto max-content;
+    height: 100%;
+    gap: 15px 0;
+    grid-template-areas: 
+      "title"
+      "contentText"
+      "utility";
+  }
+
+  .title-content {
+    width: 90%;
+    position: relative;
+    grid-area: title;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  h3:after {
+    display: none; 
+  }
+
+  .utility-info li:last-of-type{
+    width:100%
+  }
+  .card-info{
+    position: relative;
+    grid-area: contentText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    padding: 0 10px;
+    margin: 0;
+    opacity: 1;
+  }
+
+  .utility-info {
+    position: relative;
+    grid-area: utility;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-card:hover .title-content {
+    margin-top: 0;
+  }
+
+  .blog-card:hover .card-info {
+    bottom: 0px;
+  }
+
+  .blog-card:hover .utility-info {
+    bottom: 0px;
+  }
+}
+
+@media screen and (min-width:850px) and (max-width: 1000px) {
+  .blog-card {
+    display: grid;
+  }
+
+  .mainPart {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto max-content;
+    height: 100%;
+    gap: 15px 0;
+    grid-template-areas: 
+      "title"
+      "contentText"
+      "utility";
+  }
+
+  .title-content {
+    width: 90%;
+    position: relative;
+    grid-area: title;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  h3:after {
+    display: none; 
+  }
+
+  .utility-info li:last-of-type{
+    width:100%
+  }
+  .card-info{
+    position: relative;
+    grid-area: contentText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    padding: 0 10px;
+    margin: 0;
+    opacity: 1;
+  }
+
+  .utility-info {
+    position: relative;
+    grid-area: utility;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-card:hover .title-content {
+    margin-top: 0;
+  }
+
+  .blog-card:hover .card-info {
+    bottom: 0px;
+  }
+
+  .blog-card:hover .utility-info {
+    bottom: 0px;
+  }
+}
+
 @media (max-width:750px)
 {
   .utility-info {

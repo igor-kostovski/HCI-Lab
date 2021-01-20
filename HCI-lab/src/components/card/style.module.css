@@ -160,10 +160,73 @@ ul {
     padding-bottom: 10px;
   }
 
-  @media screen and (max-width: 400.5px) {
+  @media screen and (max-width: 900.5px) {
+    .roundedImage {
+      width: 9em;
+      height: 9em;
+    }
+
+    .image {
+      width: 9em;
+      height: 9em
+    }
+
+    .header {
+      font-size: 22px;
+    }
+
+    .moreInfoTitle {
+      font-size: 22px;
+    }
+
+    .moreInfoText {
+      font-size: 19px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 700.5px) {
+    .roundedImage {
+      width: 8em;
+      height: 8em;
+    }
+
     .image {
       width: 8em;
       height: 8em
+    }
+
+    .header {
+      font-size: 19px;
+    }
+
+    .moreInfoTitle {
+      font-size: 19px;
+    }
+
+    .moreInfoText {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (max-width: 500.5px) {
+    .roundedImage {
+      width: 7em;
+      height: 7em;
+    }
+
+    .image {
+      width: 7em;
+      height: 7em
+    }
+
+    .header {
+      font-size: 17px;
+    }
+
+    .moreInfoTitle {
+      font-size: 17px;
     }
 
     .moreInfoText {

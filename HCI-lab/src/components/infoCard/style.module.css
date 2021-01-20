@@ -37,6 +37,10 @@
       flex-direction: column-reverse;
     }
 
+    .container {
+      padding: 0;
+    }
+
     .image {
       width: 80%;
     }

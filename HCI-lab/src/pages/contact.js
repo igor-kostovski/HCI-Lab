@@ -7,6 +7,7 @@ import Tag from "../components/searchTagBar/tag"
 import { contactSections, faq, findUs, contactForm, images } from "../constants"
 
 import styles from "./contact.module.css"
+import Image from "../components/image";
 
 const ContactPage = () => {
   const [canSubmit, setCanSubmit] = useState(true);
@@ -75,18 +76,31 @@ const ContactPage = () => {
         <div className={styles.addressValue}>{findUs.values.address}</div>
       </div>
       <SeparatorBar text={contactSections.contact} />
-      {canSubmit ? <div className={styles.contactFormContainer}>
-        <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
-        <input className={styles.contactFormNameValue}></input>
-        <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
-        <input className={styles.contactFormEmailValue}></input>
-        <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
-        <textarea className={styles.contactFormMessageValue}></textarea>
-        <div className={styles.submitButton}>
-          <Tag title={contactForm.buttonText} action={submit} resetButtonAction={() => { }} />
+      <div className={styles.contactHolder}>
+        <div className={styles.contactFormContainer}>
+          <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
+          <input className={styles.contactFormNameValue}></input>
+          <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
+          <input className={styles.contactFormEmailValue}></input>
+          <div className={styles.contactFormMessageLabel}>{contactForm.labels.message}</div>
+          <textarea className={styles.contactFormMessageValue}></textarea>
+          <div className={styles.submitButton}>
+            <Tag title={contactForm.buttonText} action={submit} resetButtonAction={() => { }} />
+          </div>
+        </div>
+        <div className={styles.errorCard}>
+          <div className={styles.contentContainer}>
+            <div className={styles.imageTitleText}>
+              <div className={styles.image}>
+                <Image name={images.mailSent} />
+              </div>
+              <div className={styles.container}>
+                <p>You have already sent an email today!</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-        : "You have already sent an email today"}
     </>
   )
 }

@@ -33,7 +33,8 @@ export const images = {
     food: 'dish',
     safety: 'helmet',
     noItems: 'noItems',
-    firstPerson: 'firstPerson'
+    firstPerson: 'firstPerson',
+    mailSent: 'mailSent'
 }
 
 export const cardType = {

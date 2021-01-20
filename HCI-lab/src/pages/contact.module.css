@@ -82,6 +82,7 @@ textarea:focus {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 50px 50px 150px 50px;
+    grid-area: overlay;
     gap: 30px 30px;
     font-family: proxima-nova, sans-serif;
     color: white;
@@ -205,6 +206,80 @@ textarea:focus {
     text-align: left;
 }
 
+.contactHolder {
+    display: grid;
+    grid-template-areas: "overlay";
+    width: 40%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.errorCard {
+    grid-area: overlay;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    transition: 0.3s;
+    border-radius: 35px;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "contentContainer";
+    background-color: transparent;
+    background-size: 100% 90%;
+    font-weight: 600;
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "overlay";
+    overflow: hidden;
+    grid-area: contentContainer;
+}
+
+.imageTitleText {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    grid-template-areas:
+        "image"
+        "text";
+    align-items: center;
+    justify-items: center;
+    gap: 20px 0;
+    grid-area: overlay;
+    transition: all 1s;
+    max-width: 100%;
+    position: relative;
+    right: 0;
+    padding: 15px;
+    align-content: center;
+}
+
+.image {
+    margin-top: 20px;
+    width: 10em;
+    height: 10em;
+    grid-area: image;
+}
+
+.container {
+    font-family: proxima-nova, sans-serif;;
+    font-size: 20px;
+    padding: 2px 16px;
+    color: white;
+    grid-area: text;
+    display: grid;
+    grid-template-rows: max-content auto;
+    grid-template-areas: "title";
+    height: max-content;
+    text-align: center;
+}
+
 @media screen and (max-width: 1100.5px) {
     .faqContainer {
         grid-template-columns: 1fr 1fr;
@@ -234,6 +309,7 @@ textarea:focus {
     }
 
     .contactFormContainer {
+        
         font-size: 20px;
     }
 

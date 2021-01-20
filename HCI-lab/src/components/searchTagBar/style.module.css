@@ -26,7 +26,6 @@
     flex-direction: row;
     align-content: center;
     width: max-content;
-    margin-right: 20px;
     max-width: 220px;
 }
 
@@ -36,6 +35,21 @@
     display: inherit;
     height: 100%;
     align-content: center;
+    overflow: hidden;
+    padding: 0;
+    margin-left: 20px;
+    transition: all 0.5s;
+}
+
+.clearDisabled {
+    grid-area: clear;
+    flex-direction: row;
+    display: inherit;
+    height: 100%;
+    align-content: center;
+    overflow: hidden;
+    transition: all 0.5s;
+    padding: 0;
 }
 
 .clearBtn {
@@ -50,6 +64,9 @@
     transition: all 0.5s;
     border-radius: 10px;
     font-family: proxima-nova, sans-serif;
+    position: relative;
+    right: 0;
+    width: 100%;
 }
 
 .clearBtn:hover {
@@ -61,17 +78,16 @@
 }
 
 .clearBtnDisabled {
+    width: 0;
+    transition: all 0.5s;
     color: black;
     border: none;
-    background-color: grey;
-    font: 20px;
-    outline:none;
     height: 56px !important;
-    padding: 0 20px;
-    transition: all 0.5s;
+    background-color: 	#FF8C00;
     border-radius: 10px;
-    cursor: not-allowed;
-    font-family: proxima-nova, sans-serif;
+    position: relative;
+    right: -105%;
+    padding: 0;
 }
 
 @media screen and (max-width: 676.5px) {

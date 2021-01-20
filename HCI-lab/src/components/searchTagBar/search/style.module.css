@@ -19,6 +19,6 @@
 @media screen and (max-width: 676.5px) {
     .input {
         max-width: none;
-        width: calc(100% - 30px);
+        width: calc(100% - 14px);
     }
 }

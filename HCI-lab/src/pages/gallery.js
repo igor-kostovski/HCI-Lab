@@ -88,7 +88,9 @@ const GalleryPage = () => {
 
   return (
     <>
-      <SeparatorBar text="Sections" />
+      <div className={styles.separatorContainer}>
+        <SeparatorBar text="Sections" />
+      </div>
       <TagBar tags={tabs} onTagAction={galleryTagChange} />
       <div className={styles.galleryContainer}>
         <Slider ref={gallerySlider} {...carouselSettings}>

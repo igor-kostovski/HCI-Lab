@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+.separatorContainer {
+    display: none;
+}
+
 .rodalContainer {
     height: 100%;
     display: grid;
@@ -564,6 +568,10 @@
 }
 
 @media screen and (max-width: 500.5px) {
+    .separatorContainer {
+        display: block;
+    }
+
     .rodalContainer {
         gap: 0 20px;
     }

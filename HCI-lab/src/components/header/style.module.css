@@ -5,7 +5,7 @@
     background-color: transparent;
     width: 100%;
     margin: 0 auto;
-    background-color: #111E6C;
+    background-color: transparent;
 }
 
 .logoContainer {
@@ -32,6 +32,7 @@
         position: sticky;
         top: 0;
         z-index: 60;
+        background-color: #111E6C;
     }
 
     .menuContainer {

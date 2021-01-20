@@ -70,13 +70,13 @@ export const aboutUsSections = {
 
 export const contactSections = {
     faq: "FAQ",
-    findUs: "FIND US",
-    contact: "CONTACT"
+    findUs: "Find us",
+    contact: "Contact"
 }
 
 export const blogSections = {
-    filterSearch: "FILTER & SEARCH",
-    posts: "POSTS"
+    filterSearch: "Filter & search",
+    posts: "Posts"
 }
 
 export const galleryTabs = [

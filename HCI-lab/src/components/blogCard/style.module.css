@@ -239,17 +239,32 @@ h3:after {
 
 @media (max-width:500px){
   .blog-card {
-    height: 510px;
+    display: grid;
   }
 
-  .blog-card:hover .title-content {
-    margin: 0;
+  .mainPart {
+    display: grid;
+    position: absolute;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content auto max-content;
+    height: 100%;
+    gap: 15px 0;
+    grid-template-areas: 
+      "title"
+      "contentText"
+      "utility";
   }
 
   .title-content {
-    margin: 0;
-    margin-bottom: 30px;
+    width: 90%;
+    position: relative;
+    grid-area: title;
+    margin: 0 auto;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
   h3:after {
@@ -260,21 +275,39 @@ h3:after {
     width:100%
   }
   .card-info{
-    display:block;
-    top: 120px;
+    position: relative;
+    grid-area: contentText;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     bottom: 0;
     padding: 0 10px;
     margin: 0;
-    margin-bottom: 10px;
     opacity: 1;
   }
 
   .utility-info {
-    margin-top: 20px;
+    position: relative;
+    grid-area: utility;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .blog-card:hover .title-content {
+    margin-top: 0;
   }
 
   .blog-card:hover .card-info {
-    bottom: 0;
+    bottom: 0px;
+  }
+
+  .blog-card:hover .utility-info {
+    bottom: 0px;
   }
 .blog-card h3{
   font-size:1.3em

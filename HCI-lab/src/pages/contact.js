@@ -33,7 +33,7 @@ const ContactPage = () => {
 
   const calculateDiff = () => {
     const windowGlobal = typeof window !== 'undefined' && window
-    if(window === false) {
+    if(windowGlobal === false) {
       return true;
     }
     let now = new Date();

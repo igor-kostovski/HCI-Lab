@@ -211,10 +211,10 @@ export const faq = {
     answers: {
         answer1: "By Croatian law all boats registered for charter must have life belts and first aid box, fire extinguisher, etc. Life raft is provided only on boats bigger than 42 ft as they belong to yacht category and all boats have dinghy included.",
         answer2: "The best sailing season is late spring (April through June) and end September. The sea is calm and still nice for swimming. July and August are fewer crowded but ideal for swimming  end enjoying summer in full. April and October are also very popular for regattas and those who like quite time out of the season.",
-        answer3: "Yes, our booking office can send you list of food and baverages that can be ordered for you and wait for you on board.",
+        answer3: "Yes, our booking office can send you list of food and baverages that can be ordered for you and wait for you on board, 0% of the weekly charter price if the company Delphinus Yachting manages to find a client for the cancelled week, we kindly advice to make your own travel insurance in your home country as they usually cover trip cancellation.",
         answer4: "The most important is to remember to bring any personal items, you will need sun hats, sun glasses, light summer clothing, trainers, not slippery shoes, swimmingsuits and for evening or dinning in restaurants  „smart casual“.",
         answer5: "Upon confirming booking with us, our office will send you booking confirmation with IBAN payment info. We accept payment by bank. We also accept payment by credit cards but charge 2-2,5% of bank fees for credit card payments.",
-        answer6: "The clients shall be debited owing to the cancellation in the amount of: 50% of the weekly yacht charter price if a reservation has been cancelled more than a month prior to the first charter day, 100% of the weekly charter price if a reservation has been cancelled less than a month prior to the first charter day, 0% of the weekly charter price if the company Delphinus Yachting manages to find a client for the cancelled week, we kindly advice to make your own travel insurance in your home country as they usually cover trip cancellation."
+        answer6: "The clients shall be debited owing to the cancellation in the amount of: 50% of the weekly yacht charter price if a reservation has been cancelled more than a month prior to the first charter day, 100% of the weekly charter price if a reservation has been cancelled less than a month prior to the first charter day."
     }
 }
 

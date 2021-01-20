@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
 
+.separatorContainer {
+    display: none;
+}
+
 .rodalContainer {
     height: 100%;
     display: grid;
@@ -60,12 +64,10 @@
 }
 
 .galleryContainer {
-    padding-right: 100px;
-    padding-left: 100px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
+    margin: 0 auto;
+    width: 800px;
 }
+
 .circleLayout {
     display: grid;
     grid-template-columns: 1fr;
@@ -84,7 +86,9 @@
     border-radius: 50%;
     font-family: 'Raleway', sans-serif;
     font-size: 25px;
-    background-color: #65b8db;
+    background-color: #0080FF;
+    color: #ffffff;
+    box-shadow: 0 0 0 4px white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +99,7 @@
 
 .outerCircleLine {
     border-radius: 50%;
-    border: 2px dotted #000000;
+    border: 2px dotted #ffffff;
     width: 500px;
     height: 500px;
     grid-area: overlap;
@@ -103,51 +107,55 @@
 
 .topImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-top: -500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-top: 500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .rightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-right: -500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .leftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
     margin-right: 500px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topRightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -155,11 +163,12 @@
     margin-right: -350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topLeftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -167,11 +176,12 @@
     margin-right: 350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomRightImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -179,11 +189,12 @@
     margin-right: -350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .bottomLeftImageCircle {
     border-radius: 50%;
-    border: 1px solid #000000;
+    border: 1px solid#ffffff;
     width: 150px;
     height: 150px;
     grid-area: overlap;
@@ -191,9 +202,41 @@
     margin-right: 350px;
     transition: all 0.5s;
     overflow: hidden;
+    box-shadow: 0 4px 8px 0 #0080FF;
 }
 
 .topImageCircle:hover, .bottomImageCircle:hover, .rightImageCircle:hover, .leftImageCircle:hover, .topRightImageCircle:hover, .topLeftImageCircle:hover, .bottomRightImageCircle:hover, .bottomLeftImageCircle:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+.slickLeftArrow {
+    width: 0;
+    height: 0;
+    border-right: 20px solid #ffffff;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 20px solid transparent;
+    transition: all 0.6s;
+    top: 45.4%;
+    left: -40px;
+    position: absolute;
+}
+
+.slickRightArrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid #ffffff;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 20px solid transparent;
+    transition: all 0.6s;
+    top: 45.4%;
+    right: -40px;
+    position: absolute;
+}
+
+.slickLeftArrow:hover, .slickRightArrow:hover {
     transform: scale(1.3);
     cursor: pointer;
 }
@@ -290,18 +333,27 @@
     }
 }
 
+@media screen and (max-width: 900.5px) {
+    .galleryContainer {
+        width: 700px;
+    }
+}
+
 @media screen and (max-width: 850.5px) {
     .rodalContainer {
         gap: 0 25px;
     }
 
     .galleryContainer {
-        padding-right: 50px;
-        padding-left: 50px;
+        width: 85%;
     }
 }
 
 @media screen and (max-width: 750.5px) {
+    .separatorContainer {
+        display: block;
+    }
+
     .centerCircle {
         width: 150px;
         height: 150px;
@@ -364,6 +416,10 @@
         margin-top: 275px;
         margin-right: 275px;
     }
+
+    .slickLeftArrow, .slickRightArrow {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 650.5px) {
@@ -397,11 +453,6 @@
         border-top: 25px solid transparent;
         border-bottom: 25px solid transparent;
         border-right: 15px solid transparent;
-    }
-
-    .galleryContainer {
-        padding-right: 30px;
-        padding-left: 30px;
     }
 
     .outerCircleLine {

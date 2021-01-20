@@ -1,9 +1,9 @@
 export const navigationTabs = [
     { name: 'Home', linkTo: '/' },
-    { name: 'About us', linkTo: '/aboutUs' },
-    { name: 'Specs', linkTo: '/specs' },
-    { name: 'Gallery', linkTo: '/gallery' },
+    { name: 'Specifications', linkTo: '/specs' },
     { name: 'Blog', linkTo: '/blog' },
+    { name: 'Gallery', linkTo: '/gallery' },
+    { name: 'About us', linkTo: '/aboutUs' },
     { name: 'Contact', linkTo: '/contact' }
 ]
 
@@ -31,7 +31,9 @@ export const images = {
     sailing: 'sailing',
     payment: 'payment',
     food: 'dish',
-    safety: 'helmet'
+    safety: 'helmet',
+    noItems: 'noItems',
+    firstPerson: 'firstPerson'
 }
 
 export const cardType = {
@@ -42,46 +44,46 @@ export const cardType = {
 }
 
 export const footerTitles = {
-    socialMedia: "FIND US ON:",
-    contact: "CONTACT INFO:",
-    eu: "IN COOPERATION WITH:"
+    socialMedia: "Find us on:",
+    contact: "Contact:",
+    eu: "In cooperation with:"
 }
 
 export const contactInfo = {
-    email: "MAIL: info@delphinus-yachts.com",
-    telephone: "TELEPHONE: +385 98 448 518",
-    address: "ADRESS: PUT RADOŠEVCA 9, SPLIT 21000 CROATIA"
+    email: "Email: info@delphinus-yachts.com",
+    telephone: "Telephone: +385 98 448 518",
+    address: "Address: Put Radoševca 9, Split 21000 Croatia"
 }
 
 export const homePageTexts = {
-    titleText: "ENJOY ADRIATIC WITH US",
-    offerText: "WE OFFER OUR GUESTS CRYSTAL BLUE CRUISING AROUND CHARMING ISLANDS IN THE MID ADRIATIC SEA TO ENRICH THEIR VACATION WITH THE MOST PLEASANT MEMORIES.",
-    locationText: "OUR PORT OF CALL IS SPLIT, HOWEVER THE ROUTE FOR YOUR CRYSTAL BLUE VOYAGE MAY BE SPECIFICALLY TAILORED AS PER YOUR OWN WISH AMONG SECLUDED BAYS AND BEAUTIFUL BEACHES ON THE ISLANDS OF VIS, HVAR, KORČULA, MLJET AND SO ON.",
-    motivationText: "ON OUR LUXURY YACHT ALESSANDRO YOU WILL SHARE AN UNFORGETTABLE HOLIDAY AND WE ARE LOOKING FORWARD TO GET TO KNOW YOU, YOUR FAMILY AND FRIENDS.",
+    titleText: "Enjoy Adriatic with Us",
+    offerText: "We offer our guests crystal blue cruising around charming islands in the mid-Adriatic sea to enrich their vacation with the most pleasant memories.",
+    locationText: "Our port of call is Split, however, the route for your crystal blue voyage may be specifically tailored as per your own wish among secluded bays and beautiful beaches on the islands of Vis, Hvar, Korčula, Mljet, and so on.",
+    motivationText: "On our luxury yacht Alessandro you will share an unforgettable holiday and we are looking forward to getting to know you, your family, and your friends.",
     bannerText: "Unique experience delivered with passion"
 }
 
 export const aboutUsSections = {
-    companyInfo: "COMPANY INFO",
-    crewMembers: "CREW MEMBERS"
+    companyInfo: "Company info",
+    crewMembers: "Crew members"
 }
 
 export const contactSections = {
     faq: "FAQ",
-    findUs: "FIND US",
-    contact: "CONTACT"
+    findUs: "Find us",
+    contact: "Contact"
 }
 
 export const blogSections = {
-    filterSearch: "FILTER & SEARCH",
-    posts: "POSTS"
+    filterSearch: "Filter & search",
+    posts: "Posts"
 }
 
 export const galleryTabs = [
-    { title: "EXTERIOR", isActive: true },
-    { title: "INTERIOR", isActive: false },
-    { title: "FLY BRIDGE", isActive: false },
-    { title: "MAIN DECK", isActive: false }
+    { title: "Exterior", isActive: true },
+    { title: "Interior", isActive: false },
+    { title: "Fly bridge", isActive: false },
+    { title: "Main deck", isActive: false }
 ]
 
 export const galleryImages = [
@@ -127,25 +129,23 @@ export const aboutUsTexts = {
 }
 
 export const crewPositions = {
-    captain: "CAPTAIN",
-    motorman: "MOTORMAN",
-    chiefStewardess: "CHIEF STEWARDESS",
-    chefDeCuisine: "CHEF DE CUISINE",
-    stewardess: "STEWARDESS",
-    sailor: "SAILOR"
+    captain: "Captain",
+    motorman: "Motorman",
+    chiefStewardess: "Chief Stewardess",
+    chefDeCuisine: "Chef de cuisine",
+    stewardess: "Stewardess",
+    sailor: "Sailor"
 }
 
 export const crewInfo = {
     labels: {
-        dateOfBirth: "DATE OF BIRTH",
-        languages: "LANGUAGES",
-        experience: "EXPERIENCE"
+        languages: "Languages",
+        experience: "Experience"
     },
     captain: {
         name: "Luka Podrug",
         foto: "podrug",
         shortInfo: {
-            dateOfBirth: "20.10.1998.",
             languages: "Croatian, English",
             experience: "4 years"
         },
@@ -155,7 +155,6 @@ export const crewInfo = {
         name: "Igor Kostovski",
         foto: "kostovski",
         shortInfo: {
-            dateOfBirth: "16.04.1992.",
             languages: "Croatian, Italian, Spanish",
             experience: "7 years"
         },
@@ -165,7 +164,6 @@ export const crewInfo = {
         name: "Ivan Zivkovic",
         foto: "zivkovic",
         shortInfo: {
-            dateOfBirth: "15.01.1995.",
             languages: "Croatian, Spanish",
             experience: "3 years"
         },
@@ -175,7 +173,6 @@ export const crewInfo = {
         name: "Boris Borovic",
         foto: "borovic",
         shortInfo: {
-            dateOfBirth: "02.05.1998.",
             languages: "Croatian, English, Portugese",
             experience: "1 year"
         },
@@ -185,7 +182,6 @@ export const crewInfo = {
         name: "Matija Sisko",
         foto: "sisko",
         shortInfo: {
-            dateOfBirth: "15.08.1994.",
             languages: "Croatian, English, German",
             experience: "3 years"
         },
@@ -195,17 +191,11 @@ export const crewInfo = {
         name: "Zvonimir Butic",
         foto: "butic",
         shortInfo: {
-            dateOfBirth: "12.02.1982.",
             languages: "Croatian",
             experience: "10 years"
         },
         longInfo: "A sailor is a person who works aboard a watercraft as part of its crew, and may work in any one of a number of different fields that are related to the operation and maintenance of a ship. Sailors hold a variety of professions and ranks, each of which carries unique responsibilities which are integral to the successful operation of an ocean-going vessel."
     }
-}
-
-export const buttonTexts = {
-    hide: "HIDE INFO",
-    show: "MORE INFO"
 }
 
 export const faq = {
@@ -230,7 +220,7 @@ export const faq = {
 export const findUs = {
     labels: {
         telephone: "Telephone: ",
-        email: "E-mail: ",
+        email: "Email: ",
         address: "Address: "
     },
     values: {
@@ -246,7 +236,7 @@ export const contactForm = {
         email: "E-mail: ",
         message: "Message: "
     },
-    buttonText: "SUBMIT"
+    buttonText: "Submit"
 }
 
 export const contentfulEndpoint = (accessKey, spaceKey) => {

@@ -83,7 +83,8 @@ textarea:focus {
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 50px 50px 150px 50px;
     gap: 30px 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
+    color: white;
     font-size: 25px;
     grid-template-areas: 
         "contactFormNameLabel contactFormNameValue"
@@ -103,8 +104,11 @@ textarea:focus {
 .contactFormNameValue {
     grid-area: contactFormNameValue;
     border-radius: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;;
     font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
 .contactFormEmailLabel {
@@ -118,8 +122,11 @@ textarea:focus {
 .contactFormEmailValue {
     grid-area: contactFormEmailValue;
     border-radius: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;;
     font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
 .contactFormMessageLabel {
@@ -133,28 +140,20 @@ textarea:focus {
 .contactFormMessageValue {
     grid-area: contactFormMessageValue;
     border-radius: 10px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;;
     font-size: 20px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
 }
 
 .submitButton {
     grid-area: submitButton;
     width: 40%;
     margin: 0 auto;
-    border-radius: 10px;
-    border: 2px solid #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    transition: all 0.7s;
-    background-color: #ffffff;
-}
-
-.submitButton:hover {
-    color: #ffffff;
-    background-color: #000000;
-    cursor: pointer;
 }
 
 .findUsContainer {
@@ -164,7 +163,8 @@ textarea:focus {
     grid-template-columns: max-content max-content;
     grid-template-rows: 1fr 1fr 1fr;
     gap: 10px 30px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
+    color: #ffffff;
     font-size: 25px;
     grid-template-areas: 
         "telephoneLabel telephoneValue"

@@ -77,7 +77,7 @@ const ContactPage = () => {
       </div>
       <SeparatorBar text={contactSections.contact} />
       <div className={styles.contactHolder}>
-        <div className={styles.contactFormContainer}>
+        <div className={canSubmit ? styles.contactFormContainer : styles.contactFormContainerMoved}>
           <div className={styles.contactFormNameLabel}>{contactForm.labels.name}</div>
           <input className={styles.contactFormNameValue}></input>
           <div className={styles.contactFormEmailLabel}>{contactForm.labels.email}</div>
@@ -88,14 +88,14 @@ const ContactPage = () => {
             <Tag title={contactForm.buttonText} action={submit} resetButtonAction={() => { }} />
           </div>
         </div>
-        <div className={styles.errorCard}>
+        <div className={canSubmit ? styles.errorCard: styles.errorCardMoved}>
           <div className={styles.contentContainer}>
             <div className={styles.imageTitleText}>
               <div className={styles.image}>
                 <Image name={images.mailSent} />
               </div>
               <div className={styles.container}>
-                <p>You have already sent an email today!</p>
+                <p>E-mail successfully sent!</p>
               </div>
             </div>
           </div>

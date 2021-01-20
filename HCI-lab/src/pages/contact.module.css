@@ -77,12 +77,36 @@ textarea:focus {
 }
 
 .contactFormContainer {
+    position: relative;
+    left: 0;
     width: max-content;
     margin: 40px auto;
     display: grid;
+    transition: 0.7s;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 50px 50px 150px 50px;
-    grid-area: overlay;
+    grid-area: overlay2;
+    gap: 30px 30px;
+    font-family: proxima-nova, sans-serif;
+    color: white;
+    font-size: 25px;
+    grid-template-areas: 
+        "contactFormNameLabel contactFormNameValue"
+        "contactFormEmailLabel contactFormEmailValue"
+        "contactFormMessageLabel contactFormMessageValue"
+        "submitButton submitButton";
+}
+
+.contactFormContainerMoved {
+    position: relative;
+    left: -100%;
+    width: max-content;
+    margin: 40px auto;
+    transition: 0.7s;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 50px 50px 150px 50px;
+    grid-area: overlay2;
     gap: 30px 30px;
     font-family: proxima-nova, sans-serif;
     color: white;
@@ -159,6 +183,8 @@ textarea:focus {
 
 .findUsContainer {
     width: max-content;
+    justify-content: center;
+    justify-items: center;
     margin: 40px auto;
     display: grid;
     grid-template-columns: max-content max-content;
@@ -208,20 +234,40 @@ textarea:focus {
 
 .contactHolder {
     display: grid;
-    grid-template-areas: "overlay";
-    width: 40%;
-    margin: 0 auto;
+    grid-template-areas: "overlay2";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
     overflow: hidden;
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
 }
 
 .errorCard {
-    grid-area: overlay;
-    grid-column: 2 / 3;
-    grid-row: 1;
-    transition: 0.3s;
+    position: relative;
+    right: -100%;
+    grid-area: overlay2;
+    transition: 0.7s;
     border-radius: 35px;
-    width: 100%;
-    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "contentContainer";
+    background-color: transparent;
+    background-size: 100% 90%;
+    font-weight: 600;
+}
+
+.errorCardMoved {
+    position: relative;
+    right: 0;
+    grid-area: overlay2;
+    transition: 0.7s;
+    border-radius: 35px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -280,6 +326,48 @@ textarea:focus {
     text-align: center;
 }
 
+@media screen and (max-width: 900.5px) {
+    .image {
+      width: 9em;
+      height: 9em
+    }
+
+    .container {
+      font-size: 19px;
+      line-height: 21px;
+    }
+  }
+
+  @media screen and (max-width: 700.5px) {
+    .image {
+      width: 8em;
+      height: 8em
+    }
+
+    .container {
+      font-size: 17px;
+      line-height: 20px;
+    }
+  }
+
+  @media screen and (max-width: 550.5px) {
+    .contactFormContainerMoved {
+        left: -150%;
+    }
+  }
+
+  @media screen and (max-width: 500.5px) {
+    .image {
+      width: 7em;
+      height: 7em
+    }
+
+    .container {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
 @media screen and (max-width: 1100.5px) {
     .faqContainer {
         grid-template-columns: 1fr 1fr;
@@ -326,6 +414,20 @@ textarea:focus {
 
 @media screen and (max-width: 480.5px) {
     .contactFormContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 50px max-content 50px max-content 150px 50px;
+        gap: 10px 0;
+        grid-template-areas: 
+            "contactFormNameLabel"
+            "contactFormNameValue"
+            "contactFormEmailLabel"
+            "contactFormEmailValue"
+            "contactFormMessageLabel"
+            "contactFormMessageValue"
+            "submitButton";
+    }
+
+    .contactFormContainerMoved {
         grid-template-columns: 1fr;
         grid-template-rows: max-content 50px max-content 50px max-content 150px 50px;
         gap: 10px 0;

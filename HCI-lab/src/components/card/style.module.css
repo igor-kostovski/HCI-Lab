@@ -1,36 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
-
 ul {
   list-style: none;
 }
 
 .card {
-    /* Add shadows to create the "card" effect */
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #0080FF;
     transition: 0.3s;
     border-radius: 35px;
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto max-content;
     grid-template-areas: 
       "contentContainer"
       "infoButton";
-    background-image: linear-gradient(315deg,#D2E7F0 50%,#AEB8BC 100%);
+    background-image: linear-gradient(90deg,#0F52BA -20%,#111E6C);
+    background-size: 100% 90%;
     font-weight: 600;
   }
+
+  .card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 4px white;
+  }
   
-  /* Add some padding inside the card container */
   .container {
     padding: 2px 16px;
-    color: #343131;
+    color: white;
     grid-area: text;
     display: grid;
     grid-template-rows: max-content auto;
     grid-template-areas: 
-      "title"
-      "shortBio";
+      "title";
     height: max-content;
   }
 
@@ -47,11 +48,12 @@ ul {
     height: 10em;
     grid-area: image;
     border-radius: 50%;
+    border: 2px solid white;
   }
 
   .header {
     font-size: 25px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
     text-align: center;
     grid-area: title;
     display: flex;
@@ -65,51 +67,8 @@ ul {
 
   .text {
     font: 15px;
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
     text-align: center;
-  }
-
-  .moreInfoButton {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .moreInfoButtonText {
-    border: 2px solid #000000;
-    font-family: 'Raleway', sans-serif;
-    border-radius: 10px;
-    width: max-content;
-    padding: 8px;
-    margin: 8px;
-    transition: all 0.5s;
-    background-color: #ffffff;
-    grid-area: infoButton;
-  }
-
-  .moreInfoButtonText:hover {
-    cursor: pointer;
-    background-color: #000000;
-    color: #ffffff;
-  }
-
-  .hideInfoButtonText {
-    border: 2px solid #000000;
-    font-family: 'Raleway', sans-serif;
-    border-radius: 10px;
-    width: max-content;
-    padding: 8px;
-    margin: 8px;
-    transition: all 0.5s;
-    background-color: #000000;
-    color: #ffffff;
-    grid-area: infoButton;
-  }
-
-  .hideInfoButtonText:hover {
-    cursor: pointer;
-    background-color: #ffffff;
-    color: #000000;
   }
 
   .moreInfoContainerHidden {
@@ -130,6 +89,7 @@ ul {
     position: relative;
     left: 0;
     transition: all 1s;
+    color: white;
   }
 
   .contentContainer {
@@ -158,10 +118,14 @@ ul {
     max-width: 100%;
     position: relative;
     right: 0;
+    padding: 15px;
+    align-content: center;
   }
 
   .imageTitleTextMoved {
     display: grid;
+    padding: 15px;
+    align-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: max-content max-content;
     grid-template-areas:
@@ -177,68 +141,96 @@ ul {
   }
 
   .moreInfoTitle {
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 20px;
+    margin-bottom: 25px;
+    font-size: 25px;
   }
 
   .moreInfoText {
-    font-family: 'Raleway', sans-serif;
+    font-family: proxima-nova, sans-serif;
     text-align: center;
-    line-height: 20px;
-    display: flex;
+    line-height: 23px;
+    font-size: 20px;
     justify-content: center;
-    align-items: center;
-    height: calc(100% - 49px);
+    height: calc(100% - 65px);
     font-weight: 200;
     margin: 0 auto;
     padding-bottom: 10px;
   }
 
-  .shortBio {
-    font-family: 'Raleway', sans-serif;
-    grid-area: shortBio;
-    padding: 0 25px;
-    font-size: 22px;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(min-content, max-content);
-    grid-template-areas: 
-      "dateOfBirthLabel"
-      "dateOfBirthValue"
-      "languagesLabel"
-      "languagesValue"
-      "experienceLabel"
-      "experienceValue";
+  @media screen and (max-width: 900.5px) {
+    .roundedImage {
+      width: 9em;
+      height: 9em;
+    }
+
+    .image {
+      width: 9em;
+      height: 9em
+    }
+
+    .header {
+      font-size: 22px;
+    }
+
+    .moreInfoTitle {
+      font-size: 22px;
+    }
+
+    .moreInfoText {
+      font-size: 19px;
+      line-height: 21px;
+    }
   }
 
-  .dateOfBirthLabel {
-    grid-area: dateOfBirthLabel;
+  @media screen and (max-width: 700.5px) {
+    .roundedImage {
+      width: 8em;
+      height: 8em;
+    }
+
+    .image {
+      width: 8em;
+      height: 8em
+    }
+
+    .header {
+      font-size: 19px;
+    }
+
+    .moreInfoTitle {
+      font-size: 19px;
+    }
+
+    .moreInfoText {
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 
-  .dateOfBirthValue {
-    grid-area: dateOfBirthValue;
-  }
+  @media screen and (max-width: 500.5px) {
+    .roundedImage {
+      width: 7em;
+      height: 7em;
+    }
 
-  .languagesLabel {
-    grid-area: languagesLabel;
-  }
+    .image {
+      width: 7em;
+      height: 7em
+    }
 
-  .languagesValue {
-    grid-area: languagesValue;
-  }
+    .header {
+      font-size: 17px;
+    }
 
-  .experienceLabel {
-    grid-area: experienceLabel;
-  }
+    .moreInfoTitle {
+      font-size: 17px;
+    }
 
-  .experienceValue {
-    grid-area: experienceValue;
-  }
-
-  .dateOfBirthValue, .languagesValue {
-    margin-bottom: 15px;
+    .moreInfoText {
+      font-size: 15px;
+      line-height: 18px;
+    }
   }

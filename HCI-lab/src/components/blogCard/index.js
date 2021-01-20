@@ -6,16 +6,16 @@ import Image from '../image';
 
 const BlogCard = ({ post, imageName }) => {
     return (
-        <a href={post.link} target='blank'>
-            <div className={`${styles.blogCard} ${styles.springFever}`}>
-                <Image isBackground={true} name={imageName} />
+        <div className={`${styles.blogCard} ${styles.springFever}`}>
+            <Image isBackground={true} name={imageName} />
+            <div className={styles.mainPart}>
                 <div className={styles.titleContent}>
                     <h3>{post.title}</h3>
                 </div>
                 <div className={styles.cardInfo}>
                     {post.text}
                     <a href={post.link} target='blank'>
-                        Read Article
+                        More Info
                         <span className={`${styles.licon} ${styles.iconArr} ${styles.iconBlack}`}></span>
                     </a>
                 </div>
@@ -25,10 +25,10 @@ const BlogCard = ({ post, imageName }) => {
                         <li><span className={`${styles.licon} ${styles.iconTag}`}></span>{post.tags.join(', ')}</li>
                     </ul>
                 </div>
-                <div className={styles.gradientOverlay}></div>
-                <div className={styles.colorOverlay}></div>
             </div>
-        </a>
+            <div className={styles.gradientOverlay}></div>
+            <div className={styles.colorOverlay}></div>
+        </div>
     );
 }
 

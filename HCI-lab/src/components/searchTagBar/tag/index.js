@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './style.module.css'
 
-const Tag = ({ title, action, isActive }) => {
+const Tag = ({ title, action, resetButtonAction, isActive }) => {
 
     const getStyle = () => {
         let style = `${styles.btn}`;
@@ -17,7 +17,7 @@ const Tag = ({ title, action, isActive }) => {
     }
 
     return (
-        <button onClick={() => action({ title, isActive: !isActive })} className={getStyle()}>
+        <button onClick={() => { action({ title, isActive: !isActive }); resetButtonAction(!isActive) }} className={getStyle()}>
             {title}
         </button>
     );

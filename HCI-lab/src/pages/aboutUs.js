@@ -16,69 +16,99 @@ const AboutUsPage = () => (
     <SeparatorBar text={aboutUsSections.crewMembers} />
     <div className={styles.crewMembersContainer}>
       <div className={styles.crewMember1}>
-        <div className={styles.crewPosition1}>
-          {crewPositions.captain}
-        </div>
         <Card image={crewInfo.captain.foto}
           cardType={cardType.crew}
-          header={crewInfo.captain.name}
+          header={crewPositions.captain}
           shortBio={crewInfo.captain.shortInfo}>
-          {crewInfo.captain.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.captain.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.captain.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.captain.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
       <div className={styles.crewMember2}>
-        <div className={styles.crewPosition2}>
-          {crewPositions.motorman}
-        </div>
         <Card image={crewInfo.motorman.foto}
           cardType={cardType.crew}
-          header={crewInfo.motorman.name}
+          header={crewPositions.motorman}
           shortBio={crewInfo.motorman.shortInfo}>
-          {crewInfo.motorman.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.motorman.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.motorman.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.motorman.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
       <div className={styles.crewMember3}>
-        <div className={styles.crewPosition3}>
-          {crewPositions.chiefStewardess}
-        </div>
         <Card image={crewInfo.chiefStewardess.foto}
           cardType={cardType.crew}
-          header={crewInfo.chiefStewardess.name}
+          header={crewPositions.chiefStewardess}
           shortBio={crewInfo.chiefStewardess.shortInfo}>
-          {crewInfo.chiefStewardess.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.chiefStewardess.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.chiefStewardess.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.chiefStewardess.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
       <div className={styles.crewMember4}>
-        <div className={styles.crewPosition4}>
-          {crewPositions.chefDeCuisine}
-        </div>
         <Card image={crewInfo.chefDeCuisine.foto}
           cardType={cardType.crew}
-          header={crewInfo.chefDeCuisine.name}
+          header={crewPositions.chefDeCuisine}
           shortBio={crewInfo.chefDeCuisine.shortInfo}>
-          {crewInfo.chefDeCuisine.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.chefDeCuisine.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.chefDeCuisine.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.chefDeCuisine.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
       <div className={styles.crewMember5}>
-        <div className={styles.crewPosition5}>
-          {crewPositions.sailor}
-        </div>
         <Card image={crewInfo.sailor.foto}
           cardType={cardType.crew}
-          header={crewInfo.sailor.name}
+          header={crewPositions.sailor}
           shortBio={crewInfo.sailor.shortInfo}>
-          {crewInfo.sailor.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.sailor.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.sailor.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.sailor.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
       <div className={styles.crewMember6}>
-        <div className={styles.crewPosition6}>
-          {crewPositions.stewardess}
-        </div>
         <Card image={crewInfo.stewardess.foto}
           cardType={cardType.crew}
-          header={crewInfo.stewardess.name}
+          header={crewPositions.stewardess}
           shortBio={crewInfo.stewardess.shortInfo}>
-          {crewInfo.stewardess.longInfo}
+          {<>
+            <div className={styles.label}>Full name:</div> 
+            <div className={styles.text}>{crewInfo.stewardess.name}</div> 
+            <div className={styles.label}>Languages:</div> 
+            <div className={styles.text}>{crewInfo.stewardess.shortInfo.languages}</div> 
+            <div className={styles.label}>Experience:</div>
+            <div className={styles.text}>{crewInfo.stewardess.shortInfo.experience}</div>
+           </>
+          }
         </Card>
       </div>
     </div>

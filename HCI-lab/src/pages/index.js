@@ -30,6 +30,9 @@ const IndexPage = () => (
           <Image name={images.nightImage}/>
         </div>
         <div className={styles.contentImage2}>
+          <Image name={images.firstPerson}/>
+        </div>
+        <div className={styles.contentImage3}>
           <Image name={images.groundPlan}/>
         </div>
       </div>

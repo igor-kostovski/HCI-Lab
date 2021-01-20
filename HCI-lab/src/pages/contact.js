@@ -22,20 +22,22 @@ const ContactPage = () => {
 
   //checks if email is never sent or expiry date has passed
   const isEmailSentInPast = () => {
-    if(window === undefined){
+    const windowGlobal = typeof window !== 'undefined' && window
+    if(windowGlobal === false){
       return true;
     }
-    var lastSentString = localStorage.getItem('expiryDate');
+    var lastSentString = windowGlobal.localStorage.getItem('expiryDate');
     return !!!lastSentString ||
       (new Date() - new Date(Date.parse(lastSentString))) > 0;
   }
 
   const calculateDiff = () => {
-    if(window === undefined) {
+    const windowGlobal = typeof window !== 'undefined' && window
+    if(window === false) {
       return true;
     }
     let now = new Date();
-    var expiryDateString = localStorage.getItem('expiryDate');
+    var expiryDateString = windowGlobal.localStorage.getItem('expiryDate');
     let expiryDate = new Date(Date.parse(expiryDateString));
     let diff = expiryDate - now;
     let hours = ((diff / 1000) / 60) / 60;

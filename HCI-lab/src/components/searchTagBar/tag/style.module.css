@@ -13,7 +13,8 @@
     outline: none;
     border: none;
     border-radius: 10px;
-    font-family: proxima-nova, sans-serif;;
+    font-family: proxima-nova, sans-serif;
+    transition: all 0.5s;
   }
   
   .btn:hover {

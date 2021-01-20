@@ -84,7 +84,7 @@ const ContactPage = () => {
             <Tag title={contactForm.buttonText} action={updateMailStatus} resetButtonAction={() => {}} />
           }
           {mailSubmitted &&
-            <Tag title={mailSent ? "Mail sent" : "Sending mail"} isActive={mailSubmitted} action={() => {}} resetButtonAction={() => {}} />
+            <Tag title={mailSent ? "Sent" : "Sending"} isActive={mailSubmitted} action={() => {}} resetButtonAction={() => {}} />
           }
         </div>
       </div>

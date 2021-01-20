@@ -37,12 +37,13 @@ color:#fff;
 }
 
 .blog-card .gradient-overlay {  
-  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.6) 21%);
+  background-image: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.2) 21%);
   width: 550px;
   height: 500px;
   position: absolute;
   top: 350px;
   left: 0;
+  top: 0;
   z-index: 15;
 }
 
@@ -388,6 +389,7 @@ h3:after {
 @media (max-width:550px){
   .blog-card {
     display: grid;
+    background:  rgba(64, 84, 94,0.5);
   }
 
   .mainPart {
@@ -403,11 +405,16 @@ h3:after {
       "utility";
   }
 
+  .blog-card:hover .color-overlay {
+    background: rgba(64, 64, 70,0.8);
+  }
+
   .title-content {
     width: 90%;
     position: relative;
     grid-area: title;
     margin: 0 auto;
+    margin-top: 20px;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -447,7 +454,7 @@ h3:after {
   }
 
   .blog-card:hover .title-content {
-    margin-top: 0;
+    margin-top: 20px;
   }
 
   .blog-card:hover .card-info {

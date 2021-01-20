@@ -343,6 +343,10 @@
 }
 
 @media screen and (max-width: 750.5px) {
+    .separatorContainer {
+        display: block;
+    }
+
     .centerCircle {
         width: 150px;
         height: 150px;
@@ -568,10 +572,6 @@
 }
 
 @media screen and (max-width: 500.5px) {
-    .separatorContainer {
-        display: block;
-    }
-
     .rodalContainer {
         gap: 0 20px;
     }

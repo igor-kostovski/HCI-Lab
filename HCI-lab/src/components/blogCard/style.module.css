@@ -237,7 +237,7 @@ h3:after {
   }
 }
 
-@media (max-width:500px){
+@media (max-width:550px){
   .blog-card {
     display: grid;
   }

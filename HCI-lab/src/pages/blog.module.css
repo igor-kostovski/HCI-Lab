@@ -84,6 +84,7 @@
     .blogContainer {
         width: 90%;
         margin: 0 auto;
+        margin-bottom: 30px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: max-content max-content max-content;
         grid-template-areas: 

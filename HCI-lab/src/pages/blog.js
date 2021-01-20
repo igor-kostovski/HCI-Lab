@@ -8,9 +8,32 @@ import Image from "../components/image"
 import styles from './blog.module.css';
 
 import Pagination from '@material-ui/lab/Pagination';
+import { makeStyles } from '@material-ui/core/styles';
 import { blogPosts, blogTags } from "../constants/mocks";
 
 const POSTS_PER_PAGE = 3;
+
+const useStyles = makeStyles({
+  root: {
+  },
+  ul: {
+    '& .MuiPaginationItem-root': {
+      backgroundColor: 'transparent',
+      color:'#ffffff',
+      border: "2px solid #ffffff"
+     },
+     '& .MuiPaginationItem-root:hover': {
+      backgroundColor: '#ffffff',
+      color:'#000000',
+      border: "2px solid #ffffff"
+     },
+     '& .Mui-selected': {
+      backgroundColor: '#ffffff',
+      color:'#000000',
+      border: "2px solid #ffffff"
+     },
+  },
+});
 
 const BlogPage = () => {
   const [filter, setFilter] = useState(() => (post) => true);
@@ -18,6 +41,8 @@ const BlogPage = () => {
   const [tags, setTags] = useState([...blogTags]);
   const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
   const [currentPage, setCurrentPage] = useState(1)
+
+  const classes = useStyles();
 
   const onClearAction = () => {
     let filter = (post) => true;
@@ -94,12 +119,17 @@ const BlogPage = () => {
                     post={post} />
                 </div>)
             })}
-        <Pagination count={pageCount}
-          page={currentPage}
-          color='standard'
-          variant="outlined"
-          className={styles.pagination}
-          onChange={(event, number) => onPageChange(number - 1)} />
+        <div className={styles.pagination}>
+          <Pagination count={pageCount}
+            classes={{
+              root: classes.root,
+              ul: classes.ul,
+            }}
+            page={currentPage}
+            color='standard'
+            variant="outlined"
+            onChange={(event, number) => onPageChange(number - 1)} />
+        </div>
       </div>
     </>
   );

@@ -1,15 +1,16 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import SearchTagBar from "../components/searchTagBar"
 import SeparatorBar from "../components/separatorBar"
-import { blogSections, images } from "../constants"
+import { blogSections, contentfulEndpoint, images } from "../constants"
+import {blogPostsMock} from "../constants/mocks.js"
 import BlogCard from "../components/blogCard";
 import Image from "../components/image"
+import { makeStyles } from '@material-ui/core/styles';
 
 import styles from './blog.module.css';
 
 import Pagination from '@material-ui/lab/Pagination';
-import { makeStyles } from '@material-ui/core/styles';
-import { blogPosts, blogTags } from "../constants/mocks";
+import { blogTags } from "../constants/mocks";
 
 const POSTS_PER_PAGE = 3;
 
@@ -19,30 +20,50 @@ const useStyles = makeStyles({
   ul: {
     '& .MuiPaginationItem-root': {
       backgroundColor: 'transparent',
-      color:'#ffffff',
+      color: '#ffffff',
       border: "2px solid #ffffff"
-     },
-     '& .MuiPaginationItem-root:hover': {
+    },
+    '& .MuiPaginationItem-root:hover': {
       backgroundColor: '#ffffff',
-      color:'#000000',
+      color: '#000000',
       border: "2px solid #ffffff"
-     },
-     '& .Mui-selected': {
+    },
+    '& .Mui-selected': {
       backgroundColor: '#ffffff',
-      color:'#000000',
+      color: '#000000',
       border: "2px solid #ffffff"
-     },
+    },
   },
 });
 
 const BlogPage = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
   const [filter, setFilter] = useState(() => (post) => true);
-  const [activePosts, setActivePosts] = useState(blogPosts.filter(filter).slice(0, POSTS_PER_PAGE));
+  const [activePosts, setActivePosts] = useState([]);
   const [tags, setTags] = useState([...blogTags]);
-  const [pageCount, setPageCount] = useState(Math.ceil(blogPosts.length / POSTS_PER_PAGE));
-  const [currentPage, setCurrentPage] = useState(1)
+  const [pageCount, setPageCount] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const classes = useStyles();
+
+  useEffect(() => {
+    if(!!process.env.GATSBY_CONTENTFUL_ACCESS_KEY) {
+    fetch(contentfulEndpoint(process.env.GATSBY_CONTENTFUL_ACCESS_KEY, process.env.GATSBY_CONTENTFUL_SPACE_ID))
+      .then(res => res.json())
+      .then(({ items }) => {
+        setInitialState(items.map(x => x.fields));
+      });
+    }
+    else {
+      setInitialState(blogPostsMock)
+    }
+  }, []);
+
+  const setInitialState = (posts) => {
+    setActivePosts([...posts].slice(0, POSTS_PER_PAGE));
+    setBlogPosts([...posts]);
+    setPageCount(Math.ceil(posts.length / POSTS_PER_PAGE))
+  }
 
   const onClearAction = () => {
     let filter = (post) => true;
@@ -114,7 +135,7 @@ const BlogPage = () => {
               let postClass = "post" + index
               return (
                 <div key={index} className={styles.[postClass]}>
-                  <BlogCard imageName={[images.zlatniRat, images.krknjasi, images.nightImage][index % 3]}
+                  <BlogCard imageName={post.imageName}
                     key={post.title + post.date + index}
                     post={post} />
                 </div>)

@@ -27,6 +27,15 @@ const ContactPage = () => {
       (new Date() - new Date(Date.parse(lastSentString))) > 0;
   }
 
+  const calculateDiff = () => {
+    let now = new Date();
+    var expiryDateString = localStorage.getItem('expiryDate');
+    let expiryDate = new Date(Date.parse(expiryDateString));
+    let diff = expiryDate - now;
+    let hours = ((diff / 1000) / 60) / 60;
+    return hours < 1 ? Math.floor(((diff / 1000) / 60)) + " minutes" : Math.floor(hours) + " hours";
+  }
+
   useEffect(() => {
     setCanSubmit(isEmailSentInPast());
   }, []);
@@ -88,7 +97,7 @@ const ContactPage = () => {
             <Tag title={contactForm.buttonText} action={submit} resetButtonAction={() => { }} />
           </div>
         </div>
-        <div className={canSubmit ? styles.errorCard: styles.errorCardMoved}>
+        <div className={canSubmit ? styles.errorCard : styles.errorCardMoved}>
           <div className={styles.contentContainer}>
             <div className={styles.imageTitleText}>
               <div className={styles.image}>
@@ -96,6 +105,8 @@ const ContactPage = () => {
               </div>
               <div className={styles.container}>
                 <p>E-mail successfully sent!</p>
+                <p>You've reached your daily limit.</p>
+                <p>Next mail can be send in {calculateDiff()}.</p>
               </div>
             </div>
           </div>

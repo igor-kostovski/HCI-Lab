@@ -11,6 +11,8 @@
 .logoContainer {
     width: 150px;
     transition: transform 0.2s;
+    position: relative;
+    right: -10px;
 }
 
 .logoContainer:hover {

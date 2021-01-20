@@ -1,9 +1,9 @@
 export const navigationTabs = [
     { name: 'Home', linkTo: '/' },
-    { name: 'About us', linkTo: '/aboutUs' },
-    { name: 'Gallery', linkTo: '/gallery' },
-    { name: 'Blog', linkTo: '/blog' },
     { name: 'Specifications', linkTo: '/specs' },
+    { name: 'Blog', linkTo: '/blog' },
+    { name: 'Gallery', linkTo: '/gallery' },
+    { name: 'About us', linkTo: '/aboutUs' },
     { name: 'Contact', linkTo: '/contact' }
 ]
 

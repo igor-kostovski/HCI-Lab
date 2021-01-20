@@ -36,8 +36,8 @@ const SearchTagBar = ({ tags, onTagAction, onSearchAction, onClearAction }) => {
             }
             {
                 onClearAction && 
-                    <div className={activeSearchTags ? styles.clear : styles.clearDisabled}>
-                        <button className={activeSearchTags ? styles.clearBtn : styles.clearBtnDisabled} onClick={() => {onClearAction(); setActiveSearchTags(false)}}>
+                    <div className={activeSearchTags ? `${styles.clear}` : `${styles.clear} ` + `${styles.clearDisabled}`}>
+                        <button className={activeSearchTags ? `${styles.clearBtn}` : `${styles.clearBtn} ` + `${styles.clearBtnDisabled}`} onClick={() => {onClearAction(); setActiveSearchTags(false)}}>
                             Reset
                         </button>
                     </div>

@@ -65,8 +65,9 @@
 
 .galleryContainer {
     margin: 0 auto;
-    width: 80%;
+    width: 800px;
 }
+
 .circleLayout {
     display: grid;
     grid-template-columns: 1fr;
@@ -329,6 +330,12 @@
         height: 125px;
         margin-top: 300px;
         margin-right: 300px;
+    }
+}
+
+@media screen and (max-width: 900.5px) {
+    .galleryContainer {
+        width: 700px;
     }
 }
 
